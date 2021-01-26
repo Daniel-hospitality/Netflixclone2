@@ -1,6 +1,6 @@
   
 import React from "react";
-import { Container, Row, Column, Link, Title, Text, Break, Link1, Link2, } from "./footer.js";
+import { Container, Row, Column, Link, Title, Text, BreakIcon, Break, Link1, Link2,Icon } from "./footer.js";
 
 export default function Footer({ children, ...restProps }) {
     return <Container{...restProps}></Container>
@@ -27,6 +27,13 @@ Footer.Title = function footerTitle({ children, ...restProps }) {
 Footer.Text = function footerText({ children, ...restProps }) {
    return <Text {...restProps}>{children}</Text>
 }
+Footer.Icon = function footerIcon({ children, ...restProps }) {
+   return <Icon {...restProps}>{children}</Icon>
+}
 Footer.Break = function footerBreak({ children, ...restProps }) {
    return <Break {...restProps}>{children}</Break>
 }
+Footer.BreakIcon = function footerBreakIcon({ children, ...restProps }) {
+   return <BreakIcon {...restProps}>{children}</BreakIcon>
+}
+
