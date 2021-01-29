@@ -50,7 +50,7 @@ function Home() {
       <Banner />
 
       <div className="row-container">
-        {/* <Row
+        <Row
           title="NETFLIX ORIGINALS"
           fetchUrl={requests.fetchNetflixOriginals}
         />
@@ -69,7 +69,7 @@ function Home() {
           isLargeRow
         />
         <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-        <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} /> */}
+        <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
       </div>
     </div>
   );
