@@ -18,7 +18,7 @@ function InfoButton() {
           <div>
             <ReactPlayer url="https://www.youtube.com/watch?v=sY8gUtyeAKE"
               playing={true}
-              muted={false}
+              muted={true}
               controls={false}
               width="cover"
               height="500px" 
@@ -45,7 +45,7 @@ function InfoButton() {
             </div>
           </div>
         </div>
-        <div classname="container_movie_info">
+        <div className="container_movie_info">
           <div className="speelduur_overview">
             <p>2018 hier komt Speelduur: </p>{" "}
             <p>

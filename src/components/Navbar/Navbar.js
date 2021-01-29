@@ -107,37 +107,37 @@ function Navbar() {
 
           
           <li className="nav_item1">
-            <Link to="/" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="/" className="nav_links" onClick={closeMobileMenu}>
               Homepagina
             </Link>
           </li>
 
           <li className="nav_item1">
-            <Link to="./Series" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="./Series" className="nav_links" onClick={closeMobileMenu}>
               Series
             </Link>
           </li>
 
           <li className="nav_item1">
-            <Link to="./Films" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="./Films" className="nav_links" onClick={closeMobileMenu}>
               Films
             </Link>
           </li>
 
           <li className="nav_item1">
-            <Link to="./Nieuw" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="./Nieuw" className="nav_links" onClick={closeMobileMenu}>
               Nieuw en Populair
             </Link>
           </li>
 
           <li className="nav_item1">
-            <Link to="./Lijst" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="./Lijst" className="nav_links" onClick={closeMobileMenu}>
               Mijn lijst
             </Link>
           </li>
 
           <li className="nav_item1">
-            <Link to="./Kijk" className="nav_links" onclick={closeMobileMenu}>
+            <Link to="./Kijk" className="nav_links" onClick={closeMobileMenu}>
               Kijk opnieuw
             </Link>
           </li>

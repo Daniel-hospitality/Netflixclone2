@@ -87,7 +87,8 @@ function Banner() {
         <h1 className="banner_description">{movie?.overview}</h1>
         <div className="banner_buttons">
           <button className="banner_button" onClick={onPlayerReady}>
-            Play
+          <i className="fas fa-caret-right" />
+          &nbsp;&nbsp; Play
           </button>
           {/* <button className="banner_button">Meer informatie</button> */}
           <InfoButton />
