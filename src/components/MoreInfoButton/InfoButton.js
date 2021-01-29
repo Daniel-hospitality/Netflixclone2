@@ -26,7 +26,6 @@ function InfoButton() {
               onStart={()=>console.log(' onStart callback')}
               onPause={()=>console.log('onPause callback')}
               onEnded={()=>console.log(' onEnded callback')}
-              onPause = {()=> console.log('onPause callback')}
               />
           </div>
           <div className="like_buttons">
