@@ -16,7 +16,7 @@ function InfoButton() {
       <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
         <div className="showMovie">
           <div>
-            <ReactPlayer url="https://www.youtube.com/watch?v=sY8gUtyeAKE"
+            <ReactPlayer url="https://www.youtube.com/watch?v=haXvp8M9Cog"
               playing={true}
               muted={true}
               controls={false}
