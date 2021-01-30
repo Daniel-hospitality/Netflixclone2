@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Row from "./Row";
 import requests from "./requests";
+import Hero from "./components/Hero"
 
 // eigen import //
 // import { Series, Films, Nieuw, Lijst, Kijk } from "./pages";
@@ -13,7 +14,6 @@ import Nieuw from "./pages/Nieuw";
 import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
 
-import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
 
 //605573c650780e682a02144be1ed2304//
@@ -47,7 +47,8 @@ function App() {
 function Home() {
   return (
     <div className="app">
-      <Banner />
+      <Hero />
+      {/* <Banner /> */}
 
       <div className="row-container">
         <Row
