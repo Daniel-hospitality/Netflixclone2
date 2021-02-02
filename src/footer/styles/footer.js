@@ -74,8 +74,15 @@ export const Link = styled.a`
   ${"" /* margin-bottom: 3px; */}
   font-size: 15px;
   text-decoration: none;
+  ${
+    "" /* @media only screen and (max-width: 767px), screen and (min-width: 576px) {
+   margin-bottom:0px;
+  } */
+  }
+`;
 
-  
+export const Icon = styled.i`
+  display: flex;
   justify-content: space-between;
   font-size: 27px;
   margin-left: 10%;
