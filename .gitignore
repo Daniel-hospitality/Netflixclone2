@@ -22,3 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .eslintcache
+
+src/footer/container/footer test.js
+
+src/footer/container/footerTest.css
