@@ -1,40 +1,61 @@
-import React, { useRef, useState } from "react";
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import ReactPlayer from "react-player";
-import { findDOMNode } from "react-dom";
 import screenfull from "screenfull";
+import "./Banner.css";
 
-function Player() {
-  const [movie, setMovie] = useState();
+function Player(props, ref) {
+  const player = useRef(null);
+
+  const [playVideo, setPlayVideo] = useState(false);
+  const [light, setLight] = useState(false);
   const [muted, setMuted] = useState(true);
   const [controls, setControls] = useState(false);
-  const refPlayer = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+    enableFullscreen: () => {
+      if (screenfull.isEnabled) {
+        screenfull.request(player.current.wrapper);
+        setControls(true);
+        setMuted(false);
+      }
+    },
+    toggleMute: () => {
+      setMuted(true) ? setMuted(false) : setMuted(true);
+    },
+  }));
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPlayVideo(true);
+      setLight(true);
+    }, 5000);
+  }, []);
 
   return (
-    <ReactPlayer
-      className="react-player"
-      url={`https://youtu.be/${movie?.youtubeKey}`}
-      // light={`https://image.tmdb.org/t/p/original${movie?.backdropPath}`}
-      controls={controls}
-      ref={refPlayer}
-      playbackRate={1}
-      width="100%"
-      height="100%"
-      muted={muted}
-      loop={true}
-      config={{
-        youtube: {
-          playerVars: {
-            disable: 0,
-            autoplay: 1,
-            playsinline: 1,
-            showinfo: 0,
-            rel: 0,
-            iv_load_policy: 3,
-            fs: 0,
-          },
-        },
-      }}
-    />
-    );
-  }
-  export default Player;
+    <div>
+        <ReactPlayer
+          className="banner-player"
+          url={`https://youtu.be/${props.movie?.youtubeKey}`}
+          playing={playVideo}
+          width="100%"
+          height="100%"
+          ref={player}
+          playbackRate={1}
+          controls={controls}
+          muted={muted}
+          loop={true}
+          light={`${light ? "" : `https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`}`}
+        />
+    </div>
+  );
+}
+
+Player = forwardRef(Player);
+
+export default Player;
