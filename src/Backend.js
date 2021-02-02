@@ -5,7 +5,6 @@ const client = axios.create({
   mode: "cors",
   baseURL: "http://localhost:8080"
 });
-
 const requests = {
   fetchMovies: (movieId) => client.get(`/movies/${movieId}`)
 };
