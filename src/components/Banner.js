@@ -5,9 +5,11 @@ import "./Banner.css";
 
 function Banner(props) {
   const player = useRef(null);
+
   const handleClickFullscreen = () => {
     player.current.enableFullscreen();
   };
+  
   const handleClickMute = () => {
     player.current.toggleMute();
   }
