@@ -16,9 +16,9 @@ function InfoButton() {
       <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
         <div className="showMovie">
           <div>
-            <ReactPlayer url="https://www.youtube.com/watch?v=sY8gUtyeAKE"
+            <ReactPlayer url="https://www.youtube.com/watch?v=haXvp8M9Cog"
               playing={true}
-              muted={false}
+              muted={true}
               controls={false}
               width="cover"
               height="500px" 
@@ -26,7 +26,6 @@ function InfoButton() {
               onStart={()=>console.log(' onStart callback')}
               onPause={()=>console.log('onPause callback')}
               onEnded={()=>console.log(' onEnded callback')}
-              onPause = {()=> console.log('onPause callback')}
               />
           </div>
           <div className="like_buttons">
@@ -45,7 +44,7 @@ function InfoButton() {
             </div>
           </div>
         </div>
-        <div classname="container_movie_info">
+        <div className="container_movie_info">
           <div className="speelduur_overview">
             <p>2018 hier komt Speelduur: </p>{" "}
             <p>

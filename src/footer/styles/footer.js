@@ -8,16 +8,27 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-
-
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+ grid-template-columns: repeat( 4, auto-fit, minmax(230px, 1fr));
+
   grid-gap: 15px;
   padding-top: 15px;
   margin-left: 19%;
 
- 
+/**  .parent {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}*/ 
+
+
+
+
+
+
 
   @media only screen and (max-width: 767px), screen and (min-width: 576px) {
     margin-left: 19%;
@@ -25,37 +36,35 @@ export const Row = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 2fr));
     grid-gap: 10px;
-    margin-left:5%;
-    padding-right:50px; 
+    margin-left: 5%;
+    padding-right: 50px;
   }
 
-  @media only screen and (max-width: 991px), screen and (min-width:768px) {
+  @media only screen and (max-width: 991px), screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    margin-left:5%;
-
+    margin-left: 5%;
   }
 
-  @media only screen and (max-width: 1199px), screen and (min-width:992px) {
+  @media only screen and (max-width: 1199px), screen and (min-width: 992px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    margin-left:5%;
+    margin-left: 5%;
   }
 
-  @media only screen and  (min-width: 1200px ) {
+  @media only screen and (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    margin-left:5%;
+    justify-content: space-between;
   }
 `;
-
 
 export const Column = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: left;
   margin-left: 65px;
-  max-width: 1000px;
+  max-width: 100%;
   flex-direction: column;
 
   @media (max-width: 1080px) {
@@ -102,7 +111,7 @@ export const Link = styled.a`
   font-size: 15px;
   text-decoration: none;
   @media only screen and (max-width: 767px), screen and (min-width: 576px) {
-   margin-bottom:0px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -114,27 +123,24 @@ export const Icon = styled.i`
   width: 9%;
   color: silver;
 
-
   @media only screen and (max-width: 767px), screen and (min-width: 576px) {
     margin-left: 14%;
     font-size: 150%;
     width: 25%;
   }
 
-  @media only screen and (max-width: 991px), screen and (min-width:768px ;) {
+  @media only screen and (max-width: 991px), screen and (min-width: 768px ;) {
     margin-left: 13%;
   }
 
-  @media only screen and (max-width: 1199px), screen and (min-width:992px ;) {
+  @media only screen and (max-width: 1199px), screen and (min-width: 992px ;) {
     margin-left: 5%;
   }
 
-  @media only screen and  (min-width: 1200px ) {
-    margin-left:5%;
-    width:16%;
+  @media only screen and (min-width: 1200px) {
+    margin-left: 5%;
+    width: 16%;
   }
-
-
 `;
 
 export const Link1 = styled.a`
