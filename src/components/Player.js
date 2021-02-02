@@ -15,18 +15,13 @@ function Player(props, ref) {
   const [playVideo, setPlayVideo] = useState(false);
   const [light, setLight] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [controls, setControls] = useState(false);
 
   useImperativeHandle(ref, () => ({
     enableFullscreen: () => {
       if (screenfull.isEnabled) {
         screenfull.request(player.current.wrapper);
-        setControls(true);
         setMuted(false);
       }
-    },
-    toggleMute: () => {
-      setMuted(true) ? setMuted(false) : setMuted(true);
     },
   }));
 
@@ -47,7 +42,7 @@ function Player(props, ref) {
           height="100%"
           ref={player}
           playbackRate={1}
-          controls={controls}
+          controls={false}
           muted={muted}
           loop={true}
           light={`${light ? "" : `https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`}`}
