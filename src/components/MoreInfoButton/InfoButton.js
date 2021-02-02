@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import "./InfoButton.css";
-function InfoButton() {
+
+function InfoButton(props) {
   const [showMovie, setshowMovie] = useState(false);
   const toggleMovie = () => {
     setshowMovie(true);
@@ -16,10 +17,13 @@ function InfoButton() {
       <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
         <div className="showMovie">
           <div>
-            <ReactPlayer url="https://www.youtube.com/watch?v=haXvp8M9Cog"
+
+            <ReactPlayer 
+              url={`https://youtu.be/${props.movie?.youtubeKey}`}
               playing={true}
               muted={true}
               controls={false}
+              loop={true}
               width="cover"
               height="500px" 
               onReady={()=>console.log('onReady callback')}
@@ -41,6 +45,9 @@ function InfoButton() {
             </div>
             <div>
               <i className="far fa-thumbs-down like_styling" />
+            </div>
+            <div>
+              <i className="fas fa-volume-mute like_styling" id="mute"/>
             </div>
           </div>
         </div>
