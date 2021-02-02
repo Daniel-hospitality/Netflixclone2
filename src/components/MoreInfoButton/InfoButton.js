@@ -7,8 +7,13 @@ function InfoButton(props) {
   const toggleMovie = () => {
     setshowMovie(true);
   };
+
+  const handleOnBlur = () => {
+    setshowMovie(false);
+  }
+
   return (
-    <div>
+    <div onBlur={handleOnBlur}>
       <div>
         <button onClick={toggleMovie} className="style-btn">
           <i className="fas fa-info-circle" /> &nbsp;&nbsp; Meer informatie
@@ -70,6 +75,7 @@ function InfoButton(props) {
         </div>
       </div>
     </div>
+
   );
 }
 export default InfoButton;
