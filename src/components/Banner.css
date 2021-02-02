@@ -1,19 +1,20 @@
 .banner {
+  position: relative;
   margin-top: -20vh;
-  color: white;
-  object-fit: contain;
   height: fit-content;
+  object-fit: contain;
+  color: white;
 }
 
 .player-wrapper {
   pointer-events: none;
-  /* z-index: 0; */
   position: relative;
   padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
 }
 
-.react-player {
+.banner-player {
   position: absolute;
+  margin-top: -5vh;
   top: 60px;
   left: 0;
 }
@@ -51,6 +52,7 @@
   display: flex;
   flex-direction: row;
 }
+
 .banner_button {
   cursor: pointer;
   color: #fff;
@@ -66,6 +68,20 @@
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 1rem;
 }
+
+.banner-mute-button {
+  position: absolute;
+  top: 88vh;
+  right: 5rem;
+  padding: 0.75rem;
+  padding-left: 0;
+  border: white solid 1px;
+  border-radius: 50%;
+  background-color: #51515262;
+  color: #FFF;
+  z-index: 2;
+}
+
 .banner_button:hover {
   color: #000;
   background-color: #e6e6e6;
