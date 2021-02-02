@@ -17,7 +17,7 @@ function Banner(props) {
   return (
     <header className="banner">
         <button className="banner-mute-button" onClick={handleClickMute}>
-          <i class="fas fa-volume-mute"></i>
+          <i className="fas fa-volume-mute"></i>
         </button>
       <div className="player-wrapper">
         <Player ref={player} movie={props.movie}/>
@@ -33,7 +33,7 @@ function Banner(props) {
           <button className="banner_button" onClick={handleClickFullscreen}>
             Play
           </button>
-          <InfoButton movie={props.movie} />
+          <InfoButton movie={props.movie}/>
         </div>
       </div>
       <div className="banner_fadeBottom" />
