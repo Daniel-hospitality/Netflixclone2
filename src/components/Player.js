@@ -23,6 +23,13 @@ function Player(props, ref) {
         setMuted(false);
       }
     },
+    toggleMute: () => {
+      if (muted) {
+        setMuted(false);
+      } else {
+        setMuted(true);
+      }
+    }
   }));
 
   useEffect(() => {
