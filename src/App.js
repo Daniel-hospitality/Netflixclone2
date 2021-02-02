@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState, useEffect}from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Row from "./Row";
 import requests from "./requests";
-
+import Hero from "./components/Hero";
+import Backend from "./Backend";
 // eigen import //
 // import { Series, Films, Nieuw, Lijst, Kijk } from "./pages";
 import Series from "./pages/Series";
@@ -12,8 +13,7 @@ import Films from "./pages/Films";
 import Nieuw from "./pages/Nieuw";
 import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
-
-import Banner from "./components/Banner";
+import Banner from "./components/Banner"
 import { FooterContainer } from "./footer/container/footer";
 
 //605573c650780e682a02144be1ed2304//
@@ -45,10 +45,19 @@ function App() {
 }
 
 function Home() {
+  const [movie, setMovie] = useState();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Backend.fetchMovies(335984);
+      setMovie(response.data);
+    }
+    fetchData();
+  }, []);
+  
   return (
     <div className="app">
-      <Banner />
-
+      {/* <Hero /> */}
+      <Banner movie={movie}/>
       <div className="row-container">
         <Row
           title="NETFLIX ORIGINALS"
