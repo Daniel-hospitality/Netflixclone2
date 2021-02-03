@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Backend from "../Backend";
 import ReactPlayer from "react-player";
-import screenfull from "screenfull";
+// import screenfull from "screenfull";
 // import YouTube from "react-youtube";
 // import ReactPlayer from 'react-player';
 import InfoButton from "../components/MoreInfoButton/InfoButton"
@@ -10,7 +10,7 @@ import "./Banner.css";
 
 function Banner() {
   const [movie, setMovie] = useState();
-  const [play, setPlay] = useState(false);
+  // const [play, setPlay] = useState(false);
   useEffect(() => {
     async function fetchData() {
       // const request = await axios.get(requests.fetchNetflixOriginals);
@@ -27,15 +27,15 @@ function Banner() {
     fetchData();
   }, []);
 
-  function truncate(str, n) {
-    //... na 200 karakters in description//
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
-  }
+  // function truncate(str, n) {
+  //   //... na 200 karakters in description//
+  //   return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  // }
 
-  function toggleColor() {
-    const nav = document.querySelector(".nav_container");
-    nav.style.background = "black";
-  }
+  // function toggleColor() {
+  //   const nav = document.querySelector(".nav_container");
+  //   nav.style.background = "black";
+  // }
 
   function onPlayerReady(event) {
     event.target.playVideo();
@@ -43,9 +43,9 @@ function Banner() {
     console.log(arguments);
   }
 
-  function allowFullscreen() {
-    screenfull.request();
-  }
+  // function allowFullscreen() {
+  //   screenfull.request();
+  // }
 
   console.log(movie);
 
