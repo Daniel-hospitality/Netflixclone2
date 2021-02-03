@@ -4,34 +4,28 @@ import "./InfoButton.css";
 
 function InfoButton(props) {
   const [showMovie, setshowMovie] = useState(false);
+  const [genres, setGenres] = useState(null);
   const toggleMovie = () => {
     setshowMovie(true);
-    var stringOfGenres = "asdasdf";
-    for (var i = 0; i < props.movie?.genres.length; i++) {
-      // {props.movie?.genres[0].name}
-      let banaan = "banaan";
-      stringOfGenres.concat(banaan);
-      console.log(stringOfGenres);
-      console.log(banaan);
-      console.log(props.movie?.genres.length);
-    }
+    setGenres(returnGenres);
+  };
+  // const [stringOfGenres, setstringOfGenres] = useState("");
  
-    };
-    // for (var i = 0; i < props.movie?.genres.length; i++) {
-    //   {props.movie?.genres[i].name}
-    //   stringOfGenres.concat("banaan");
-    //   console.log({props.movie?.genres[i].name});
-    //   console.log(props.movie?.genres.length);
-    // }
-  
+  const returnGenres = () =>{
+   let genres= "";
+   let values= "";
+  for (let i = 0; i < props.movie?.genres.length; i++) {
+       genres = genres.concat(props.movie?.genres[i].name + ", ");
+        }              
+        values =  genres.slice(0, -2);
+    
+  return values;
+  }
+ 
+
   const handleOnBlur = () => {
     setshowMovie(false);
   };
-
-  // const [listOfGenres, setlistOfGenres] = useState(true);
-  // const setlist
-
- 
 
   return (
     <div>
@@ -89,13 +83,14 @@ function InfoButton(props) {
             <div className="speelduur_overview">
               <p>Runtime: {props.movie?.runtime} min </p>{" "}
               <p>{props.movie?.overview}</p>
+              <p>Director: {props.movie?.director}</p>
+              <p>
+                Genres: {genres}
+              </p>
             </div>
             <div className="director_genre">
               {" "}
-              <p>Director: {props.movie?.director}</p>
-              <p>
-                Genres:  {props.movie?.genres[0].name}
-              </p>
+             
             </div>
           </div>
         </div>
