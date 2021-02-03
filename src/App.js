@@ -4,7 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Row from "./Row";
 import requests from "./requests";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 import Backend from "./Backend";
 // eigen import //
 // import { Series, Films, Nieuw, Lijst, Kijk } from "./pages";
