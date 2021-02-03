@@ -1,18 +1,24 @@
-import React from "react";
-import './pages.css';
-import ReactPlayer from 'react-player';
+import React, {useState, useEffect} from "react";
+import "./pages.css";
+import Backend from "../Backend";
+import Banner from "../components/Banner";
 
 
 function Kijk() {
+  const [movie, setMovie] = useState();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Backend.fetchMovies(335984);
+      setMovie(response.data);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="kijk">
-      <ReactPlayer
-       url="https://youtu.be/luai0p0y2zE"
-       controls
-       playbackRate = {2}
-       width = "896px"
-       height = "504px"
-      />
+      <Banner movie={movie}/>
+
+     
       {/* <h1>Kijk opnieuw</h1> */}
     </div>
   );

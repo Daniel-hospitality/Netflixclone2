@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./pages.css";
+import Backend from "../Backend";
+
 
 import Banner from "../components/Banner";
 import Row from "../Row";
@@ -7,10 +9,20 @@ import requests from "../requests";
 
 
 
+
+
 function Films() {
+  const [movie, setMovie] = useState();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Backend.fetchMovies(335984);
+      setMovie(response.data);
+    }
+    fetchData();
+  }, []);
   return (
     <div className="app <br/>">
-      <Banner />
+      <Banner movie={movie}/>
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
@@ -19,15 +31,7 @@ function Films() {
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
 
-      {/* <h1>Mijn lijst </h1>
-
-      <h1>Top 10 van films in Nederland vandaag </h1>
-
-      <h1>Trending </h1>
-
-      <h1>Thrillers </h1>
-
-      <h1>Netflix Orgiginals </h1> */}
+   
     </div>
   );
 }

@@ -1,15 +1,26 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./pages.css";
+import Backend from "../Backend";
+
 
 import Banner from "../components/Banner";
 import Row from "../Row";
 import requests from "../requests";
 
 function Nieuw() {
+  const [movie, setMovie] = useState();
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Backend.fetchMovies(335984);
+      setMovie(response.data);
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="app">
 
-      <Banner />
+      <Banner movie={movie}/>
 
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />

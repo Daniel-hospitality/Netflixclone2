@@ -16,9 +16,7 @@ function Banner(props) {
 
   return (
     <header className="banner">
-        <button className="banner-mute-button" onClick={handleClickMute}>
-          <i class="fas fa-volume-mute"></i>
-        </button>
+       
       <div className="player-wrapper">
         <Player ref={player} movie={props.movie}/>
       </div>
@@ -31,9 +29,15 @@ function Banner(props) {
         <h1 className="banner_description">{props.movie?.overview}</h1>
         <div className="banner_buttons">
           <button className="banner_button" onClick={handleClickFullscreen}>
-            Play
+          <i className="fas fa-caret-right" />
+             &nbsp;&nbsp; Play
+
           </button>
-          <InfoButton movie={props.movie} />
+          <InfoButton className="banner_button" movie={props.movie} />
+          <button className="banner_button_mute" onClick={handleClickMute}>
+          <i className="fas fa-volume-mute"></i>
+          {/* <i class="fas fa-volume-off"></i> */}
+          </button>
         </div>
       </div>
       <div className="banner_fadeBottom" />
