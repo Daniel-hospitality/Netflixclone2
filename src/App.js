@@ -43,7 +43,6 @@ function Home() {
     }
     fetchData();
   }, []);
-  
   return (
     <div className="app">
       <Banner movie={movie}/>
