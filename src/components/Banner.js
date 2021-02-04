@@ -4,7 +4,7 @@ import Player from "./Player";
 import InfoButton from "./MoreInfoButton/InfoButton"
 import "./Banner.css";
 
-function Banner(props) {
+function Banner() {
   const player = useRef(null);
   const [movie, setMovie] = useState(null);
 
