@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import InfoButton from "./MoreInfoButton/InfoButton";
 import Backend from "../Backend";
 import "./Banner.css";
@@ -43,7 +43,7 @@ function Banner() {
              &nbsp;&nbsp; Play
 
           </button>
-          <InfoButton className="banner_button" movie={props.movie} />
+          <InfoButton className="banner_button" movie={movie} />
           <button className="banner_button_mute" onClick={handleClickMute}>
           <i className="fas fa-volume-mute"></i>
           {/* <i class="fas fa-volume-off"></i> */}
