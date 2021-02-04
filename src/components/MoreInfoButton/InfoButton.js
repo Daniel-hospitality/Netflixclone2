@@ -9,15 +9,14 @@ function InfoButton(props) {
     setshowMovie(true);
     setGenres(returnGenres);
   };
- 
+
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
       values.push(props.movie?.genres[i].name);
     }
-    return values.join(', ');
+    return values.join(", ");
   };
- 
 
   const handleOnBlur = () => {
     setshowMovie(false);
@@ -52,44 +51,55 @@ function InfoButton(props) {
                 onEnded={() => console.log(" onEnded callback")}
               />
             </div>
-            <div className="like_buttons">
+
+            <div className="icons-miniplayer-container">
               <button className="playButtonDetailCard ">
-                <i className="fas fa-caret-right " />
-                &nbsp;&nbsp; <p>Play</p>
+                <i className="fas fa-caret-right" /> Play{" "}
               </button>
-              <div>
+              <div className="plus-button">
                 <i className="fas fa-plus like_styling" />
               </div>
-              <div>
+
+              <div className="thumbsUp">
                 <i className="far fa-thumbs-up like_styling" />
               </div>
-              <div>
+              <div className="thumbsDown">
                 <i className="far fa-thumbs-down like_styling" />
               </div>
-              <div>
+
+              <div className="mute-button">
                 <i
                   className="fas fa-volume-mute like_styling muteButtonDetailCard"
                   id="mute"
                 />
+              </div>
+              <div className="closeMovie">
                 <i className="fas fa-times"></i>
               </div>
             </div>
           </div>
           <div className="container_movie_info">
-            <div className="speelduur_overview">
-              <p>Runtime: {props.movie?.runtime} min </p>{" "}
-              <p>{props.movie?.overview}</p>
-              <p>Director: {props.movie?.director}</p>
-              <p>
-                Genres: {genres}
-              </p>
+            <div className="runTime_overview">
+              <div className="movieJarFile">
+                <div className="genresMovies">
+                  Genres: &nbsp; <h5>{genres}</h5>
+                </div>
+                <div className="movieDirector">
+                  <p>Director: &nbsp; {props.movie?.director}</p>
+                </div>
+                <div className="playTime">
+                  <p>Runtime: &nbsp;  <h5>{props.movie?.runtime}</h5> min </p>{" "}
+                </div>
+              </div>
+              <div className="movieOverview">
+                <p>{props.movie?.overview}</p>
+              </div>
             </div>
-           
+            <div className="director_genre"> </div>
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 export default InfoButton;
