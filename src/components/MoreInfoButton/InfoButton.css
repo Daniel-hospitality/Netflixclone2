@@ -1,76 +1,131 @@
 .style-btn {
-    cursor: pointer;
-    color: #fff;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    margin-right: 1rem;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    background-color: rgba(51, 51, 51, 0.5);
-    padding-bottom: 1rem;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  padding-bottom: 1rem;
+  
+}
+.playButtonDetailCard {
+  cursor: pointer;
+  color: rgba(14, 13, 13);
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: x-large;
+  border-radius: 0.7vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-left: 40px;
+  background-color: #fff;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.playButtonDetailCard > p {
+  display: inline;
+  margin-top: -100px;
 }
 .style-btn:hover {
-    color: #000;
-    background-color: #e6e6e6;
-    transition: all 0.2s;
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 2s;
+
+}
+.centerMoreInfo {
+  justify-content: center;
 }
 .moreInfo {
-    display: flex;
-    flex-direction: column;
-    height: 900px;
-    border-radius: 15px;
-    z-index: 10;
-    background-color: #19181a;
-    width: 60vw;
-    position: absolute;
-    top: 0;
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 25px;
+  z-index: 10;
+  background-color: #19181a;
+  width: 90vw;
+  margin-left: 5vw;
+  position: fixed;
+  top: 35px;
+  left: 0;
+  /* justify-content: center; */
+  /* /* margin-right: 15vw; */
 }
-  /* .moreInfo > .style-btn {
+
+.blurMoreDetailsCard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.8);
+       z-index: 5;
+       transition: background-color 2s linear;}
+
+
+@media screen and (min-width: 576px) {
+    .moreInfo {
+      width: 550px;
+      margin-left: calc((100vw - 550px) / 2);
+    }
+}
+@media screen and (min-width: 992px) {
+  .moreInfo {
+    width: 850px;
+    margin-left: calc((100vw - 850px) / 2);
+  }
+  }
+ 
+/* .moreInfo > .style-btn {
   display: hidden;
   } */
 .hidden {
-    display: none;
+  display: none;
 }
 .iconsLikes,
-  i {
-    font-size: 150%;
-    display: flex;
-    padding-left: 1rem;
+i {
+  font-size: 150%;
+  display: flex;
+  padding-left: 1rem;
 }
 .like_buttons {
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: inline;
-    vertical-align: middle;
-    margin-top: -6rem;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: inline;
+  vertical-align: middle;
+  margin-top: -6rem;
 }
 .fa-caret-right {
-    position: relative!;
+  position: relative!;
 }
 .container_movie_info {
-    /* position: absolute; */
-    display: flex;
-    flex-direction: row;
-    align-content: space-around;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
 }
 .like_styling {
-    flex: 1;
-    border: white solid 1px;
-    border-radius: 50%;
-    background-color: #51515262;
-    padding: 15px;
-    display: block;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    z-index: 2;
+  flex: 1;
+  border: white solid 1px;
+  border-radius: 50%;
+  background-color: #51515262;
+  padding: 15px;
+  display: block;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  z-index: 2;
 }
-.showMovie {
+.muteButtonDetailCard {
+  right: 0;
 }
