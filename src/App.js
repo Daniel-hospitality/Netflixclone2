@@ -4,6 +4,10 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Row from "./Row";
 import requests from "./requests";
+<<<<<<< HEAD
+=======
+
+>>>>>>> net04-feature_youtube_fullscreen
 import Backend from "./Backend";
 import Series from "./pages/Series";
 import Films from "./pages/Films";
@@ -13,12 +17,21 @@ import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner"
 import { FooterContainer } from "./footer/container/footer";
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> net04-feature_youtube_fullscreen
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> net04-feature_youtube_fullscreen
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Series" component={Series} />
@@ -45,6 +58,10 @@ function Home() {
   }, []);
   return (
     <div className="app">
+<<<<<<< HEAD
+=======
+     
+>>>>>>> net04-feature_youtube_fullscreen
       <Banner movie={movie}/>
       <div className="row-container">
         <Row

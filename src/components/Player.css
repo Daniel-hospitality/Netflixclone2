@@ -1,16 +1,19 @@
-#player-fs-exit-btn, #player-fs-mute-btn, #player-fs-play-btn {
+#player-fs-exit-btn,
+#player-fs-mute-btn,
+#player-fs-play-btn {
   position: absolute;
   padding: 1rem;
   pointer-events: all;
   background: none;
   outline: none;
   border: none;
-  color: #FFF;
+  color: #fff;
   font-size: 150%;
 }
 
-#player-fs-exit-btn, #player-fs-mute-btn {
-  right
+#player-fs-exit-btn,
+#player-fs-mute-btn {
+  right: 1rem;
 }
 
 #player-fs-exit-btn {
@@ -19,6 +22,7 @@
 
 #player-fs-mute-btn {
   bottom: 1rem;
+  left: 1rem;
 }
 
 .hidden {
