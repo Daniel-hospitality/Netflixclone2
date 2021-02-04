@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import Backend from "../Backend";
 import InfoButton from "./MoreInfoButton/InfoButton";
+import LineIcon from 'react-lineicons';
 import Player from "./Player";
 import "./Banner.css";
 
 function Banner() {
   const player = useRef(null);
   const [movie, setMovie] = useState();
+  const [muted, setMuted] = useState(true);
   
   useEffect(() => {
     async function fetchData() {
-      const response = await Backend.fetchMovies(122);
+      const response = await Backend.fetchMovies(155);
       setMovie(response.data);
     }
     fetchData();
@@ -22,6 +24,7 @@ function Banner() {
   
   const handleClickMute = () => {
     player.current.toggleMute();
+    muted ? setMuted(false) : setMuted(true);
   }
   
   return (
@@ -45,7 +48,7 @@ function Banner() {
           </button>
           <InfoButton className="banner_button" movie={movie} />
           <button className="banner_button_mute" onClick={handleClickMute}>
-          <i className="fas fa-volume-mute"></i>
+            <LineIcon name={muted ? "volume-mute" : "volume"}/>
           </button>
 
         </div>
