@@ -1,12 +1,13 @@
-import React, {useEffect, useRef, useState} from "react";
-import Player from "./Player";
+import React, { useState, useEffect } from "react";
 import InfoButton from "./MoreInfoButton/InfoButton";
 import Backend from "../Backend";
 import "./Banner.css";
- 
+import Player from "./Player";
 
 function Banner() {
+  const player = useRef(null);
   const [movie, setMovie] = useState();
+  
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchMovies(122);
@@ -14,8 +15,7 @@ function Banner() {
     }
     fetchData();
   }, []);
-  const player = useRef(null);
-  
+   
   const handleClickFullscreen = () => {
     player.current.enableFullscreen();
   };
@@ -23,12 +23,10 @@ function Banner() {
   const handleClickMute = () => {
     player.current.toggleMute();
   }
-
+  
   return (
     <header className="banner">
-        <button className="banner-mute-button" onClick={handleClickMute}>
-          <i class="fas fa-volume-mute"></i>
-        </button>
+       
       <div className="player-wrapper">
         <Player ref={player} movie={movie}/>
       </div>
@@ -41,9 +39,16 @@ function Banner() {
         <h1 className="banner_description">{movie?.overview}</h1>
         <div className="banner_buttons">
           <button className="banner_button" onClick={handleClickFullscreen}>
-            Play
+          <i className="fas fa-caret-right" />
+             &nbsp;&nbsp; Play
+
           </button>
-          <InfoButton movie={movie} />
+          <InfoButton className="banner_button" movie={props.movie} />
+          <button className="banner_button_mute" onClick={handleClickMute}>
+          <i className="fas fa-volume-mute"></i>
+          {/* <i class="fas fa-volume-off"></i> */}
+          </button>
+
         </div>
       </div>
       <div className="banner_fadeBottom" />
