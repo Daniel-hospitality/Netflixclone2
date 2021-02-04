@@ -1,6 +1,5 @@
-#player-fs-exit-btn, #player-fs-mute-btn {
+#player-fs-exit-btn, #player-fs-mute-btn, #player-fs-play-btn {
   position: absolute;
-  right: 1rem;
   padding: 1rem;
   pointer-events: all;
   background: none;
@@ -8,6 +7,10 @@
   border: none;
   color: #FFF;
   font-size: 150%;
+}
+
+#player-fs-exit-btn, #player-fs-mute-btn {
+  right
 }
 
 #player-fs-exit-btn {

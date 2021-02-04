@@ -36,15 +36,11 @@ function Player(props, ref) {
       if (screenfull.isEnabled) {
         screenfull.on('change', () => {
           screenfull.isFullscreen ? setMuted(false) : setMuted(true);
+          screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
         });
       }
     };
-    // const handleMouseMove = (event) => {
-    //   if (screenfull.isFullscreen) {
 
-    //     });
-    //   }
-    // };
     setTimeout(() => {
       setPlayVideo(true);
       setLight(true);
@@ -73,6 +69,10 @@ function Player(props, ref) {
     muted ? setMuted(false) : setMuted(true);
   }
 
+  const handlePause = () => {
+    playVideo ? setPlayVideo(false) : setPlayVideo(true);
+  }
+
   return (
     <div ref={playerWrapper}>
         <ReactPlayer
@@ -94,6 +94,10 @@ function Player(props, ref) {
 
         <button className={hidden} id="player-fs-mute-btn" onClick={handleMute}>
           <LineIcon name="volume-mute"/>
+        </button>
+
+        <button className={hidden} id="player-fs-play-btn" onClick={handlePause}>
+          <LineIcon name="play"/>
         </button>
     </div>
   );
