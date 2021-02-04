@@ -84,10 +84,7 @@ function InfoButton(props) {
                 Genres: {genres}
               </p>
             </div>
-            <div className="director_genre">
-              {" "}
-             
-            </div>
+           
           </div>
         </div>
       </div>
