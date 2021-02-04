@@ -11,16 +11,14 @@ function InfoButton(props) {
   };
   // const [stringOfGenres, setstringOfGenres] = useState("");
  
-  const returnGenres = () =>{
-   let genres= "";
-   let values= "";
-  for (let i = 0; i < props.movie?.genres.length; i++) {
-       genres = genres.concat(props.movie?.genres[i].name + ", ");
-        }              
-        values =  genres.slice(0, -2);
-    
-  return values;
-  }
+  const filterGenres = () => {
+    let values = [];
+    for (let i = 0; i < props.movie?.genres.length; i++) {
+      values.push(props.movie?.genres[i].name);
+      values.join();
+    }
+    return values;
+  } 
  
 
   const handleOnBlur = () => {
