@@ -93,11 +93,11 @@ function Player(props, ref) {
         </button>
 
         <button className={hidden} id="player-fs-mute-btn" onClick={handleMute}>
-          <LineIcon name="volume-mute"/>
+          <LineIcon name={muted ? "volume-mute" : "volume"}/>
         </button>
 
         <button className={hidden} id="player-fs-play-btn" onClick={handlePause}>
-          <LineIcon name="play"/>
+          <LineIcon name={playVideo ? "play" : "pause"}/>
         </button>
     </div>
   );
