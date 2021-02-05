@@ -33,13 +33,14 @@ function Banner() {
       <div className="player-wrapper">
         <Player ref={player} movie={movie}/>
       </div>
+      <div className="banner_fadeBottom1" /> 
       <div className="banner_contents">
         <img
           className="banner_movielogo"
           src={movie?.logoUrl}
           alt={movie?.title + "logo"}
         /> 
-        <h1 className="banner_description">{movie?.overview}</h1>
+        <p className="banner_description">{movie?.overview}</p>
         <div className="banner_buttons">
           <button className="banner_button" onClick={handleClickFullscreen}>
           <i className="fas fa-caret-right" />
@@ -49,9 +50,11 @@ function Banner() {
           <InfoButton className="banner_button" movie={movie} />
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
-          </button>
 
+          </button>
+          
         </div>
+        
       </div>
       <div className="banner_fadeBottom" />
     </header>

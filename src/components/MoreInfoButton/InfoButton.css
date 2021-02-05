@@ -91,7 +91,7 @@
 .hidden {
   display: none;
 }
-.iconsLikes,
+.iconsLikes >
 i {
   font-size: 150%;
   display: flex;
