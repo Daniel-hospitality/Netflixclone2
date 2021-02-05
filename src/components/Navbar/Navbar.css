@@ -7,7 +7,7 @@
   height: 3.75rem;
   background-color: rgba(0, 0, 0, 0.05);
   color: white;
-  z-index: 2;
+  z-index: 3;
 
   transition-timing-function: ease-in;
   transition: all 0.5s;
