@@ -23,11 +23,11 @@ function InfoButton(props) {
     setshowMovie(false);
   };
 
-  const handlePlayPause = () => {
-    if (play === true) {
-      setPlay(false);
-    }
-  };
+  // const handlePlayPause = () => {
+  //   if (play === true) {
+  //     setPlay(false);
+  //   }
+  // };
 
   return (
     <div>
