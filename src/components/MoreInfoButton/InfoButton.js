@@ -5,7 +5,7 @@ import "./InfoButton.css";
 function InfoButton(props) {
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
-  const [play, setPlay] = useState(true);
+  // const [play, setPlay] = useState(true);
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
@@ -46,7 +46,7 @@ function InfoButton(props) {
             <div>
               <ReactPlayer
                 url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={play}
+                playing={true}
                 muted={true}
                 controls={false}
                 loop={true}

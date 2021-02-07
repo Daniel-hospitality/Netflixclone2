@@ -203,10 +203,10 @@
   padding-right: 2rem;
   /* margin-right: 1rem; */
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: -10rem;
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 1rem;
-  margin-left: 5%;
+  margin-left: 7%;
   margin-top: -3.5rem;
 }
 @media only screen and (min-width: 576px) {
@@ -222,7 +222,7 @@
   display: flex;
   flex-direction: inline;
   vertical-align: middle;
-  margin-top: -4.5rem;
+  margin-top: -5.1rem;
   width:100px;
   height: fit-content;
   margin-left:40%;
@@ -239,7 +239,7 @@
 .plus-button i {
   position: absolute;
   flex-direction: inline;
-  margin-top: -3.4rem;
+  margin-top: -3.5rem;
   color: rgba(255, 255, 255, 0.541);
   margin-right: 10%;
   margin-left:-5%;
@@ -262,7 +262,7 @@
 .thumbsUp {
   position: absolute;
   flex-direction: inline;
-  margin-top:1rem;
+  margin-top:1.5rem;
   color: rgba(255, 255, 255, 0.541);
   margin-right: 10%;
   margin-left:-158%;
@@ -279,7 +279,7 @@
 .thumbsDown {
   position: absolute;
   flex-direction: inline;
-  margin-top:1rem;
+  margin-top:1.5rem;
   color: rgba(255, 255, 255, 0.541);
   margin-right: 10%;
   margin-left:-69%;
@@ -299,6 +299,8 @@
   margin-left: 616%;
   border: transparent solid 1px;
   color: rgba(255, 255, 255, 0.541);
+ padding-top:0.3rem;
+  
 }
 .mute-button :hover {
   color: white;
