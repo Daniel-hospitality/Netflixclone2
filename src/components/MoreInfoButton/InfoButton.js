@@ -5,6 +5,7 @@ import "./InfoButton.css";
 function InfoButton(props) {
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
+  const [play, setPlay] = useState(true);
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
@@ -20,6 +21,12 @@ function InfoButton(props) {
 
   const handleOnBlur = () => {
     setshowMovie(false);
+  };
+
+  const handlePlayPause = () => {
+    if (play === true) {
+      setPlay(false);
+    }
   };
 
   return (
@@ -39,7 +46,7 @@ function InfoButton(props) {
             <div>
               <ReactPlayer
                 url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={true}
+                playing={play}
                 muted={true}
                 controls={false}
                 loop={true}
@@ -52,19 +59,25 @@ function InfoButton(props) {
               />
             </div>
 
-            <div className="icons-miniplayer-container">
-              <button className="playButtonDetailCard ">
-                <i className="fas fa-caret-right" /> Play{" "}
-              </button>
-              <div className="plus-button">
-                <i className="fas fa-plus like_styling" />
+            <div className="playbutton">
+                <button className="playButtonDetailCard ">
+                  <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
+                </button>
+            </div>
+            
+
+            <div className="plus-button">
+                <i class="lni lni-plus"></i>
               </div>
 
+
+            <div className="icons-miniplayer-container">
+              
               <div className="thumbsUp">
-                <i className="far fa-thumbs-up like_styling" />
+              <i class="lni lni-thumbs-up"></i>
               </div>
               <div className="thumbsDown">
-                <i className="far fa-thumbs-down like_styling" />
+              <i class="lni lni-thumbs-down"></i>
               </div>
 
               <div className="mute-button">
@@ -73,6 +86,10 @@ function InfoButton(props) {
                   id="mute"
                 />
               </div>
+              {/* <div
+
+                  onClick={handleonStop}
+                ></div> */}
               <div className="closeMovie">
                 <i className="fas fa-times"></i>
               </div>
@@ -85,10 +102,14 @@ function InfoButton(props) {
                   Genres: &nbsp; <h5>{genres}</h5>
                 </div>
                 <div className="movieDirector">
-                  <p>Director: &nbsp; {props.movie?.director}</p>
+                  <p>
+                    Director:&nbsp; <h5>{props.movie?.director}</h5>
+                  </p>
                 </div>
                 <div className="playTime">
-                  <p>Runtime: &nbsp;  <h5>{props.movie?.runtime}</h5> min </p>{" "}
+                  <p>
+                    Runtime: &nbsp; <h5>{props.movie?.runtime}</h5> min{" "}
+                  </p>{" "}
                 </div>
               </div>
               <div className="movieOverview">
