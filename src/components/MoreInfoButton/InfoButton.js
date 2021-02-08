@@ -3,19 +3,16 @@ import ReactPlayer from "react-player/youtube";
 import LineIcon from 'react-lineicons';
 import screenfull from "screenfull";
 import "./InfoButton.css";
-
 function InfoButton(props) {
   const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
   };
-
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
@@ -23,32 +20,26 @@ function InfoButton(props) {
     }
     return values.join(", ");
   };
-
   const handleOnBlur = () => {
     setshowMovie(false);
   };
-
   const handlePlayPause = () => {
     if (play === true) {
       setPlay(false);
     }
   };
-
   const handleToggleMuted = () => {
     muted ? setMuted(false) : setMuted(true);
   }
-
   const handleFullscreen = () => {
     if (screenfull.isEnabled) {
       screenfull.request(playerWrapper.current);
       handleToggleMuted();
     } 
   };
-
   const handleClose = () => {
     setshowMovie(false);
   }
-
   return (
     <div>
       <div
@@ -128,5 +119,4 @@ function InfoButton(props) {
     </div>
   );
 }
-
 export default InfoButton;

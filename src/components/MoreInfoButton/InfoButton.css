@@ -56,11 +56,9 @@
     margin-left: calc((100vw - 850px) / 2);
   }
 }
-
 .hidden {
   display: none;
 }
-
 .fa-caret-right {
   position: relative!;
 }
@@ -100,10 +98,6 @@
   margin-left: -3rem;
   word-break: break-word;
 }
-
-
-
-
 @media only screen and (min-width: 576px) {
   .movieJarFile {
     width: 100vw;
@@ -114,7 +108,6 @@
     width: 74vw;
   }
 }
-
 @media only screen and (min-width: 992px) {
   .movieJarFile {
     width: 87vw;
@@ -125,7 +118,6 @@
     width: 71.5vw;
   }
 }
-
 .movieOverview {
   font-size: 16px;
   margin-left: 6rem;
@@ -139,12 +131,10 @@
     margin-left: 4%;
   }
 }
-
 .genresMovies {
   display: inline-flex;
   color: silver;
 }
-
 .movieDirector h5 {
   display: inline-flex;
   color: silver;
@@ -153,7 +143,6 @@
   font-weight: bold;
   line-height: 20px;
 }
-
 .movieDirector {
   color: silver;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -164,11 +153,9 @@
   color: silver;
   font-weight: bold;
 }
-
 .playTime {
   color: silver;
 }
-
 .playButtonDetailCard {
   position: absolute;
   cursor: pointer;
@@ -187,26 +174,22 @@
   margin-left: 7%;
   margin-top: -3.5rem;
 }
-
 .playButtonDetailCard:hover {
   transition: all 1s ease-in-out;
   color: #000;
   background-color: #fff;
 }
-
 @media only screen and (min-width: 576px) {
   .playButtonDetailCard {
     margin-left: 3%;
   }
 }
-
 @media only screen and (min-width: 576px) {
   .icons-miniplayer-container {
     margin-left: 40%;
     width: 65px;
   }
 }
-
 .icons-container {
   display: flex;
   position: absolute;
@@ -218,13 +201,11 @@
   bottom: 0.625rem;
   left: 1rem;
 }
-
 @media only screen and (min-width: 576px) {
   .icons-container {
     margin-left: 25%;
   }
 }
-
 .icon-btn {
   pointer-events: all;
   color: rgba(255, 255, 255, 0.541);
@@ -234,35 +215,29 @@
   border-radius: 54%;
   background-color: rgba(51, 51, 51, 0.5);
 }
-
 .icon-btn:hover {
   color: white;
   border: 1px solid #fff;
 }
-
 .icon-plus {
   color: red;
 }
-
 @media screen and (min-width: 576px) {
   .plus-button {
     width: 550px;
     margin-left: 7%;
   }
 }
-
 @media screen and (min-width: 576px) {
   .thumbsUp {
     margin-left: -20%;
   }
 }
-
 @media screen and (min-width: 576px) {
   .thumbsDown {
     margin-left: 58%;
   }
 }
-
 .mute-button {
   position: absolute;
   bottom: 1rem;
@@ -272,43 +247,35 @@
   padding: 0.3rem;
   font-size: 140%;
 }
-
 .mute-button :hover {
   color: white;
 }
-
 @media screen and (min-width: 576px) {
   .mute-button {
     margin-left: 17rem;
   }
 }
-
 .showMovie {
   position: relative;
 }
-
 .playerWrapper {
   width: 100%;
   height: 500px;
   pointer-events: none;
 }
-
 .closeMovie {
   position: absolute;
   top: 0.625rem;
   right: 0.625rem;
   font-size: 140%;
 }
-
 .closeMovie :hover {
   color: red;
 }
-
 @media screen and (min-width: 576px) {
   .closeMovie {
     margin-left: 7rem;
   }
 }
-
 @media screen and (min-width: 1200px) {
 }
