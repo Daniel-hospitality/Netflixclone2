@@ -3,6 +3,7 @@ import ReactPlayer from "react-player/youtube";
 import LineIcon from 'react-lineicons';
 import screenfull from "screenfull";
 import "./InfoButton.css";
+
 function InfoButton(props) {
   const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
