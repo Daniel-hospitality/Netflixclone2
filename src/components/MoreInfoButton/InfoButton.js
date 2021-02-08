@@ -62,7 +62,7 @@ function InfoButton(props) {
       <div className="centerMoreInfo">
         <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
           <div className="showMovie">
-            <div className="closeMovie">
+            <div className="closeMovie" onClick={handleClose}>
               <LineIcon name="close"/>
             </div>
             <div className="mute-button" onClick={handleToggleMuted}>
