@@ -140,6 +140,7 @@
   display: inline-flex;
   color: silver;
 }
+
 .movieDirector h5 {
   display: inline-flex;
   color: silver;
@@ -148,6 +149,7 @@
   font-weight: bold;
   line-height: 20px;
 }
+
 .movieDirector {
   color: silver;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -158,9 +160,11 @@
   color: silver;
   font-weight: bold;
 }
+
 .playTime {
   color: silver;
 }
+
 .playButtonDetailCard {
   position: absolute;
   cursor: pointer;
@@ -210,6 +214,7 @@
   bottom: 0.625rem;
   left: 1rem;
 }
+
 @media only screen and (min-width: 576px) {
   .icons-container {
     margin-left: 25%;
@@ -281,6 +286,7 @@
 .playerWrapper {
   width: 100%;
   height: 500px;
+  pointer-events: none;
 }
 
 .closeMovie {
