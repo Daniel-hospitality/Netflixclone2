@@ -44,6 +44,10 @@ function InfoButton(props) {
     } 
   };
 
+  const handleClose = () => {
+    setshowMovie(false);
+  }
+
   return (
     <div>
       <div
