@@ -116,7 +116,7 @@ function InfoButton(props) {
                 <p>{props.movie?.overview}</p>
               </div>
             </div>
-            <div className="director_genre"> </div>
+            <div className="director_genre"></div>
           </div>
         </div>
       </div>
