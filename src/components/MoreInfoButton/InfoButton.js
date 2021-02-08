@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
+import LineIcon from 'react-lineicons';
+import screenfull from "screenfull";
 import "./InfoButton.css";
-
 function InfoButton(props) {
+  const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
-  // const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(true);
+  const [muted, setMuted] = useState(true);
+
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
@@ -23,11 +27,22 @@ function InfoButton(props) {
     setshowMovie(false);
   };
 
-  // const handlePlayPause = () => {
-  //   if (play === true) {
-  //     setPlay(false);
-  //   }
-  // };
+  const handlePlayPause = () => {
+    if (play === true) {
+      setPlay(false);
+    }
+  };
+
+  const handleToggleMuted = () => {
+    muted ? setMuted(false) : setMuted(true);
+  }
+
+  const handleFullscreen = () => {
+    if (screenfull.isEnabled) {
+      screenfull.request(playerWrapper.current);
+      handleToggleMuted();
+    } 
+  };
 
   return (
     <div>
@@ -43,55 +58,40 @@ function InfoButton(props) {
       <div className="centerMoreInfo">
         <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
           <div className="showMovie">
-            <div>
-              <ReactPlayer
-                url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={true}
-                muted={true}
-                controls={false}
-                loop={true}
-                width="cover"
-                height="500px"
-                onReady={() => console.log("onReady callback")}
-                onStart={() => console.log(" onStart callback")}
-                onPause={() => console.log("onPause callback")}
-                onEnded={() => console.log(" onEnded callback")}
+            <div className="closeMovie">
+              <LineIcon name="close"/>
+            </div>
+            <div className="mute-button" onClick={handleToggleMuted}>
+              <i
+                className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
+                id="mute"
               />
             </div>
-
-            <div className="playbutton">
-                <button className="playButtonDetailCard ">
-                  <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
-                </button>
+            <div className="playerWrapper" ref={playerWrapper}>
+              <ReactPlayer
+                url={`https://youtu.be/${props.movie?.youtubeKey}`}
+                playing={play}
+                muted={muted}
+                controls={false}
+                loop={true}
+                width="100%"
+                height="100%"
+                />
             </div>
-            
-
-            <div className="plus-button">
+            <div className="playbutton">
+              <button className="playButtonDetailCard" onClick={handleFullscreen}>
+                <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
+              </button>
+            </div>
+            <div className="icons-container">
+              <div className="icon-btn" id="icon-plus">
                 <i class="lni lni-plus"></i>
               </div>
-
-
-            <div className="icons-miniplayer-container">
-              
-              <div className="thumbsUp">
-              <i class="lni lni-thumbs-up"></i>
+              <div className="icon-btn">
+                <i class="lni lni-thumbs-up"></i>
               </div>
-              <div className="thumbsDown">
-              <i class="lni lni-thumbs-down"></i>
-              </div>
-
-              <div className="mute-button">
-                <i
-                  className="fas fa-volume-mute like_styling muteButtonDetailCard"
-                  id="mute"
-                />
-              </div>
-              {/* <div
-
-                  onClick={handleonStop}
-                ></div> */}
-              <div className="closeMovie">
-                <i className="fas fa-times"></i>
+              <div className="icon-btn">
+                <i class="lni lni-thumbs-down"></i>
               </div>
             </div>
           </div>
@@ -123,4 +123,5 @@ function InfoButton(props) {
     </div>
   );
 }
+
 export default InfoButton;
