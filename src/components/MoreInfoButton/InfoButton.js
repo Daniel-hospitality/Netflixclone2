@@ -9,7 +9,6 @@ function InfoButton(props) {
   const [genres, setGenres] = useState(null);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
@@ -24,30 +23,23 @@ function InfoButton(props) {
   const handleOnBlur = () => {
     setshowMovie(false);
   };
-  const toggleMute = () => {
+  const handlePlayPause = () => {
+    if (play === true) {
+      setPlay(false);
+    }
+  };
+  const handleToggleMuted = () => {
     muted ? setMuted(false) : setMuted(true);
-  };
-
-  const handleClickClose = () => {
-    setshowMovie(false);
-  };
-
-  const handleClickPlay = () => {
-    setPlay(true);
-  };
-
+  }
   const handleFullscreen = () => {
     if (screenfull.isEnabled) {
       screenfull.request(playerWrapper.current);
-    }
+      handleToggleMuted();
+    } 
   };
-
-  // const handlePlayPause = () => {
-  //   if (play === true) {
-  //     setPlay(false);
-  //   }
-  // };
-
+  const handleClose = () => {
+    setshowMovie(false);
+  }
   return (
     <div>
       <div
@@ -62,7 +54,16 @@ function InfoButton(props) {
       <div className="centerMoreInfo">
         <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
           <div className="showMovie">
-            <div ref={playerWrapper} className="movie_trailer_container">
+            <div className="closeMovie" onClick={handleClose}>
+              <LineIcon name="close"/>
+            </div>
+            <div className="mute-button" onClick={handleToggleMuted}>
+              <i
+                className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
+                id="mute"
+              />
+            </div>
+            <div className="playerWrapper" ref={playerWrapper}>
               <ReactPlayer
                 url={`https://youtu.be/${props.movie?.youtubeKey}`}
                 playing={play}
@@ -71,39 +72,22 @@ function InfoButton(props) {
                 loop={true}
                 width="100%"
                 height="100%"
-              />
+                />
             </div>
-            <button
-              onClick={handleFullscreen}
-              className="playButtonDetailCard " >
-
-              {/* {play? setPlay(false) : setPlay(true)} */}
-              <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
-            </button>
-
-            <div className="plus-button">
-              <i class="lni lni-plus"></i>
+            <div className="playbutton">
+              <button className="playButtonDetailCard" onClick={handleFullscreen}>
+                <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
+              </button>
             </div>
-
-            <div className="icons-miniplayer-container">
-              <div className="thumbsUp">
+            <div className="icons-container">
+              <div className="icon-btn" id="icon-plus">
+                <i class="lni lni-plus"></i>
+              </div>
+              <div className="icon-btn">
                 <i class="lni lni-thumbs-up"></i>
               </div>
-              <div className="thumbsDown">
+              <div className="icon-btn">
                 <i class="lni lni-thumbs-down"></i>
-              </div>
-
-              <div onClick={toggleMute}
-                className="mute-button">
-                <i className={`${muted ? "fas fa-volume-mute" : "fas fa-volume-up" }  "like_styling muteButtonDetailCard"` }
-                  id="mute"
-/>
-              </div>
-              <div
-                onClick={handleClickClose}
-                className={`${showMovie ? "closeMovie" : "hidden"}`}
-              >
-                <i className="fas fa-times"></i>
               </div>
             </div>
           </div>
