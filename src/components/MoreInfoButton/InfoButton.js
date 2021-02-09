@@ -1,20 +1,19 @@
 import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
+import LineIcon from 'react-lineicons';
 import screenfull from "screenfull";
 import "./InfoButton.css";
-
 function InfoButton(props) {
+  const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-  const playerWrapper = useRef(null);
 
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
   };
-
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
@@ -22,7 +21,6 @@ function InfoButton(props) {
     }
     return values.join(", ");
   };
-
   const handleOnBlur = () => {
     setshowMovie(false);
   };
@@ -130,7 +128,7 @@ function InfoButton(props) {
                 <p>{props.movie?.overview}</p>
               </div>
             </div>
-            <div className="director_genre"> </div>
+            <div className="director_genre"></div>
           </div>
         </div>
       </div>

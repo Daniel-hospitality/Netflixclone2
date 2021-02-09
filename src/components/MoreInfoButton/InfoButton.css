@@ -13,7 +13,6 @@
   background-color: rgba(51, 51, 51, 0.5);
   padding-bottom: 1rem;
 }
-
 .style-btn:hover {
   color: #000;
   background-color: #e6e6e6;
@@ -35,7 +34,6 @@
   top: 35px;
   left: 0;
 }
-
 .blurMoreDetailsCard {
   position: fixed;
   top: 0;
@@ -46,25 +44,29 @@
   z-index: 5;
   transition: background-color 2s linear;
 }
-
 @media screen and (min-width: 576px) {
   .moreInfo {
     width: 550px;
     margin-left: calc((100vw - 550px) / 2);
   }
 }
-
 @media screen and (min-width: 992px) {
   .moreInfo {
     width: 850px;
     margin-left: calc((100vw - 850px) / 2);
   }
 }
+<<<<<<< HEAD
 
 .hidden {
   display: none;
 }
 
+=======
+.hidden {
+  display: none;
+}
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 .fa-caret-right {
   position: relative!;
 }
@@ -76,9 +78,15 @@
 }
 @media only screen and (min-width: 576px) {
   .container_movie_info {
-    height: 38vh;
+    height: 65vh;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .container_movie_info {
+    height: 35vh;
+  }
+}
+<<<<<<< HEAD
 
 .movie_trailer_container {
   height: 500px;
@@ -99,6 +107,19 @@
   }
 }
 
+=======
+/* @media screen and (min-width: 768px ;) {
+}
+@media screen and (min-width: 992px ;) {
+}
+@media only screen and (min-width: 1200px) {
+;
+}
+} */
+*/ .runTime_overview {
+  width: 60%;
+}
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 .movieJarFile {
   text-align: right;
   width: 43.6vw;
@@ -108,11 +129,12 @@
   margin-left: -3rem;
   word-break: break-word;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 576px) {
   .movieJarFile {
     width: 100vw;
   }
 }
+<<<<<<< HEAD
 
 @media screen and (min-width: 768px) {
   .movieJarFile {
@@ -133,6 +155,23 @@
   }
 }
 
+=======
+@media only screen and (min-width: 768px) {
+  .movieJarFile {
+    width: 74vw;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .movieJarFile {
+    width: 87vw;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .movieJarFile {
+    width: 71.5vw;
+  }
+}
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 .movieOverview {
   font-size: 16px;
   margin-left: 6rem;
@@ -144,6 +183,7 @@
 @media only screen and (min-width: 576px) {
   .movieOverview {
     margin-left: 4%;
+<<<<<<< HEAD
   }
 }
 
@@ -151,26 +191,14 @@
   .movieOverview {
     margin-left: 2rem;
     width: 80%;
+=======
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
   }
 }
-
-.like_styling {
-  display: flex;
-  border: rgba(255, 255, 255, 0.315) solid 1px;
-  border-radius: 50%;
-  background-color: #51515262;
-  padding: 15px;
-  display: block;
-  margin-right: 1rem;
-  margin-top: 1rem;
-  z-index: 2;
-}
-
 .genresMovies {
   display: inline-flex;
   color: silver;
 }
-
 .movieDirector h5 {
   display: inline-flex;
   color: silver;
@@ -192,7 +220,6 @@
 .playTime {
   color: silver;
 }
-
 .playButtonDetailCard {
   position: absolute;
   cursor: pointer;
@@ -211,6 +238,7 @@
   margin-left: 7%;
   margin-top: -3.5rem;
 }
+<<<<<<< HEAD
 
 @media only screen and (min-width: 576px) {
   .playButtonDetailCard {
@@ -234,12 +262,25 @@
   margin-left: 40%;
 }
 
+=======
+.playButtonDetailCard:hover {
+  transition: all 1s ease-in-out;
+  color: #000;
+  background-color: #fff;
+}
+@media only screen and (min-width: 576px) {
+  .playButtonDetailCard {
+    margin-left: 3%;
+  }
+}
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 @media only screen and (min-width: 576px) {
   .icons-miniplayer-container {
     margin-left: 40%;
     width: 65px;
   }
 }
+<<<<<<< HEAD
 
 .plus-button i {
   position: absolute;
@@ -257,11 +298,25 @@
 
 .plus-button {
   padding-left: 26%;
+=======
+.icons-container {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 10rem;
+  margin-left: 16%;
+  bottom: 0.625rem;
+  left: 1rem;
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 }
-
-.plus-button :hover {
-  color: red;
+@media only screen and (min-width: 576px) {
+  .icons-container {
+    margin-left: 25%;
+  }
 }
+<<<<<<< HEAD
 
 @media screen and (min-width: 576px) {
   .plus-button {
@@ -283,14 +338,20 @@
   color: rgba(255, 255, 255, 0.541);
   margin-right: 10%;
   margin-left: -158%;
+=======
+.icon-btn {
+  pointer-events: all;
+  color: rgba(255, 255, 255, 0.541);
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
   padding: 12.5px;
   font-size: 17.5px;
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 54%;
   background-color: rgba(51, 51, 51, 0.5);
 }
-.thumbsUp :hover {
+.icon-btn:hover {
   color: white;
+<<<<<<< HEAD
 }
 
 @media screen and (min-width: 576px) {
@@ -317,10 +378,30 @@
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 54%;
   background-color: rgba(51, 51, 51, 0.5);
+=======
+  border: 1px solid #fff;
 }
-.thumbsDown :hover {
-  color: white;
+.icon-plus {
+  color: red;
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 }
+@media screen and (min-width: 576px) {
+  .plus-button {
+    width: 550px;
+    margin-left: 7%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .thumbsUp {
+    margin-left: -20%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .thumbsDown {
+    margin-left: 58%;
+  }
+}
+<<<<<<< HEAD
 
 @media screen and (min-width: 576px) {
   .thumbsDown {
@@ -334,22 +415,34 @@
   }
 }
 
+=======
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 .mute-button {
-  vertical-align: right;
-  margin-left: 616%;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
   border: transparent solid 1px;
   color: rgba(255, 255, 255, 0.541);
+<<<<<<< HEAD
   padding-top: 0.3rem;
+=======
+  padding: 0.3rem;
+  font-size: 140%;
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 }
 .mute-button :hover {
   color: white;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 @media screen and (min-width: 576px) {
   .mute-button {
     margin-left: 17rem;
   }
 }
+<<<<<<< HEAD
 
 @media screen and (min-width: 992px) {
   .mute-button {
@@ -361,18 +454,35 @@
   position: fixed;
   top: 6%;
   left: 67%;
+=======
+.showMovie {
+  position: relative;
+}
+.playerWrapper {
+  width: 100%;
+  height: 500px;
+  pointer-events: none;
+}
+.closeMovie {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
   font-size: 140%;
 }
-
 .closeMovie :hover {
   color: red;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 @media screen and (min-width: 576px) {
   .closeMovie {
     margin-left: 7rem;
   }
 }
+<<<<<<< HEAD
 
 @media screen and (min-width: 768px) {
   .closeMovie {
@@ -390,4 +500,7 @@
   .closeMovie {
     margin-left: 2.5rem;
   }
+=======
+@media screen and (min-width: 1200px) {
+>>>>>>> 92599c7adb43c85309610da1883cc6c477a4e4a7
 }
