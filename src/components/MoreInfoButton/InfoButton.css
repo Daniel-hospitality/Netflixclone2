@@ -84,11 +84,7 @@
   align-content: space-around;
   height: 43vh;
 }
-@media only screen and (max-width: 575px) {
-  .container_movie_info  {
-    height:100vh;
-  }
-}
+
 @media only screen and (min-width: 576px) {
   .container_movie_info {
     height: 65vh;
@@ -99,15 +95,8 @@
     height: 35vh;
   }
 }
-/* @media screen and (min-width: 768px ;) {
-}
-@media screen and (min-width: 992px ;) {
-}
-@media only screen and (min-width: 1200px) {
-;
-}
-} */
-*/ .runTime_overview {
+
+ .runTime_overview {
   width: 60%;
 }
 
@@ -120,8 +109,7 @@
   line-height: 20px;
   margin: 1.3em;
   margin-left: 18rem;
- 
-  /* word-break: break-word; */
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -153,7 +141,7 @@
   }
 }
 .movieOverview {
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 6rem;
   color: silver;
   width: 55%;
@@ -212,7 +200,6 @@
   border-radius: 0.2vw;
   padding-left: 2rem;
   padding-right: 2rem;
-  /* margin-right: 1rem; */
   padding-top: 1rem;
   margin-top: -10rem;
   background-color: rgba(51, 51, 51, 0.5);
