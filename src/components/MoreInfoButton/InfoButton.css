@@ -90,27 +90,29 @@
   width: 60%;
 }
 .movieJarFile {
+  position: relative;
   text-align: right;
   width: 43.6vw;
   font-size: 14px;
   line-height: 20px;
   margin: 1.3em;
-  margin-left: 17rem;
+  margin-left: 18rem;
+ 
   word-break: break-word;
 }
 @media only screen and (min-width: 576px) {
   .movieJarFile {
-    width: 100vw;
+    width:40vw;
   }
 }
 @media only screen and (min-width: 768px) {
   .movieJarFile {
-    width: 74vw;
+    width: 32vw;
   }
 }
 @media only screen and (min-width: 992px) {
   .movieJarFile {
-    width: 87vw;
+    width:53vw;
   }
 }
 @media only screen and (min-width: 1200px) {
