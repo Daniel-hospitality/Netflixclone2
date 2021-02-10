@@ -42,13 +42,11 @@
   }
 }
 @media screen and (min-width: 992px) {
-.moreInfo {
-  width: 850px;
-  margin-left: calc((100vw - 850px) / 2);
+  .moreInfo {
+    width: 850px;
+    margin-left: calc((100vw - 850px) / 2);
+  }
 }
-}
-
-
 
 .blurMoreDetailsCard {
   position: fixed;
@@ -96,10 +94,9 @@
   }
 }
 
- .runTime_overview {
+.runTime_overview {
   width: 60%;
 }
-
 
 .movieJarFile {
   position: relative;
@@ -109,20 +106,19 @@
   line-height: 20px;
   margin: 1.3em;
   margin-left: 18rem;
-
 }
 
 @media only screen and (max-width: 575px) {
-  .movieJarFile  {
-  top:0;
-  margin:0;
-  width:90vw;
-  margin-bottom:1rem;
+  .movieJarFile {
+    top: 0;
+    margin: 0;
+    width: 90vw;
+    margin-bottom: 1rem;
   }
 }
 @media only screen and (min-width: 576px) {
   .movieJarFile {
-    width:40vw;
+    width: 40vw;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -132,12 +128,14 @@
 }
 @media only screen and (min-width: 992px) {
   .movieJarFile {
-    width:53vw;
+    width: 53vw;
   }
 }
 @media only screen and (min-width: 1200px) {
   .movieJarFile {
-    width: 45vw;
+    width: 50%;
+    margin-left: 0;
+    right:0;
   }
 }
 .movieOverview {
@@ -150,13 +148,13 @@
 }
 
 @media only screen and (max-width: 575px) {
-  .movieOverview  {
-  position:relative;
-  top:0;
-  left:5vw;
-  margin-left:0;
-  width:75vw;
-  margin-bottom:1rem;
+  .movieOverview {
+    position: relative;
+    top: 0;
+    left: 5vw;
+    margin-left: 0;
+    width: 75vw;
+    margin-bottom: 1rem;
   }
 }
 
@@ -209,7 +207,7 @@
 }
 @media only screen and (max-width: 575px) {
   .playButtonDetailCard {
-  margin-left:0.5%;
+    margin-left: 0.5%;
   }
 }
 .playButtonDetailCard:hover {
@@ -222,12 +220,11 @@
     margin-left: 3%;
   }
 }
-@media only screen and (min-width: 576px) {
-  .icons-miniplayer-container {
+/* .icons-miniplayer-container {
     margin-left: 40%;
     width: 65px;
-  }
-}
+  } */
+
 .icons-container {
   display: flex;
   position: absolute;
@@ -241,7 +238,7 @@
 }
 @media only screen and (max-width: 575px) {
   .icons-container {
-  margin-left:33%;
+    margin-left: 33%;
   }
 }
 
@@ -252,7 +249,7 @@
 }
 @media only screen and (min-width: 992px) {
   .icons-container {
-    margin-left:8.5rem;
+    margin-left: 8.5rem;
   }
 }
 .icon-btn {
