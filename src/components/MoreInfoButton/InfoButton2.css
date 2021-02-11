@@ -213,7 +213,6 @@
     }
     .playButtonDetailCard {
         margin-left: 0.5%;
-        font-size: ;
     }
     .icons-container {
         margin-left: 33%;
@@ -311,10 +310,10 @@
       margin-left: 135px;
     }
     
-    .movieJarFile {
-      /* width: 65vw; */
+    /* .movieJarFile {
+      width: 65vw;
       
-    }
+    } */
     .container_movie_info {
       height: 35vh;
     }
