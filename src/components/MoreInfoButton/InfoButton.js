@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import LineIcon from 'react-lineicons';
 import screenfull from "screenfull";
-import "./InfoButton.css";
+import "./InfoButton2.css";
 
 function InfoButton(props) {
   const playerWrapper = useRef(null);
@@ -82,13 +82,13 @@ function InfoButton(props) {
             </div>
             <div className="icons-container">
               <div className="icon-btn" id="icon-plus">
-                <i class="lni lni-plus"></i>
+                <i className="lni lni-plus"></i>
               </div>
               <div className="icon-btn">
-                <i class="lni lni-thumbs-up"></i>
+                <i className="lni lni-thumbs-up"></i>
               </div>
               <div className="icon-btn">
-                <i class="lni lni-thumbs-down"></i>
+                <i className="lni lni-thumbs-down"></i>
               </div>
             </div>
           </div>
