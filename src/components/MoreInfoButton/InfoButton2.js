@@ -1,33 +1,34 @@
-import React, { useRef, useState, useEffect } from "react";
-import ReactPlayer from "react-player/youtube";
+import React, { useRef, useEffect, useState } from "react";
+import Player from "../Player";
+import Backend from "../../Backend";
+
 import LineIcon from 'react-lineicons';
-import screenfull from "screenfull";
 import "./InfoButton2.css";
-import "../Player.css";
 
 function InfoButton(props) {
+  const player = useRef(null);
+  const [movie, setMovie] = useState();
   const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-  const [hidden, setHidden] = useState('hidden');
-
-  // useEffect(() => {
-  //   const toggleScreenfull = () => {
-  //     if (screenfull.isEnabled) {
-  //       screenfull.on('change', () => {
-  //         screenfull.isFullscreen ? setMuted(false) : setMuted(true);
-  //         screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
-  //       });
-  //     }
-  //   };
-  // }, []);
-  
+  const [light, setLight] = useState(false);
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await Backend.fetchMovies(155);
+      setMovie(response.data);
+    }
+    fetchData();
+  }, []);
+
+ 
+  console.log(light);
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
@@ -39,31 +40,19 @@ function InfoButton(props) {
     setshowMovie(false);
   };
 
-  const handlePause = () => {
-    play ? setPlay(false) : setPlay(true);
-  }
-
   const handleToggleMuted = () => {
     muted ? setMuted(false) : setMuted(true);
   }
-  const handleFullscreen = () => {
-    if (screenfull.isEnabled) {
-      screenfull.request(playerWrapper.current);
-     /* handleToggleMuted(); */
-      screenfull.on('change', () => {
-        screenfull.isFullscreen ? setMuted(false) : setMuted(true);
-        screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
-      });
-    }
-  };
+
+
+     const handleClickFullscreen = () => {
+     player.current.enableFullscreen();
+    };
+
   
   const handleClose = () => {
     setshowMovie(false);
   }
-  function handleExit(){
-    screenfull.exit();
-  }
-
   return (
     <div>
       <div
@@ -87,30 +76,11 @@ function InfoButton(props) {
                 id="mute"
               />
             </div>
-            <div className="playerWrapper" ref={playerWrapper}>
-              <ReactPlayer
-                url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={play}
-                muted={muted}
-                controls={false}
-                loop={true}
-                width="100%"
-                height="100%"
-                />
-                <button className={hidden} id="player-fs-exit-btn" onClick={handleExit}>
-                 <LineIcon name="close"/>
-                </button>
-
-                <button className={hidden} id="player-fs-mute-btn" onClick={handleToggleMuted}>
-                 <LineIcon name={muted ? "volume-mute" : "volume"}/>
-                </button>
-
-                <button className={hidden} id="player-fs-play-btn" onClick={handlePause}>
-                  <LineIcon name={play ? "play" : "pause"}/>
-                </button>
+            <div className="playerWrapper" >
+                <Player ref={player} movie={movie} light={false}/>
             </div>
             <div className="playbutton">
-              <button className="playButtonDetailCard" onClick={handleFullscreen}>
+              <button className="playButtonDetailCard" onClick={handleClickFullscreen}>
                 <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
               </button>
             </div>

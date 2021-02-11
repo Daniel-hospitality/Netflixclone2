@@ -11,12 +11,11 @@ import "./Banner.css";
 import "./Player.css";
 import LineIcon from 'react-lineicons';
 
-function Player(props, ref) {
+function MoreInfoPlayer(props, ref) {
   const player = useRef(null);
   const playerWrapper = useRef(null);
 
   const [playVideo, setPlayVideo] = useState(false);
-  const [light, setLight] = useState(false);
   const [muted, setMuted] = useState(true);
   const [hidden, setHidden] = useState('hidden');
 
@@ -40,12 +39,6 @@ function Player(props, ref) {
         });
       }
     };
-
-    setTimeout(() => {
-      setPlayVideo(true);
-      setLight(true);
-    }, 5000);
-    toggleScreenfull();
   }, []);
 
 
@@ -106,6 +99,6 @@ function Player(props, ref) {
   );
 }
 
-Player = forwardRef(Player);
+MoreInfoPlayer = forwardRef(MoreInfoPlayer);
 
-export default Player;
+export default MoreInfoPlayer;
