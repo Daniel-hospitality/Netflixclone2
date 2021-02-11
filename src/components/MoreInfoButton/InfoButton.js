@@ -1,28 +1,46 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
-import "./InfoButton.css";
+import LineIcon from 'react-lineicons';
+import screenfull from "screenfull";
+import "./InfoButton2.css";
 
 function InfoButton(props) {
+  const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
+  const [play, setPlay] = useState(true);
+  const [muted, setMuted] = useState(true);
   const toggleMovie = () => {
     setshowMovie(true);
     setGenres(returnGenres);
   };
- 
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
       values.push(props.movie?.genres[i].name);
     }
-    return values.join(', ');
+    return values.join(", ");
   };
- 
-
   const handleOnBlur = () => {
     setshowMovie(false);
   };
-
+  const handlePlayPause = () => {
+    if (play === true) {
+      setPlay(false);
+    }
+  };
+  const handleToggleMuted = () => {
+    muted ? setMuted(false) : setMuted(true);
+  }
+  const handleFullscreen = () => {
+    if (screenfull.isEnabled) {
+      screenfull.request(playerWrapper.current);
+      handleToggleMuted();
+    } 
+  };
+  const handleClose = () => {
+    setshowMovie(false);
+  }
   return (
     <div>
       <div
@@ -37,59 +55,69 @@ function InfoButton(props) {
       <div className="centerMoreInfo">
         <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
           <div className="showMovie">
-            <div>
-              <ReactPlayer
-                url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={true}
-                muted={true}
-                controls={false}
-                loop={true}
-                width="cover"
-                height="500px"
-                onReady={() => console.log("onReady callback")}
-                onStart={() => console.log(" onStart callback")}
-                onPause={() => console.log("onPause callback")}
-                onEnded={() => console.log(" onEnded callback")}
+            <div className="closeMovie" onClick={handleClose}>
+              <LineIcon name="close"/>
+            </div>
+            <div className="mute-button" onClick={handleToggleMuted}>
+              <i
+                className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
+                id="mute"
               />
             </div>
-            <div className="like_buttons">
-              <button className="playButtonDetailCard ">
-                <i className="fas fa-caret-right " />
-                &nbsp;&nbsp; <p>Play</p>
-              </button>
-              <div>
-                <i className="fas fa-plus like_styling" />
-              </div>
-              <div>
-                <i className="far fa-thumbs-up like_styling" />
-              </div>
-              <div>
-                <i className="far fa-thumbs-down like_styling" />
-              </div>
-              <div>
-                <i
-                  className="fas fa-volume-mute like_styling muteButtonDetailCard"
-                  id="mute"
+            <div className="playerWrapper" ref={playerWrapper}>
+              <ReactPlayer
+                url={`https://youtu.be/${props.movie?.youtubeKey}`}
+                playing={play}
+                muted={muted}
+                controls={false}
+                loop={true}
+                width="100%"
+                height="100%"
                 />
-                <i className="fas fa-times"></i>
+            </div>
+            <div className="playbutton">
+              <button className="playButtonDetailCard" onClick={handleFullscreen}>
+                <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
+              </button>
+            </div>
+            <div className="icons-container">
+              <div className="icon-btn" id="icon-plus">
+                <i className="lni lni-plus"></i>
+              </div>
+              <div className="icon-btn">
+                <i className="lni lni-thumbs-up"></i>
+              </div>
+              <div className="icon-btn">
+                <i className="lni lni-thumbs-down"></i>
               </div>
             </div>
           </div>
           <div className="container_movie_info">
-            <div className="speelduur_overview">
-              <p>Runtime: {props.movie?.runtime} min </p>{" "}
-              <p>{props.movie?.overview}</p>
-              <p>Director: {props.movie?.director}</p>
-              <p>
-                Genres: {genres}
-              </p>
+            <div className="runTime_overview">
+              <div className="movieJarFile">
+                <div className="genresMovies">
+                  Genres: &nbsp; <h5>{genres}</h5>
+                </div>
+                <div className="movieDirector">
+                  <p>
+                    Director:&nbsp; <h5>{props.movie?.director}</h5>
+                  </p>
+                </div>
+                <div className="playTime">
+                  <p>
+                    Runtime: &nbsp; <h5>{props.movie?.runtime}</h5> min{" "}
+                  </p>{" "}
+                </div>
+              </div>
+              <div className="movieOverview">
+                <p>{props.movie?.overview}</p>
+              </div>
             </div>
-           
+            <div className="director_genre"></div>
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 export default InfoButton;
