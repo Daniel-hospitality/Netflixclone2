@@ -9,6 +9,7 @@ function Banner() {
   const player = useRef(null);
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
+  const [rendered, setRendered] = useState(false);
   
   useEffect(() => {
     async function fetchData() {
@@ -26,10 +27,14 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
+
+  const handleMoreInfo = () => {
+    player.current.togglePlayPause();
+    rendered ? setRendered(false) : setRendered(true);
+  }
   
   return (
     <header className="banner">
-       
       <div className="player-wrapper">
         <Player ref={player} movie={movie}/>
       </div>
@@ -45,17 +50,16 @@ function Banner() {
           <button className="banner_button" onClick={handleClickFullscreen}>
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
-
           </button>
+          <button className="banner-style-btn" onClick={handleMoreInfo}>
+            <LineIcon name={"information"}/> &nbsp;&nbsp; Meer informatie
+          </button>
+          {rendered ? <InfoButton className="banner_button" movie={movie}/> : "" }
           <InfoButton className="banner_button" movie={movie} />
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
-
           </button>
-          
         </div>
-        {/* <div className="banner_fadeBottom" /> */}
-
       </div>
       <div className="banner_fadeBottom" />
     </header>
