@@ -108,7 +108,25 @@
   );
 }
 
+.banner-style-btn {
+  cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-top: 1rem 2rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    background-color: rgba(51, 51, 51, 0.5);
+}
 
+.banner-style-btn:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 2s;
+}
 
 @media screen and (max-width: 1900px) {
   .banner_button_mute {
