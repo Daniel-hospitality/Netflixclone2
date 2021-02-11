@@ -28,6 +28,9 @@ function Player(props, ref) {
     },
     toggleMute: () => {
       muted ? setMuted(false) : setMuted(true);
+    },
+    togglePlayPause: () => {
+      playVideo ? setPlayVideo(false) : setPlayVideo(true);
     }
   }));
   
