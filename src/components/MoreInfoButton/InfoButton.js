@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
-import LineIcon from 'react-lineicons';
+import LineIcon from "react-lineicons";
 import screenfull from "screenfull";
 import "./InfoButton2.css";
 
@@ -31,16 +31,16 @@ function InfoButton(props) {
   };
   const handleToggleMuted = () => {
     muted ? setMuted(false) : setMuted(true);
-  }
+  };
   const handleFullscreen = () => {
     if (screenfull.isEnabled) {
       screenfull.request(playerWrapper.current);
       handleToggleMuted();
-    } 
+    }
   };
   const handleClose = () => {
     setshowMovie(false);
-  }
+  };
   return (
     <div>
       <div
@@ -56,7 +56,7 @@ function InfoButton(props) {
         <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
           <div className="showMovie">
             <div className="closeMovie" onClick={handleClose}>
-              <LineIcon name="close"/>
+              <LineIcon name="close" />
             </div>
             <div className="mute-button" onClick={handleToggleMuted}>
               <i
@@ -73,10 +73,13 @@ function InfoButton(props) {
                 loop={true}
                 width="100%"
                 height="100%"
-                />
+              />
             </div>
             <div className="playbutton">
-              <button className="playButtonDetailCard" onClick={handleFullscreen}>
+              <button
+                className="playButtonDetailCard"
+                onClick={handleFullscreen}
+              >
                 <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
               </button>
             </div>
