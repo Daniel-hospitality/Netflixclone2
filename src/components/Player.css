@@ -7,8 +7,14 @@
   background: none;
   outline: none;
   border: none;
-  color: #fff;
+  color: grey;
   font-size: 150%;
+}
+
+#player-fs-exit-btn:hover,
+#player-fs-mute-btn:hover,
+#player-fs-play-btn:hover {
+  color: ghostwhite;
 }
 
 #player-fs-exit-btn ,
