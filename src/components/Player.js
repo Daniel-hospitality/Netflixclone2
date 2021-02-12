@@ -18,7 +18,7 @@ function Player(props, ref) {
   const [playVideo, setPlayVideo] = useState(false);
   const [light, setLight] = useState(false);
   const [muted, setMuted] = useState(true);
-  const [hidden, setHidden] = useState('hidden');
+  const [hidden, setHidden] = useState(true);
 
   useImperativeHandle(ref, () => ({
     enableFullscreen: () => {
@@ -51,19 +51,6 @@ function Player(props, ref) {
     toggleScreenfull();
   }, []);
 
-
-//   useEffect(() => {
-//     const handleEsc = (event) => {
-//         if (event.keyCode === 27) 
-//         setMuted(true);
-//     };
-//     window.addEventListener('keydown', handleEsc);
-//     return () => {
-//     window.removeEventListener('keydown', handleEsc);
-//     };
-// }, []);
-
-
   function handleExit(){
     screenfull.exit();
   }
@@ -73,14 +60,18 @@ function Player(props, ref) {
   }
 
   const handlePause = () => {
-    playVideo ? setPlayVideo(false) : setPlayVideo(true);
+    setPlayVideo(!playVideo);
   }
 
-  
+  function toggleShow(){
+    setHidden(false);
+    setTimeout(function(){ setHidden(true); }, 8000);
+  }
 
   return (
-    <div ref={playerWrapper}>
+    <div ref={playerWrapper} onPointerMove={toggleShow}>
         <ReactPlayer
+          id="banner_player"
           className="banner-player"
           url={`https://youtu.be/${props.movie?.youtubeKey}`}
           frameborder="0"
@@ -94,16 +85,16 @@ function Player(props, ref) {
           loop={true}
           light={`${light ? "" : `https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`}`}
         />
-        <button className={hidden} id="player-fs-exit-btn" onClick={handleExit}>
+        <button className={hidden ? "hidden" : "show" } id="player-fs-exit-btn" onClick={handleExit}>
           <LineIcon name="close"/>
         </button>
 
-        <button className={hidden} id="player-fs-mute-btn" onClick={handleMute}>
+        <button className={hidden ? "hidden" : "show" } id="player-fs-mute-btn" onClick={handleMute}>
           <LineIcon name={muted ? "volume-mute" : "volume"}/>
         </button>
 
-        <button className={hidden} id="player-fs-play-btn" onClick={handlePause}>
-          <LineIcon name={playVideo ? "play" : "pause"}/>
+        <button className={hidden ? "hidden" : "show" } id="player-fs-play-btn" onClick={handlePause}>
+          <LineIcon name={playVideo ? "pause" : "play"}/>
         </button>
     </div>
   );
