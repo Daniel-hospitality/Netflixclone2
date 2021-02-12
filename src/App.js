@@ -45,14 +45,12 @@ function Home() {
   }, []);
   return (
     <div className="app">
-     
       <Banner movie={movie}/>
       <div className="row-container">
         <Row
           title="NETFLIX ORIGINALS"
           fetchUrl={requests.fetchNetflixOriginals}
         />
-
         <Row
           title="Trending Now"
           fetchUrl={requests.fetchTrending}
