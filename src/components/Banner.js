@@ -1,19 +1,28 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useCallback, useState, useEffect, useRef } from "react";
 import Backend from "../Backend";
-import InfoButton from "./MoreInfoButton/InfoButton";
 import LineIcon from 'react-lineicons';
 import Player from "./Player";
+import MoreInfoCard from "./MoreInfoButton/MoreInfoCard"
 import "./Banner.css";
 
 function Banner() {
   const player = useRef(null);
+
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
   const [rendered, setRendered] = useState(false);
+  const [genres, setGenres] = useState(null);
+
+  const renderCallback = useCallback(
+    () => {
+      rendered ? setRendered(false) : setRendered(true);
+      player.current.togglePlayPause();
+    },
+  );
   
   useEffect(() => {
     async function fetchData() {
-      const response = await Backend.fetchMovies(155);
+      const response = await Backend.fetchMovies(335984);
       setMovie(response.data);
     }
     fetchData();
@@ -27,12 +36,20 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
-
-  const handleMoreInfo = () => {
-    player.current.togglePlayPause();
-    rendered ? setRendered(false) : setRendered(true);
-  }
   
+  const toggleRendered = () => {
+    rendered ? setRendered(false) : setRendered(true);
+    player.current.togglePlayPause();
+    setGenres(returnGenres);
+  }
+  const returnGenres = () => {
+    let values = [];
+    for (let i = 0; i < movie.genres?.length; i++) {
+      values.push(movie.genres[i]?.name);
+    }
+    return values.join(", ");
+  };
+
   return (
     <header className="banner">
       <div className="player-wrapper">
@@ -51,11 +68,10 @@ function Banner() {
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
           </button>
-          <button className="banner-style-btn" onClick={handleMoreInfo}>
-            <LineIcon name={"information"}/> &nbsp;&nbsp; Meer informatie
+          <button className="banner_button" onClick={renderCallback}>
+            <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
-          {rendered ? <InfoButton className="banner_button" movie={movie}/> : "" }
-          <InfoButton className="banner_button" movie={movie} />
+          {rendered ? <MoreInfoCard movie={movie} toggleRendered={toggleRendered} genres={genres}/> : "" }
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
           </button>
@@ -65,4 +81,5 @@ function Banner() {
     </header>
   );
 }
+
 export default Banner;
