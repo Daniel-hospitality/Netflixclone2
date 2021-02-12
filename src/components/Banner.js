@@ -54,7 +54,7 @@ function Banner() {
 
           </button>
           <InfoButton className="banner_button" movie={movie} />
-          <button className="banner_button_mute">
+          <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
 
           </button>
