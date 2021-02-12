@@ -73,6 +73,8 @@ function Player(props, ref) {
     playVideo ? setPlayVideo(false) : setPlayVideo(true);
   }
 
+  
+
   return (
     <div ref={playerWrapper}>
         <ReactPlayer

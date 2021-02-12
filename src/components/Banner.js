@@ -26,6 +26,12 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
+
+  // const handlePlayPause = () => {
+  //   if (play === true) {
+  //     setPlay(false);
+  //   }
+  // };
   
   return (
     <header className="banner">
@@ -48,7 +54,7 @@ function Banner() {
 
           </button>
           <InfoButton className="banner_button" movie={movie} />
-          <button className="banner_button_mute" onClick={handleClickMute}>
+          <button className="banner_button_mute">
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
 
           </button>
