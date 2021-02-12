@@ -42,7 +42,7 @@
   width: 90vw;
   margin-left: 5vw;
   position: fixed;
-  top: 35px;
+  top: 70px;
   left: 0;
 }
 
@@ -56,8 +56,8 @@
 
 .closeMovie {
   position: absolute;
-  top: 0.625rem;
-  right: 0.625rem;
+  top: 1rem;
+  right: 0.8rem;
   font-size: 140%;
 }
 .closeMovie :hover {
@@ -213,7 +213,7 @@
   }
   .icons-container {
     margin-left: 33%;
-    left: -3%;
+    /* left: -%; */
     width: 8rem;
     /* font-size: small; */
   }
