@@ -64,6 +64,12 @@ function InfoButton(props) {
     screenfull.exit();
   }
 
+  // const handlePlayPause = () => {
+  //   if (play === true) {
+  //     setPlay(false);
+  //   }
+  // };
+
   return (
     <div>
       <div
