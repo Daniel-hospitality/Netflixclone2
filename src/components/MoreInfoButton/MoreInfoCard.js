@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import LineIcon from 'react-lineicons';
 import screenfull from "screenfull";
@@ -7,27 +7,12 @@ import "../Player.css";
 
 function MoreInfoCard(props) {
   const playerWrapper = useRef(null);
-  const [showMovie, setshowMovie] = useState(false);
+
   const [genres, setGenres] = useState(null);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-  const [hidden, setHidden] = useState('hidden');
+  const [hidden, setHidden] = useState(true);
 
-  // useEffect(() => {
-  //   const toggleScreenfull = () => {
-  //     if (screenfull.isEnabled) {
-  //       screenfull.on('change', () => {
-  //         screenfull.isFullscreen ? setMuted(false) : setMuted(true);
-  //         screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
-  //       });
-  //     }
-  //   };
-  // }, []);
-  
-  const toggleMovie = () => {
-    setshowMovie(true);
-    setGenres(returnGenres);
-  };
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < props.movie?.genres.length; i++) {
@@ -35,9 +20,10 @@ function MoreInfoCard(props) {
     }
     return values.join(", ");
   };
-  const handleOnBlur = () => {
-    setshowMovie(false);
-  };
+
+  useEffect(() => {
+    setGenres(returnGenres());
+  }, []);
 
   const handlePause = () => {
     play ? setPlay(false) : setPlay(true);
@@ -49,36 +35,32 @@ function MoreInfoCard(props) {
   const handleFullscreen = () => {
     if (screenfull.isEnabled) {
       screenfull.request(playerWrapper.current);
-     /* handleToggleMuted(); */
       screenfull.on('change', () => {
         screenfull.isFullscreen ? setMuted(false) : setMuted(true);
         screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
       });
     }
   };
-  
-  const handleClose = () => {
-    setshowMovie(false);
-  }
+
   function handleExit(){
     screenfull.exit();
+  }
+
+  function toggleShow(){
+    setHidden(false);
+    setTimeout(function(){ setHidden(true); }, 8000);
   }
 
   return (
     <div>
       <div
-        onClick={handleOnBlur}
-        className={`${showMovie ? "blurMoreDetailsCard" : "hidden"}`}
+        onClick={props.toggleRendered}
+        className={"blurMoreDetailsCard"}
       ></div>
-      <div>
-        <button onClick={toggleMovie} className="style-btn">
-          <i className="fas fa-info-circle" /> &nbsp;&nbsp; Meer informatie
-        </button>
-      </div>
       <div className="centerMoreInfo">
-        <div className={`${showMovie ? "moreInfo" : "hidden"}`}>
+        <div className={"moreInfo"}>
           <div className="showMovie">
-            <div className="closeMovie" onClick={handleClose}>
+            <div className="closeMovie" onClick={props.toggleRendered}>
               <LineIcon name="close"/>
             </div>
             <div className="mute-button" onClick={handleToggleMuted}>
@@ -87,7 +69,7 @@ function MoreInfoCard(props) {
                 id="mute"
               />
             </div>
-            <div className="playerWrapper" ref={playerWrapper}>
+            <div className="playerWrapper" ref={playerWrapper} onPointerMove={toggleShow}>
               <ReactPlayer
                 url={`https://youtu.be/${props.movie?.youtubeKey}`}
                 playing={play}
@@ -97,17 +79,24 @@ function MoreInfoCard(props) {
                 width="100%"
                 height="100%"
                 />
-                <button className={hidden} id="player-fs-exit-btn" onClick={handleExit}>
+                <button className={hidden ? "hidden" : "show"} id="player-fs-exit-btn" onClick={handleExit}>
                  <LineIcon name="close"/>
                 </button>
 
-                <button className={hidden} id="player-fs-mute-btn" onClick={handleToggleMuted}>
-                 <LineIcon name={muted ? "volume-mute" : "volume"}/>
+                <button className={hidden ? "hidden" : "show"} id="player-fs-mute-btn" onClick={handleToggleMuted}>
+                 <LineIcon name={muted ? "volume" : "volume-mute"}/>
                 </button>
 
-                <button className={hidden} id="player-fs-play-btn" onClick={handlePause}>
-                  <LineIcon name={play ? "play" : "pause"}/>
+                <button className={hidden ? "hidden" : "show"} id="player-fs-play-btn" onClick={handlePause}>
+                  <LineIcon name={play ? "pause" : "play"}/>
                 </button>
+            </div>
+            <div className="logo-container">
+              <img
+                className="banner_movielogo"
+                src={props.movie?.logoUrl}
+                alt={props.movie?.title + "logo"}
+              /> 
             </div>
             <div className="playbutton">
               <button className="playButtonDetailCard" onClick={handleFullscreen}>
