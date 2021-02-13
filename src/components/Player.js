@@ -65,7 +65,7 @@ function Player(props, ref) {
 
   function toggleShow(){
     setHidden(false);
-    setTimeout(function(){ setHidden(true); }, 8000);
+    setTimeout(function(){ setHidden(true); }, 5000);
   }
 
   return (
