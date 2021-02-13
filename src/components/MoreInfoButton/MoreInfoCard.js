@@ -84,7 +84,7 @@ function MoreInfoCard(props) {
                 </button>
 
                 <button className={hidden ? "hidden" : "show"} id="player-fs-mute-btn" onClick={handleToggleMuted}>
-                 <LineIcon name={muted ? "volume" : "volume-mute"}/>
+                 <LineIcon name={muted ? "volume-mute" : "volume"}/>
                 </button>
 
                 <button className={hidden ? "hidden" : "show"} id="player-fs-play-btn" onClick={handlePause}>
