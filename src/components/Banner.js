@@ -36,6 +36,12 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
+
+  // const handlePlayPause = () => {
+  //   if (play === true) {
+  //     setPlay(false);
+  //   }
+  // };
   
   const toggleRendered = () => {
     rendered ? setRendered(false) : setRendered(true);
