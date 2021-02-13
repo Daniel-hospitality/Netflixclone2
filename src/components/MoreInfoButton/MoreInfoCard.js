@@ -93,17 +93,15 @@ function MoreInfoCard(props) {
             </div>
             <div className="logo-container">
               <img
-                className="banner_movielogo"
+                className="more-info-logo"
                 src={props.movie?.logoUrl}
                 alt={props.movie?.title + "logo"}
               /> 
             </div>
-            <div className="playbutton">
+            <div className="icons-container">
               <button className="playButtonDetailCard" onClick={handleFullscreen}>
                 <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
               </button>
-            </div>
-            <div className="icons-container">
               <div className="icon-btn" id="icon-plus">
                 <i className="lni lni-plus"></i>
               </div>
