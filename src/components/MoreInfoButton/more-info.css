@@ -89,24 +89,17 @@
   position: relative!;
 }
 
-
 .playButtonDetailCard {
-  position: absolute;
   cursor: pointer;
   color: #fff;
   outline: none;
   border: none;
   font-weight: 700;
   border-radius: 0.2vw;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 1rem;
-  margin-top: -10rem;
+  padding: 0.7rem 2rem;
   background-color: rgba(51, 51, 51, 0.5);
-  padding-bottom: 1rem;
-  margin-left: 7%;
-  margin-top: -3.5rem;
 }
+
 .playButtonDetailCard:hover {
   transition: all 1s ease-in-out;
   color: #000;
@@ -118,26 +111,24 @@
   position: absolute;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 10rem;
-  margin-left: 16%;
-  bottom: 0.625rem;
-  left: 1rem;
+  width: 90%;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
 
-.logo-container {
-  position: absolute;
-  bottom: 5rem;
-  left: 2rem;
+.icon-btn,
+.playButtonDetailCard {
+  margin-right: 1rem;
 }
 
 .icon-btn {
   pointer-events: all;
   color: rgba(255, 255, 255, 0.541);
-  padding: 12.5px;
-  font-size: 17.5px;
+  padding: 1rem;
+  font-size: 1.1rem;
   border: 1px solid rgba(128, 128, 128, 0.5);
-  border-radius: 54%;
+  border-radius: 50%;
   background-color: rgba(51, 51, 51, 0.5);
 }
 .icon-btn:hover {
@@ -146,6 +137,15 @@
 }
 .icon-plus {
   color: red;
+}
+.logo-container {
+  position: absolute;
+  bottom: 7rem;
+  left: 2rem;
+}
+
+.more-info-logo {
+  width: 20rem;
 }
 
 .container_movie_info {
@@ -240,22 +240,48 @@
     width: 75vw;
     margin-bottom: 1rem;
   }
-  .playButtonDetailCard {
-      margin-left: 0.5%;
-  }
+
   .icons-container {
-      margin-left: 33%;
-      left: -3%;
-      width: 8rem;
-      /* font-size: small; */
+    padding: 0.5rem;
   }
 
   .icon-btn {
-      font-size: 10px;
-      
+    font-size: 0.625rem;
+    padding: 0.7rem;
+  }
+  
+  .playButtonDetailCard {
+    padding: 0.3rem 1.3rem;
+    font-size: 0.7rem;
+  }
+  
+  .icon-btn,
+  .playButtonDetailCard {
+    margin-right: 0.5rem;
+  }
+  
+  .mute-button {
+    bottom: 0.5rem;
+    font-size: 90%;
   }
 
-  
+  .closeMovie {
+    top: 0.5rem;
+    font-size: 90%;
+  }
+
+  .mute-button, 
+  .closeMovie {
+    right: 0.5rem
+  }
+
+  .logo-container {
+    bottom: 5rem;
+  }
+
+  .more-info-logo {
+    width: 15rem;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -271,12 +297,6 @@
   }
   .movieOverview {
       margin-left: 4%;
-  }
-  .playButtonDetailCard {
-      margin-left: 3%;
-  }
-  .icons-container {
-      margin-left: 25%;
   }
   .plus-button {
       width: 550px;
@@ -329,16 +349,9 @@
       margin-left: 0;
       right:0;
   }
-  .icons-container {
-      margin-left: 8.5rem;
-  }
 }
 
-@media screen and (min-width: 1200px) {
-  .icons-container {
-    margin-left: 135px;
-  }
-  
+@media only screen and (min-width: 1200px) {
   /* .movieJarFile {
     width: 65vw;
     
@@ -349,8 +362,7 @@
 }
 @media screen and (min-width: 1300px) {
   .movieJarFile {
-      width: 60vw
-      ;
+      width: 60vw;
       margin-left: 0;
       right:0;
   }
