@@ -22,7 +22,7 @@ function Banner() {
   
   useEffect(() => {
     async function fetchData() {
-      const response = await Backend.fetchMovies(335984);
+      const response = await Backend.fetchMovies(155);
       setMovie(response.data);
     }
     fetchData();
