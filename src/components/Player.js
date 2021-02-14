@@ -19,6 +19,7 @@ function Player(props, ref) {
   const [light, setLight] = useState(false);
   const [muted, setMuted] = useState(true);
   const [hidden, setHidden] = useState(true);
+  const [hideBorder, setHideBorder] = useState(true);
 
   useImperativeHandle(ref, () => ({
     enableFullscreen: () => {
@@ -47,7 +48,8 @@ function Player(props, ref) {
       if (screenfull.isEnabled) {
         screenfull.on('change', () => {
           screenfull.isFullscreen ? setMuted(false) : setMuted(true);
-          screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
+          screenfull.isFullscreen ? setHidden(false) : setHidden(true);
+          screenfull.isFullscreen ? setHideBorder(false) : setHideBorder(true);
         });
       }
     };
@@ -93,6 +95,8 @@ function Player(props, ref) {
           loop={true}
           light={`${light ? "" : `https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`}`}
         />
+        <div className={hideBorder ? "hide-border" : "show-border"} id="top-frameborder"></div>
+        <div className={hideBorder ? "hide-border" : "show-border"} id="bottom-frameborder"></div>
         <button className={hidden ? "hidden" : "show" } id="player-fs-exit-btn" onClick={handleExit}>
           <LineIcon name="close"/>
         </button>
