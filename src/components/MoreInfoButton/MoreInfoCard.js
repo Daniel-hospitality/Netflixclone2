@@ -12,6 +12,7 @@ function MoreInfoCard(props) {
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
   const [hidden, setHidden] = useState(true);
+  const [hideBorder, setHideBorder] = useState(true);
 
   const returnGenres = () => {
     let values = [];
@@ -37,7 +38,8 @@ function MoreInfoCard(props) {
       screenfull.request(playerWrapper.current);
       screenfull.on('change', () => {
         screenfull.isFullscreen ? setMuted(false) : setMuted(true);
-        screenfull.isFullscreen ? setHidden("show") : setHidden("hidden");
+        screenfull.isFullscreen ? setHidden(false) : setHidden(true);
+        screenfull.isFullscreen ? setHideBorder(false) : setHideBorder(true);
       });
     }
   };
@@ -51,7 +53,6 @@ function MoreInfoCard(props) {
     setTimeout(function(){ setHidden(true); }, 5000);
   }
 
-  console.log(playerWrapper);
   return (
     <div>
       <div
@@ -61,8 +62,8 @@ function MoreInfoCard(props) {
       <div className="centerMoreInfo">
         <div className={"moreInfo"}>
           <div className="showMovie">
-            <div className="top-frameborder"></div>
-            <div className="bottom-frameborder"></div>
+            <div className={"show-border"} id="top-frameborder"></div>
+            <div className={"show-border"} id="bottom-frameborder"></div>
             <div className="closeMovie" onClick={props.timedLightMode}>
               <LineIcon name="close"/>
             </div>
@@ -82,6 +83,8 @@ function MoreInfoCard(props) {
                 width="100%"
                 height="100%"
                 />
+                <div className={hideBorder ? "hide-border" : "show-border"} id="top-frameborder"></div>
+                <div className={hideBorder ? "hide-border" : "show-border"} id="bottom-frameborder"></div>
                 <button className={hidden ? "hidden" : "show"} id="player-fs-exit-btn" onClick={handleExit}>
                  <LineIcon name="close"/>
                 </button>
