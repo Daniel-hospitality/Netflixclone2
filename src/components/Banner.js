@@ -12,7 +12,7 @@ function Banner() {
 
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
-  const [rendered, setRendered] = useState(false);
+  const [render, setRender] = useState(false);
   const [genres, setGenres] = useState(null);
 
   useEffect(() => {
@@ -35,19 +35,19 @@ function Banner() {
   }
 
   const handleBodyScroll = () => {
-    rendered ? console.log('BodyScroll: locked') : console.log('BodyScroll: unlocked');
-    rendered ? enableBodyScroll(bannerRef.current) : disableBodyScroll(bannerRef.current);
+    render ? console.log('BodyScroll: locked') : console.log('BodyScroll: unlocked');
+    render ? enableBodyScroll(bannerRef.current) : disableBodyScroll(bannerRef.current);
   }
   
-  const toggleRendered = () => {
-    setRendered(!rendered);
+  const handleRender = () => {
+    setRender(!render);
     handleBodyScroll();
     player.current.toggleLight();
     setGenres(returnGenres);
   }
   
   const timedLightMode = () => {
-    setRendered(!rendered);
+    setRender(!render);
     handleBodyScroll();
     player.current.timedToggleLight();
   }
@@ -78,11 +78,11 @@ function Banner() {
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
           </button>
-          <button className="banner_button" onClick={toggleRendered}>
+          <button className="banner_button" onClick={handleRender}>
             <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
-          {rendered ? 
-            <MoreInfoCard movie={movie} 
+          {render ? 
+            <MoreInfoCard movie={movie}
             timedLightMode={timedLightMode} 
             genres={genres}/>
             : 
