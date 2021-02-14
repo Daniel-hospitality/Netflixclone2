@@ -25,6 +25,8 @@ function Banner() {
    
   const handleClickFullscreen = () => {
     player.current.enableFullscreen();
+    player.current.enablePlayer();
+    player.current.toggleMute();
   };
   
   const handleClickMute = () => {
@@ -38,7 +40,7 @@ function Banner() {
   }
   
   const toggleRendered = () => {
-    rendered ? setRendered(false) : setRendered(true);
+    setRendered(!rendered);
     handleBodyScroll();
     player.current.toggleLight();
     setGenres(returnGenres);
