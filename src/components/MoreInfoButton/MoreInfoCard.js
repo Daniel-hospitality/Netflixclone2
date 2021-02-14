@@ -50,17 +50,16 @@ function MoreInfoCard(props) {
     setHidden(false);
     setTimeout(function(){ setHidden(true); }, 5000);
   }
-
   return (
     <div>
       <div
-        onClick={props.toggleRendered}
+        onClick={props.timedLightMode}
         className={"blurMoreDetailsCard"}
       ></div>
       <div className="centerMoreInfo">
         <div className={"moreInfo"}>
           <div className="showMovie">
-            <div className="closeMovie" onClick={props.toggleRendered}>
+            <div className="closeMovie" onClick={props.timedLightMode}>
               <LineIcon name="close"/>
             </div>
             <div className="mute-button" onClick={handleToggleMuted}>
@@ -100,7 +99,7 @@ function MoreInfoCard(props) {
             </div>
             <div className="icons-container">
               <button className="playButtonDetailCard" onClick={handleFullscreen}>
-                <i className="fas fa-caret-right" /> &nbsp;&nbsp; Play
+                <i className="fas fa-caret-right" /> &nbsp; Play
               </button>
               <div className="icon-btn" id="icon-plus">
                 <i className="lni lni-plus"></i>
@@ -113,29 +112,29 @@ function MoreInfoCard(props) {
               </div>
             </div>
           </div>
-          <div className="container_movie_info">
-            <div className="runTime_overview">
-              <div className="movieJarFile">
-                <div className="genresMovies">
-                  Genres: &nbsp; <h5>{genres}</h5>
+            <div className="container_movie_info">
+              <div className="runTime_overview">
+                <div className="movieJarFile">
+                  <div className="genresMovies">
+                    Genres: &nbsp; <h5>{genres}</h5>
+                  </div>
+                  <div className="movieDirector">
+                    <p>
+                      Director:&nbsp; <h5>{props.movie?.director}</h5>
+                    </p>
+                  </div>
+                  <div className="playTime">
+                    <p>
+                      Runtime: &nbsp; <h5>{props.movie?.runtime}</h5> min{" "}
+                    </p>{" "}
+                  </div>
                 </div>
-                <div className="movieDirector">
-                  <p>
-                    Director:&nbsp; <h5>{props.movie?.director}</h5>
-                  </p>
-                </div>
-                <div className="playTime">
-                  <p>
-                    Runtime: &nbsp; <h5>{props.movie?.runtime}</h5> min{" "}
-                  </p>{" "}
+                <div className="movieOverview">
+                  <p>{props.movie?.overview}</p>
                 </div>
               </div>
-              <div className="movieOverview">
-                <p>{props.movie?.overview}</p>
-              </div>
+              <div className="director_genre"></div>
             </div>
-            <div className="director_genre"></div>
-          </div>
         </div>
       </div>
     </div>
