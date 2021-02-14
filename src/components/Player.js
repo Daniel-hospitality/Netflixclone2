@@ -25,20 +25,24 @@ function Player(props, ref) {
     enableFullscreen: () => {
       if (screenfull.isEnabled) {
         screenfull.request(playerWrapper.current);
-      } 
+      }
     },
     toggleMute: () => {
       muted ? setMuted(false) : setMuted(true);
     },
-    togglePlayPause: () => {
-      playVideo ? setPlayVideo(false) : setPlayVideo(true);
+    enablePlayer: () => {
+      setLight(true);
+      setPlayVideo(true);
+    },
+    enableLight: () => {
+      setLight(false);
     },
     toggleLight: () => {
       setLight(!light);
     },
     timedToggleLight: () => {
       setTimeout(() => {
-        light ? setLight("") : setLight(`https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`)
+        setLight(true);
       }, 5000);
     },
   }));
@@ -94,6 +98,13 @@ function Player(props, ref) {
           controls={false}
           loop={true}
           light={`${light ? "" : `https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`}`}
+          config={{
+            youtube: {
+              playerVars: 
+                { showinfo: 0,
+                  rel: 0 }
+            },
+          }}
         />
         <div className={hideBorder ? "hide-border" : "show-border"} id="top-frameborder"></div>
         <div className={hideBorder ? "hide-border" : "show-border"} id="bottom-frameborder"></div>
@@ -106,7 +117,7 @@ function Player(props, ref) {
         </button>
 
         <button className={hidden ? "hidden" : "show" } id="player-fs-play-btn" onClick={handlePause}>
-          <LineIcon name={playVideo ? "pause" : "play"}/>
+          <LineIcon name={playVideo ? "play" : "pause"}/>
         </button>
     </div>
   );
