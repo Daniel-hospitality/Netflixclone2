@@ -3,23 +3,18 @@ import Backend from "../Backend";
 import LineIcon from 'react-lineicons';
 import Player from "./Player";
 import MoreInfoCard from "./MoreInfoButton/MoreInfoCard"
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import "./Banner.css";
 
 function Banner() {
   const player = useRef(null);
+  const bannerRef = useRef(null);
 
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
   const [rendered, setRendered] = useState(false);
   const [genres, setGenres] = useState(null);
 
-  const renderCallback = useCallback(
-    () => {
-      rendered ? setRendered(false) : setRendered(true);
-      player.current.togglePlayPause();
-    },
-  );
-  
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchMovies(335984);
@@ -36,12 +31,19 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
+
+  const handleBodyScroll = () => {
+    rendered ? console.log('bodyscroll: locked') : console.log('bodyscroll: unlocked');
+    rendered ? enableBodyScroll(bannerRef.current) : disableBodyScroll(bannerRef.current);
+  }
   
   const toggleRendered = () => {
     rendered ? setRendered(false) : setRendered(true);
+    handleBodyScroll();
     player.current.togglePlayPause();
     setGenres(returnGenres);
   }
+
   const returnGenres = () => {
     let values = [];
     for (let i = 0; i < movie.genres?.length; i++) {
@@ -51,7 +53,7 @@ function Banner() {
   };
 
   return (
-    <header className="banner">
+    <header className="banner" ref={bannerRef}>
       <div className="player-wrapper">
         <Player ref={player} movie={movie}/>
       </div>
@@ -68,7 +70,7 @@ function Banner() {
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
           </button>
-          <button className="banner_button" onClick={renderCallback}>
+          <button className="banner_button" onClick={toggleRendered}>
             <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
           {rendered ? <MoreInfoCard movie={movie} toggleRendered={toggleRendered} genres={genres}/> : "" }
