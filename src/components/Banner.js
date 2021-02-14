@@ -31,8 +31,6 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
-
-  const handleBodyScroll = () => {
     rendered ? console.log('bodyscroll: locked') : console.log('bodyscroll: unlocked');
     rendered ? enableBodyScroll(bannerRef.current) : disableBodyScroll(bannerRef.current);
   }
