@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Backend from "../Backend";
 import LineIcon from 'react-lineicons';
 import Player from "./Player";
@@ -31,15 +31,23 @@ function Banner() {
     player.current.toggleMute();
     muted ? setMuted(false) : setMuted(true);
   }
-    rendered ? console.log('bodyscroll: locked') : console.log('bodyscroll: unlocked');
+
+  const handleBodyScroll = () => {
+    rendered ? console.log('BodyScroll: locked') : console.log('BodyScroll: unlocked');
     rendered ? enableBodyScroll(bannerRef.current) : disableBodyScroll(bannerRef.current);
   }
   
   const toggleRendered = () => {
     rendered ? setRendered(false) : setRendered(true);
     handleBodyScroll();
-    player.current.togglePlayPause();
+    player.current.toggleLight();
     setGenres(returnGenres);
+  }
+  
+  const timedLightMode = () => {
+    setRendered(!rendered);
+    handleBodyScroll();
+    player.current.timedToggleLight();
   }
 
   const returnGenres = () => {
@@ -71,7 +79,12 @@ function Banner() {
           <button className="banner_button" onClick={toggleRendered}>
             <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
-          {rendered ? <MoreInfoCard movie={movie} toggleRendered={toggleRendered} genres={genres}/> : "" }
+          {rendered ? 
+            <MoreInfoCard movie={movie} 
+            timedLightMode={timedLightMode} 
+            genres={genres}/>
+            : 
+            "" }
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
           </button>
