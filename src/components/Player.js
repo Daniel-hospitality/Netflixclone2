@@ -31,7 +31,15 @@ function Player(props, ref) {
     },
     togglePlayPause: () => {
       playVideo ? setPlayVideo(false) : setPlayVideo(true);
-    }
+    },
+    toggleLight: () => {
+      setLight(!light);
+    },
+    timedToggleLight: () => {
+      setTimeout(() => {
+        light ? setLight("") : setLight(`https://image.tmdb.org/t/p/original${props.movie?.backdropPath}`)
+      }, 5000);
+    },
   }));
   
   useEffect(() => {
@@ -63,13 +71,13 @@ function Player(props, ref) {
     setPlayVideo(!playVideo);
   }
 
-  function toggleShow(){
+  function toggleShowButtons(){
     setHidden(false);
     setTimeout(function(){ setHidden(true); }, 5000);
   }
 
   return (
-    <div ref={playerWrapper} onPointerMove={toggleShow}>
+    <div ref={playerWrapper} onPointerMove={toggleShowButtons}>
         <ReactPlayer
           id="banner_player"
           className="banner-player"
