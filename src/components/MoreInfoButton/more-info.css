@@ -61,23 +61,6 @@
   position: relative;
 }
 
-.top-frameborder {
-  top: 0;
-}
-
-.bottom-frameborder {
-  bottom: 0;
-}
-
-.top-frameborder,
-.bottom-frameborder {
-  position: absolute;
-  height: 10.5vh;
-  width: 100%;
-  z-index: 5;
-  background: black;
-}
-
 .closeMovie {
   position: absolute;
   pointer-events: all;
