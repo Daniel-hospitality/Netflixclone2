@@ -61,9 +61,27 @@
   position: relative;
 }
 
+.top-frameborder {
+  top: 0;
+}
+
+.bottom-frameborder {
+  bottom: 0;
+}
+
+.top-frameborder,
+.bottom-frameborder {
+  position: absolute;
+  height: 10.5vh;
+  width: 100%;
+  z-index: 5;
+  background: black;
+}
+
 .closeMovie {
   position: absolute;
   pointer-events: all;
+  z-index: 10;
   top: 1rem;
   right: 1rem;
   background-color: rgba(33, 33, 33, 0.2);
@@ -143,6 +161,11 @@
   bottom: 0;
   left: 0;
   padding: 1rem;
+}
+
+.icons-container,
+.mute-button {
+  z-index: 10;
 }
 
 .icon-btn,
@@ -309,6 +332,11 @@
 
   .more-info-logo {
     width: 15rem;
+  }
+
+  .top-frameborder,
+  .bottom-frameborder {
+    display: none;  
   }
 }
 

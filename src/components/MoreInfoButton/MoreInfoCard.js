@@ -50,6 +50,8 @@ function MoreInfoCard(props) {
     setHidden(false);
     setTimeout(function(){ setHidden(true); }, 5000);
   }
+
+  console.log(playerWrapper);
   return (
     <div>
       <div
@@ -59,6 +61,8 @@ function MoreInfoCard(props) {
       <div className="centerMoreInfo">
         <div className={"moreInfo"}>
           <div className="showMovie">
+            <div className="top-frameborder"></div>
+            <div className="bottom-frameborder"></div>
             <div className="closeMovie" onClick={props.timedLightMode}>
               <LineIcon name="close"/>
             </div>
