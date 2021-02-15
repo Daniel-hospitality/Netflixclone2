@@ -78,6 +78,7 @@ function Banner() {
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
           </button>
+
           <button className="banner_button" onClick={handleRender}>
             <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
@@ -87,6 +88,7 @@ function Banner() {
             genres={genres}/>
             : 
             "" }
+
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
           </button>
