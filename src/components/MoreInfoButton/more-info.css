@@ -384,17 +384,19 @@
     margin-left: calc((100vw - 850px) / 2);
   }
   .movieJarFile {
-      width: 50vw;
+      width: 70vw;
       margin-left: 0;
       right:0;
   }
+   
+
 }
 
 @media only screen and (min-width: 1200px) {
-  /* .movieJarFile {
+  .movieJarFile {
     width: 65vw;
     
-  } */
+  }
   .container_movie_info {
     height: 35vh;
   }
