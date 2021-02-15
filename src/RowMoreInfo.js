@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 
 function RowMoreInfo(props) {
   const [showMovie, setshowMovie] = useState(false);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
-   
+
   const toggleMovie = () => {
-    setshowMovie(true)
+    setshowMovie(true);
   };
-   
+  const onMute = () => {
+    muted ? setMuted(false) : setMuted(true);
+  };
+
   return (
     <div>
-      <ReactPlayer url={`https://youtu.be/${props.movie?.youtubeKey}`}
+      <ReactPlayer
+        url={`https://youtu.be/${props.movie?.youtubeKey}`}
         playing={play}
         muted={muted}
         controls={false}
@@ -21,10 +25,8 @@ function RowMoreInfo(props) {
         height="100%"
       />
     </div>
-        
-
-  )
+    // {` ${showMovie ? "smallDetailCard" : "hidden" }'}
+  );
 }
-  
 
 export default RowMoreInfo;

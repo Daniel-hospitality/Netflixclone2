@@ -65,9 +65,7 @@ function InfoButton(props) {
   }
 
   // const handlePlayPause = () => {
-  //   if (play === true) {
-  //     setPlay(false);
-  //   }
+  //  play? setPlay(true):setPlay(false)
   // };
 
   return (
