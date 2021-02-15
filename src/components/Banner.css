@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  margin-top: -18vh;
+  margin-top: -16vh;
   height: fit-content;
   object-fit: contain;
   color: white;
@@ -61,6 +61,8 @@
   border-radius: 0.6vw;
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   margin-right: 1rem;
   margin-top: 1rem;
