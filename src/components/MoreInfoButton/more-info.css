@@ -31,11 +31,8 @@
 }
 .centerMoreInfo {
   justify-content: center;
- 
 }
 .moreInfo {
-
-  
   display: flex;
   flex-direction: column;
   height: 100%;
