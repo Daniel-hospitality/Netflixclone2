@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
+import LineIcon from 'react-lineicons';
 
 function RowMoreInfo(props) {
   const [showMovie, setshowMovie] = useState(false);
@@ -27,7 +28,21 @@ function RowMoreInfo(props) {
         height="100%"
       />
     </div>
+    {/* <div>
+              <div className="icon-btn" id="icon-plus">
+                <i className="lni lni-plus"></i>
+              </div>
+              <div className="icon-btn">
+                <i className="lni lni-thumbs-up"></i>
+              </div>
+              <div className="icon-btn">
+                <i className="lni lni-thumbs-down"></i>
+    </div> */}
+    {/* <div className="mute-button" onClick={onMute}>
+              <i className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
+                id="mute"
+              /> */}
     )
-}
+};
 
 export default RowMoreInfo;
