@@ -15,7 +15,8 @@ function RowMoreInfo(props) {
   };
 
   return (
-  // <div className={` ${showMovie ? "smallDetailCard" : "hidden" }'}>
+    <div className="smallMovieContainer">
+  <div className={` ${showMovie ? "smallDetailCard" : "hidden" }'}>
 
     <div>
       <ReactPlayer
@@ -29,20 +30,21 @@ function RowMoreInfo(props) {
       />
     </div>
     {/* <div>
-              <div className="icon-btn" id="icon-plus">
+              <div className="plusIcon">
                 <i className="lni lni-plus"></i>
               </div>
-              <div className="icon-btn">
+              <div className="thumbsUp">
                 <i className="lni lni-thumbs-up"></i>
               </div>
-              <div className="icon-btn">
+              <div className="thumbsDown">
                 <i className="lni lni-thumbs-down"></i>
     </div> */}
     {/* <div className="mute-button" onClick={onMute}>
               <i className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
-                id="mute"
+                
               /> */}
-    )
+              </div>      
+              )
 };
 
 export default RowMoreInfo;
