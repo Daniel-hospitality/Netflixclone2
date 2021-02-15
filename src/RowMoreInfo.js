@@ -14,6 +14,8 @@ function RowMoreInfo(props) {
   };
 
   return (
+  // <div className={` ${showMovie ? "smallDetailCard" : "hidden" }'}>
+
     <div>
       <ReactPlayer
         url={`https://youtu.be/${props.movie?.youtubeKey}`}
@@ -25,8 +27,7 @@ function RowMoreInfo(props) {
         height="100%"
       />
     </div>
-    // {` ${showMovie ? "smallDetailCard" : "hidden" }'}
-  );
+    )
 }
 
 export default RowMoreInfo;
