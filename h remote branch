@@ -1,0 +1,1366 @@
+[33mcommit 3757517858c110707850b1c2089e140b0f070372[m[33m ([m[1;36mHEAD -> [m[1;32mRigaupdate150221[m[33m)[m
+Author: Riga Hoever <riga2ni@gmail.com>
+Date:   Mon Feb 15 14:54:44 2021 +0100
+
+    Update more info screen, moved downwards
+
+[33mcommit d63bcebc95980f3b1f15166a5495b8c79c98ab5a[m
+Author: Riga Hoever <riga2ni@gmail.com>
+Date:   Mon Feb 15 14:34:13 2021 +0100
+
+    More info screen moved downwards
+
+[33mcommit c4ab7aa79859b99589fb031c094d939b456f8c5b[m
+Author: Riga Hoever <riga2ni@gmail.com>
+Date:   Mon Feb 15 13:58:44 2021 +0100
+
+    Update styling like buttons movie info and buttons banner environment
+
+[33mcommit b1592a872f2fe3e17c57b361a8b541798a7b499a[m
+Merge: 0d62fee a561fb6
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Mon Feb 15 10:25:39 2021 +0100
+
+    Merge pull request #19 from Daniel-hospitality/Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram
+    
+    Net04 daniel clone main dev11 022021 moreinfo button update bram
+
+[33mcommit a561fb6de27e4c7a8038c59b60092365cc08c013[m[33m ([m[1;31morigin/Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram[m[33m)[m
+Merge: 2e66284 0d62fee
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Mon Feb 15 10:25:25 2021 +0100
+
+    Merge branch '150220Daniel' into Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram
+
+[33mcommit 2e66284ca3fb1296e11a0d6edba7dee011548efa[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 23:58:23 2021 +0100
+
+    Add enablePlayer() and enableLight()
+
+[33mcommit 31044a2538d90954ce33e33cca62293d96d2ef71[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 23:57:05 2021 +0100
+
+    Rename functions
+
+[33mcommit e4d7235a101804359e2fdc68948fee58fdcc0f3d[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 23:29:59 2021 +0100
+
+    Add toggle functions to  handleClickFullscreen()
+
+[33mcommit 36d5a8de08720eb8824cdb76a599ee08fd2cea34[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 23:28:48 2021 +0100
+
+    Change icons toggle behaviour
+
+[33mcommit 255bac748db84a7480114f5d0193cce23ef7b5eb[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 21:59:47 2021 +0100
+
+    Toggle frameborders in Moreinfocard
+
+[33mcommit 2c6ba8c4068b810b0da46cb557e9becbc52f9645[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 21:35:55 2021 +0100
+
+    Remove frameborder styling from more-info.css
+
+[33mcommit b3e08b85205cbda8d2c913cded516f4ed8d0ed7a[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 21:35:10 2021 +0100
+
+    Add top-frameborder and bottom-frameborder to Player component to hide youtubelogo and title during playing
+
+[33mcommit 87a28171b87621b64febf213f3b7faed4c14d150[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 19:31:19 2021 +0100
+
+    Add top % bottom frameborder div, and gave controls higher z-index
+
+[33mcommit 97d7b827a3fd8c65bcc8eb537096b6a3a05056b2[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 16:40:09 2021 +0100
+
+    Change onClick event to use function timedLightMode, triggers the banner to switch from a background image to a delayed playing video.
+
+[33mcommit d5c7d413c320bbd22f8fe0000310b5d4f8b597a0[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 16:36:05 2021 +0100
+
+    Change styling of MoreInfo buttons and added transitions, where too big in size.
+    Add height: 100% and overflow-y: auto to enable scroll on component.
+    Add pseudo element -webkit-scrollbar and set to display:none to hide scrollbar.
+
+[33mcommit fa610bc0505d7a5b6c4cadf943fa55f543155965[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 16:29:02 2021 +0100
+
+    Create timeToggleLight() in the useImperativeHandle hook, exposed to parent. Time delayed function toggles between background image (light) and playing the player.
+    
+    Rename toggleShow to toggleShowButtons
+
+[33mcommit 21d1203273f4f811e8d8b169c51d42d562f1fdf2[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 16:24:57 2021 +0100
+
+    Create timedLightMode() function, time delayed function to switch from "light" to "playing",  passed to MoreInfoCard component.
+
+[33mcommit 82498c3df13089a487d592869ec92022f141bb75[m
+Merge: 1186c66 374f028
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 13:25:52 2021 +0100
+
+    Merge remote-tracking branch 'origin/Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram' into Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram
+    
+    Fix merge conficts
+
+[33mcommit 1186c66877bb72c7b54536dbdd9bbc837e7fe291[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 13:19:24 2021 +0100
+
+    Remove renderCallback function, toggleRendered is already in use.
+    Create function handelBodyScroll to lock/dislock scroll to referenced target element.
+    Add bannerRef, reference is needed to target element for scroll locking.
+
+[33mcommit 577484613c8fcb7fc66ea9badf8614c95846b91a[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 13:11:22 2021 +0100
+
+    Add dependancy body-scroll-lock. Enables body scroll locking (for iOS Mobile and Tablet, Android, desktop Safari/Chrome/Firefox) without breaking scrolling of a target element (eg. modal/lightbox/flyouts/nav-menus).
+
+[33mcommit ffc07cd76fb5230927b057249474dd1a20c97d71[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Feb 14 13:09:35 2021 +0100
+
+    Update node modules
+
+[33mcommit 374f028d898f26b117555f616528a45a48555b2f[m
+Merge: 59e9072 2b07cae
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Sat Feb 13 17:50:54 2021 +0100
+
+    Merge branch 'Net04DanielCloneMainDev11-022021' into Net04DanielCloneMainDev11-022021-moreinfo_button_update-bram
+
+[33mcommit 59e90725ab7b7be64126ad88b0e21897d9aa164f[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Feb 13 11:25:07 2021 +0100
+
+    Change setTimeout of toggleShow() from 8 to 5 seconds.
+
+[33mcommit 98c3901ff137f02c898775592252cbecc1b57b48[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Feb 13 11:23:17 2021 +0100
+
+    Adjust styling of more-info.css
+
+[33mcommit bfe5ea2dac975e903d977ca32a980917cdf73866[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Feb 13 11:21:39 2021 +0100
+
+    Rename img to .more-info-logo, remove playbutton container
+
+[33mcommit fe4be6ab46e4d91257998e2b6850b1d42ee247c7[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:55:07 2021 +0100
+
+    Add useEffect to set Genres with values from returnGenres function, toggler for the player controls and toggler for conditional rendering of the component.
+
+[33mcommit ebf6798f1fff19d90e94f177fa5031e60e6c3a8a[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:51:57 2021 +0100
+
+    Add hidden state, function toggleShow to toggle player controls from hidden/show on PointerMove event.
+
+[33mcommit eb161cffee111b418dcd8b2c1b313cb00debaddf[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:48:56 2021 +0100
+
+    Add styling on InfoButton, more-info Player stylesheets
+
+[33mcommit 6aea81b87d1b73cdca7666b1a6a67cfae12c18c7[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:47:50 2021 +0100
+
+    Create function and callback function to toggle conditional rendering for the MoreInfoCard
+
+[33mcommit ffaf35b794489c472f5f68dce79957d27ea2d1ac[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:45:26 2021 +0100
+
+    Remove whitespace
+
+[33mcommit c1d8ffa326174bf620fd89af823d94988da6844b[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 21:45:09 2021 +0100
+
+    Remove whitespace
+
+[33mcommit 2b07caefe62d9ab1fb2847fc540c29b8e868c157[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 12 13:32:45 2021 +0100
+
+    Small mute update
+
+[33mcommit 0d62fee1e6276a1ad59ec03cea171a8b3614a65f[m[33m ([m[1;31morigin/MainDev[m[33m, [m[1;32mMainDev[m[33m)[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 12 13:31:12 2021 +0100
+
+    Mute Update
+
+[33mcommit afa72cb093886f8bb1eeba7c304361bdaa073af2[m
+Merge: 075dc3f 065d45c
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Feb 12 12:41:27 2021 +0100
+
+    Merge pull request #16 from Daniel-hospitality/Net04DanielCloneMainDev11-022021
+    
+    small styleupdate
+
+[33mcommit 065d45c9a57db1766aa9d545ce8a7e4ea9abe1e2[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 12 12:38:44 2021 +0100
+
+    small styleupdate
+
+[33mcommit 075dc3fe4261439ea136067442e7f67092c49eee[m
+Merge: 96306af cd3499a
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Feb 12 11:57:06 2021 +0100
+
+    Merge pull request #15 from Daniel-hospitality/Net04DanielCloneMainDev11-022021
+    
+    Net04 daniel clone main dev11 022021
+
+[33mcommit cd3499a4ea8ad0c93996fc4a6ca26a6e2b2b00a8[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 12 11:54:58 2021 +0100
+
+    Update InfoButton.js file
+
+[33mcommit 5e0d82c43b5da87566e9dd2aa4de4b180ce21e57[m
+Merge: a3f6a01 dd6b9e0
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Feb 12 11:48:28 2021 +0100
+
+    Merge pull request #14 from Daniel-hospitality/Net04RigaFeb
+    
+    mediaqueries adjustment for inobutton screen and info button, thumbs …
+
+[33mcommit dd6b9e049df2375f8f82cd93744c1ef419c60626[m[33m ([m[1;31morigin/Net04RigaFeb[m[33m)[m
+Merge: 657540a a3f6a01
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Feb 12 11:48:00 2021 +0100
+
+    Merge branch 'Net04DanielCloneMainDev11-022021' into Net04RigaFeb
+
+[33mcommit 96306af13a1feabf1729756d457f22eff3074a9c[m
+Merge: 5a723f4 a3f6a01
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Feb 12 11:35:47 2021 +0100
+
+    Merge pull request #13 from Daniel-hospitality/Net04DanielCloneMainDev11-022021
+    
+    Net04 daniel clone main dev11 022021
+
+[33mcommit a3f6a01baa190f88ec11ec3e7d94c4e3bb82e0b6[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 12 11:33:44 2021 +0100
+
+    Small update Banner style removed old player test files.
+
+[33mcommit 657540a358f73dd60708c321523b664a87b731fb[m
+Author: Riga Hoever <riga2ni@gmail.com>
+Date:   Fri Feb 12 09:08:56 2021 +0100
+
+    mediaqueries adjustment for inobutton screen and info button, thumbs button styling
+
+[33mcommit 44d4b7a2d9195797c2dad28895935e84fafce498[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 00:55:31 2021 +0100
+
+    Add handleMoreInfo() to Banner component, which handles conditional rendering of the InfoButton component.
+
+[33mcommit 5a5214e115735b4512237072412db7fc9192545d[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 00:53:39 2021 +0100
+
+    Create MoreInfoCard (and styling), duplicate to existing InfoButton component without the integration of the "meer informatie"  button
+
+[33mcommit c6c2251bef5d730a1ed421e0c06696a9885f5107[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 00:50:42 2021 +0100
+
+    Add togglePlayPause to Player component's imperativeHandle, expose player's toggle ability to reactplayer's playing prop
+
+[33mcommit 928e94fe2ef79ebf086598528cbd663a80889e81[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Feb 12 00:47:04 2021 +0100
+
+    Add banner-style-btn and onhover styling
+
+[33mcommit 7c2cb1095f9c8f2fff800399d9adb8b787fa2713[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Feb 11 16:52:22 2021 +0100
+
+    InfoButtonPlayer Update Buttons
+
+[33mcommit 5a723f42802a00c8fa233f6f128332e3858d566a[m
+Merge: cf8d9bf 7732b5b
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Feb 11 11:19:11 2021 +0100
+
+    Merge pull request #12 from Daniel-hospitality/Net04Hyacinthia
+    
+    Net04 hyacinthia update
+
+[33mcommit 7732b5bef246932103ac0cd44f6c6868f4082367[m[33m ([m[1;31morigin/Net04Hyacinthia[m[33m)[m
+Merge: 385aefc cf8d9bf
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Feb 11 11:18:46 2021 +0100
+
+    Merge branch 'MainDev' into Net04Hyacinthia
+
+[33mcommit 385aefc085aa484870bc40448068a1dd0845484b[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Feb 11 11:11:47 2021 +0100
+
+    smaal update clean CSS
+
+[33mcommit a9261ce84ad6cc11887e9337d6716da08caab6c0[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Feb 11 11:09:56 2021 +0100
+
+    Styling Respon ccsClean
+
+[33mcommit ea0d003dc0610b83b653433aae03d54042abebec[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Feb 10 15:46:52 2021 +0100
+
+    Update styling
+
+[33mcommit cf8d9bfeeb4da6adb1df0dd5aae9956d7ba57c19[m
+Merge: 692a938 1a1e537
+Author: Bram Engel <engelenburg1980@gmail.com>
+Date:   Wed Feb 10 14:48:44 2021 +0100
+
+    Merge pull request #11 from Daniel-hospitality/Net04Daniel
+    
+    Net04 daniel
+
+[33mcommit 1a1e537e58f206c0a7b0724c6404e4cb8b546a93[m[33m ([m[1;31morigin/Net05DanielRow[m[33m)[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Feb 10 11:23:24 2021 +0100
+
+    smallupdate index.css backgroundcolor
+
+[33mcommit 863b01c4660520117f7ba12964969d40f1cd4a5d[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 22:49:39 2021 +0100
+
+    Row-try-out setup
+
+[33mcommit ff0c62feba5c74906a5d40c54d591014afe2f874[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 22:25:39 2021 +0100
+
+    Update font-size
+
+[33mcommit 34a694c6edb0f934e3325c1986047c4b7f0c283f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 22:13:30 2021 +0100
+
+    Update InfoButton
+
+[33mcommit 64b6161675d746ea44dba6e471a5a06ab47cbb36[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 14:50:03 2021 +0100
+
+    update infobutton
+
+[33mcommit f56566803b55886643639393eae1b363b76ddd4f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 13:02:03 2021 +0100
+
+    Update styling
+
+[33mcommit c9f1ad36009ebdcc81c93653de7dd0bd8b98d8a6[m
+Merge: bb92cd1 92599c7
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 11:34:11 2021 +0100
+
+    Merge branch 'Net04Hyacinthia' of https://github.com/Daniel-hospitality/Netflixclone2 into Net04Hyacinthia
+
+[33mcommit bb92cd142d594d200ecb4e723a305eede1d78a7f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 11:29:02 2021 +0100
+
+    Updat RowMoreInfo
+
+[33mcommit 18f98916659be6e44229d6913edf703ff4adaa12[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 9 11:27:33 2021 +0100
+
+    Update json added new RowMoreInfo and styling MoreInfoButton
+            modified:   package-lock.json
+            modified:   package.json
+            modified:   src/Row.css
+            modified:   src/components/MoreInfoButton/InfoButton.css
+            modified:   src/components/MoreInfoButton/InfoButton.js
+            modified:   src/pages/Nieuw.js
+
+[33mcommit 92599c7adb43c85309610da1883cc6c477a4e4a7[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:41:28 2021 +0100
+
+    Infobutton styling
+
+[33mcommit 48b76c624220dacdf52fb47e38cf99faf5219c47[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:33:00 2021 +0100
+
+    update
+
+[33mcommit 8cd30d0141ac30c6e0ac03afbb8bbb1e874eea50[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:26:55 2021 +0100
+
+    InfoButton
+
+[33mcommit 4b6c03a78379f312b42dac4b1fe48589a5a64767[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:21:59 2021 +0100
+
+    update icons
+
+[33mcommit 090243854605731b0ec85f001cbc7355bbb990f6[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:20:57 2021 +0100
+
+    update icons
+
+[33mcommit a65968b76b25bb87e714e931b843722d05fd7056[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:10:09 2021 +0100
+
+    update icons
+
+[33mcommit 7d5a894a35beb5b9bb3fcf9663db4ede5bd1a8c8[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 20:09:38 2021 +0100
+
+    update icon-container
+
+[33mcommit 71addb0c08a50f9c12dc669439ac1a6092691117[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 19:56:33 2021 +0100
+
+    Update more info_)button
+
+[33mcommit e441e9c34fc236ead453e46004aee16ef41a450f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 19:51:38 2021 +0100
+
+    Styling buttons informationcard
+
+[33mcommit c810d389f011dee3eb79f7221ca411952830aa75[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 8 19:51:06 2021 +0100
+
+    Styling icons
+
+[33mcommit c4aebde81a3a0b41ebef0258f5b037e22dac7298[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Sun Feb 7 02:04:41 2021 +0100
+
+    icons update
+
+[33mcommit c626ec110184a49e375298b4fc6c48ef723f31de[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Sun Feb 7 01:35:06 2021 +0100
+
+    small update onPauseButton
+
+[33mcommit 821129882dd63d06d8742c75926c46069df968cf[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Sun Feb 7 01:31:08 2021 +0100
+
+    Styling remake icons
+
+[33mcommit 37547e150926ca368251bd857967c29c8efa7201[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 5 16:36:31 2021 +0100
+
+    small updates design
+
+[33mcommit 44f5d26918094a39f5d89cc269a7795ffa67e4a6[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Feb 5 08:29:12 2021 +0100
+
+    Small update NavB Bannar Descript
+
+[33mcommit 005d5b7310e2f86e1ed308786cabd1e6460fbb45[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Thu Feb 4 23:34:17 2021 +0100
+
+    Styling icons and description.
+
+[33mcommit 692a93818f0204d24cfb7e975ff7eb634c0abd20[m[33m ([m[1;31morigin/net04riga[m[33m, [m[1;31morigin/Net05-rows-genres-Halil[m[33m)[m
+Merge: cbb0d8a 3453aba
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 13:39:12 2021 +0100
+
+    Merge remote-tracking branch 'origin/net04-feature_youtube_fullscreen' into net04-feature_youtube_fullscreen
+
+[33mcommit cbb0d8a63e004aea8e61cdaa64dccc779bfff93d[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 13:38:31 2021 +0100
+
+    Add "react-lineicons": "^2.2.0", to package.json, fix line-icons issue
+
+[33mcommit 3453aba07974de95458e9efad5e346cba1fdafcc[m
+Merge: 2ed8ee4 abb9fe2
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 13:38:06 2021 +0100
+
+    Merge remote-tracking branch 'origin/net04-feature_youtube_fullscreen' into net04-feature_youtube_fullscreen
+
+[33mcommit 2ed8ee463dd360f630c0ef34f837953cc9aada42[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 13:37:57 2021 +0100
+
+    Delete div
+
+[33mcommit 0b730e7f8bfd68955b5f7c3fad387992427c3a59[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 13:37:39 2021 +0100
+
+    Add react LineIcons to package json
+
+[33mcommit d9b3f28f7dc1ca8dbf255701e1bdf767a4bdfd83[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 13:37:18 2021 +0100
+
+    Add react lineIcons to depandancy
+
+[33mcommit abb9fe298e7a18a77b60a24d248d72cca8793ec2[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 13:35:46 2021 +0100
+
+    Add handleClickMute() to toggle mute/unmuted icon
+
+[33mcommit 4d80aa370364363bbc6d07b17eea7789f85ade70[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 13:12:55 2021 +0100
+
+    Add toggle behaviour when played/paused muted/unmuted ti Player buttons
+
+[33mcommit 6480e4a879450c81e6978928ec028b608484dafb[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 12:35:01 2021 +0100
+
+    Fix merge conflics
+
+[33mcommit 0769784363d5a030581a6e9936078ba9b8ebeddd[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 12:31:14 2021 +0100
+
+    Merge remote-tracking branch 'origin/net04-feature_youtube_fullscreen' into net04-feature_youtube_fullscreen
+    
+    Add #player-fs-play-btn button styling
+
+[33mcommit 3ecb55da6399d43c8acc61ae5a7ec0d2c31a2be5[m
+Merge: c0d44fd ed043e1
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 11:34:38 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit ed043e178e7dc2455e01909d65d4934a5107b856[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 11:17:54 2021 +0100
+
+    Update Banner, remove props and add useref
+
+[33mcommit 725eb673c5d9953e2926d565654f3c7d9a405378[m
+Merge: 51455f1 169ea61
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Feb 4 10:49:35 2021 +0100
+
+    Merge pull request #9 from Daniel-hospitality/net05-backlog-Sprints-Halil
+    
+    Update genres sort method to join()
+
+[33mcommit 169ea611b9bb053c5f3df3d7051a1259b6128ed5[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 10:45:04 2021 +0100
+
+    Update genres sort method to join()
+
+[33mcommit c0d44fdd078632361b83388217feed2784f11d75[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 10:20:33 2021 +0100
+
+    Remove props argument as Component fetch data on it self
+
+[33mcommit 0429dcd16d01e8034a9af0728adf611c45a5b2ec[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 10:19:42 2021 +0100
+
+    Add play button to Player component and styling
+
+[33mcommit 51455f10a8ed9568419f093edd05c1ae146a5bce[m
+Merge: a9fc83f 9101e39
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Feb 4 10:17:01 2021 +0100
+
+    Merge pull request #8 from Daniel-hospitality/Net04-backlog-sprint-2-Halil
+    
+    Merge backlog Halil (detailsCard)
+
+[33mcommit 9101e39ccedbcde40d079c01814371883e4c0a4e[m
+Merge: 4810968 a9fc83f
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Feb 4 10:14:59 2021 +0100
+
+    Merge branch 'net04-feature_youtube_fullscreen' into Net04-backlog-sprint-2-Halil
+
+[33mcommit 481096821b87ef7aa658a537a12a7c7a6f0854de[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Thu Feb 4 09:24:33 2021 +0100
+
+    Update filter method of the genres
+
+[33mcommit ad7ec2b36029ae94698f98414e08f670ef2435b4[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 08:43:48 2021 +0100
+
+    Initialise Player component stylesheet.
+
+[33mcommit 15291469d67aff7858d3d083fce36e7618949c9b[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 08:42:43 2021 +0100
+
+    Remove unnecessary commentary from InfoButton styling
+
+[33mcommit 664197b07644a633a6c180afb7cfcebec63176e0[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 08:42:04 2021 +0100
+
+    Add mute and exit button to Player component.
+    Utilises useState, useEffect hook screenfull’s event listeners to toggle buttons on fullscreen changes.
+
+[33mcommit 5e00be0dd54c52c954c6ca4cd9cead706520c084[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 08:36:18 2021 +0100
+
+    Create hook in the Banner component to fetch data from backend.
+
+[33mcommit 4161b39fee7418550a7061018eafc42cb8d37250[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Feb 4 08:35:04 2021 +0100
+
+    Paraphrase files App and Banner styling
+
+[33mcommit 10e94e6e2159882f859f8b00f5d259b7f739ffea[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Wed Feb 3 21:21:38 2021 +0100
+
+    Add all possible genres to the detailcard
+
+[33mcommit c3f1463584a9609cd70005a84b01fd1298ea8131[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Wed Feb 3 15:15:19 2021 +0100
+
+    Update style of detailcard and background blur
+
+[33mcommit 476fec3d13046de2c43ffe4f84fa1f6dd6098106[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Wed Feb 3 15:14:32 2021 +0100
+
+    Add size responsiveness of detailmoviecard and info from json, and blur
+    
+    problem with genres
+
+[33mcommit 4cd5e1d2d5b93549d0080f70681253d41ae447f0[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Wed Feb 3 15:13:03 2021 +0100
+
+    Add movie fetch to banner and update props.movie to movie
+
+[33mcommit 87437eebc72af84a2155129fbc1a17b762e72d36[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Wed Feb 3 15:12:00 2021 +0100
+
+    Update to deactivate hero component import
+
+[33mcommit a9fc83f67b3a85da9c0f8480d4f8bca9f1504de5[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Feb 3 15:01:49 2021 +0100
+
+    smallupdate
+
+[33mcommit 1a9601d2e86eda262956528f9f219114bbbf9511[m
+Merge: 274bf19 2e874ac
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Feb 3 14:57:50 2021 +0100
+
+    Merge branch 'net04-feature_youtube_fullscreen' of https://github.com/Daniel-hospitality/Netflixclone2 into net04-feature_youtube_fullscreen
+
+[33mcommit 274bf1905fe20036fac6ecd9ae44551bc124f6b1[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Feb 3 14:57:42 2021 +0100
+
+    Banner Styling net 04
+
+[33mcommit 2e874acb5e309f22ef73e08e30f795395c544c8b[m
+Merge: dcded72 c4a14ef
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Feb 3 13:10:30 2021 +0100
+
+    Merge branch 'net04-feature_youtube_fullscreen' of https://github.com/Daniel-hospitality/Netflixclone2 into net04-feature_youtube_fullscreen
+
+[33mcommit dcded7298fe4c0059a2850bdc4967c673fbbf65b[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Feb 3 13:08:19 2021 +0100
+
+    update banner.js member
+    modified:   src/components/Banner.js
+
+[33mcommit 190058736bb8c25f743ec80c64f6e5fb8c150f14[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 22:48:29 2021 +0100
+
+    Paraphrase classname
+
+[33mcommit 9aa6af22eaf727339077cd5b806e4d3328129ca1[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 22:47:57 2021 +0100
+
+    Add handler for onBlur, which is used when click event is out of focus
+
+[33mcommit c2a5fc3bdc69cfe51ad453a218c6f2848446b32f[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 22:18:50 2021 +0100
+
+    Remove unnecessary comments on App
+
+[33mcommit c4a14ef00e780c2e9463c71111d39c63e5eca5eb[m
+Merge: 03023cd af0726a
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 12:32:31 2021 +0100
+
+    Merge branch 'net04-feature_youtube_fullscreen' of https://github.com/Daniel-hospitality/Netflixclone2 into net04-feature_youtube_fullscreen
+
+[33mcommit 03023cde04d06eaea846d1eda425228f25028731[m
+Merge: 2be4c37 9affadb
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 12:32:05 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit af0726a96d7c5795f2a55fc2f0684846130f8f79[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Tue Feb 2 12:23:17 2021 +0100
+
+    Update the footer to remove an error
+
+[33mcommit 658f9fdee82e8d1f8981e3329cb167dcd3cfd470[m
+Merge: 9affadb d2f81e5
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Tue Feb 2 12:19:03 2021 +0100
+
+    Merge remote-tracking branch 'origin/net04-feature_youtube_fullscreen' into net04-feature_youtube_fullscreen
+
+[33mcommit 2be4c3782d66d21ab8d0473fccb1db352d654877[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 12:14:45 2021 +0100
+
+    Paraphrase banner component
+
+[33mcommit 73e5b4d9ecac2a5f297e62f3fba263adf8b22be8[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 12:14:19 2021 +0100
+
+    Remove class component hero, was created for the fullscreen mode which didn’t
+    Work in the functional component, the issue was fixed.
+
+[33mcommit 9affadbc51c3f8a38cdaca3679c3a85042700762[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Tue Feb 2 12:11:20 2021 +0100
+
+    Update footer to make it and icon links responsive
+
+[33mcommit 7e7e5b9a9efa1f538a7b60b3e19717b3e1dd8e7a[m
+Author: Halil Bagci <halilbagci75@hotmail.com>
+Date:   Tue Feb 2 12:10:22 2021 +0100
+
+    Delete team link to align footer and delete footer Breaks
+
+[33mcommit d2f81e56fed2c5573c22560f1763fff388954abd[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 11:53:05 2021 +0100
+
+    Add toggleMute function to Player component, which toggles boolean on the state muted
+
+[33mcommit 6bdfe36e2f854cb3ad32e8950792eb1815e3b833[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 10:52:42 2021 +0100
+
+    Add movie props to use backend data
+
+[33mcommit 67e0d26dff76f080a46adfc178f7522052e72971[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 10:51:06 2021 +0100
+
+    Add .banner-mute-button styling
+
+[33mcommit 0056352538eb90e3e9352b0fbc3e497027d2b8fb[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 10:48:13 2021 +0100
+
+    Remove state controls
+
+[33mcommit 23e0fd214cbb458e963171c3bd5a120b0fa0aba2[m
+Merge: 7214a8e 56cb2a9
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 10:46:45 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit 7214a8e26dcd31f0e1af410635cad30a3b2a9f8e[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 09:54:44 2021 +0100
+
+    Create player component, uses useImperativeHandle to expose
+    Functions like enableFullscreen to parent.
+    Has react hook useEffect to set timed states to change behaviour.
+
+[33mcommit 8b0472c260ed5cbc3a8bcc5fc83d2b1c22857764[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 09:51:17 2021 +0100
+
+    Import useState and useEffect, to pass state as props from parent to children
+
+[33mcommit 1874b347317b209f9a2f381d203749bcaceba0b8[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Tue Feb 2 09:49:58 2021 +0100
+
+    Import player component
+    Import InfoButton component
+    Add handleClickFullScreen()
+    Add handleClickMute()
+
+[33mcommit 56cb2a9d838c88fa966368a397186c62755d7cf2[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Feb 2 06:39:36 2021 +0100
+
+    FooterTest file 2/2/2021
+    new file:   src/components/FooterTest/FooterTest.js
+    new file:   src/components/FooterTest/footerTest.css
+
+[33mcommit c577e6dee7ce254cade8dff5cd7ae8848ac134fc[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Mon Feb 1 19:56:47 2021 +0100
+
+    FooterTest flex 1 februari 2021
+
+[33mcommit bc7d4dcffe332d6d3749c3800173dddbe4cfa81a[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Jan 30 02:42:57 2021 +0100
+
+    Create separate Player component
+
+[33mcommit a57c9610f37ae0c2112b6128fae044fa3e7ab012[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Jan 30 02:41:18 2021 +0100
+
+    Remove console.table from Row
+
+[33mcommit c587c7eeafe15277f07fd904c2f2b63405ac296e[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Jan 30 02:40:41 2021 +0100
+
+    Add more negative margin to .Banner
+
+[33mcommit d90f0899be83743cd57f5341e4c1afd8b2ae4c57[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Jan 30 02:39:37 2021 +0100
+
+    Create new Hero class component, to test fullscreen
+
+[33mcommit f2967c5c9546cd4ac9ed532d14cf54a55408b247[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sat Jan 30 02:38:38 2021 +0100
+
+    Render Hero component in main App
+
+[33mcommit 9ea0c28849933b05ea9ba5c375bbb89c8e63cef8[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Fri Jan 29 14:49:34 2021 +0100
+
+    OnPause erase
+
+[33mcommit 4cae30a7b50d0afba17869fe8ab8111566d75aaf[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Jan 29 14:20:30 2021 +0100
+
+    Net04update14:20
+
+[33mcommit 2179b0f7a4d382e67d5180639a3afcacbf869900[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Jan 29 14:11:53 2021 +0100
+
+    Net04update
+
+[33mcommit 0b06c0581e0d25e9d2df221cdd77a0de221dcabf[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Jan 29 12:41:37 2021 +0100
+
+    Net04edit Button
+
+[33mcommit ab375091c64f3fe64e03ee53af9fd8442945c7e3[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Jan 29 11:15:49 2021 +0100
+
+    Net04Moreinfo
+
+[33mcommit 389ced4289748847c4fcc2237356b82c7bd1702b[m
+Merge: 0f1747a 537e167
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Jan 29 10:01:28 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit 0f1747ab3e39ac8835426e6df4d701e4eba75383[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Fri Jan 29 09:57:31 2021 +0100
+
+    Refactor Banner component
+
+[33mcommit c3b2c0a0fbd79d3d48e93c1d47c07c38983369a0[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 20:56:15 2021 +0100
+
+    Restyle banner component
+
+[33mcommit fdf455418b20ed2d0a79bf54b60601159f7577d2[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 20:55:48 2021 +0100
+
+    Add rows
+
+[33mcommit d3b06e2c71420c8c4dfc409b7937bd7c3d57b53b[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 20:55:33 2021 +0100
+
+    Add screenful package to display in fullscreen
+
+[33mcommit 074991d33ec578d5df656a402aa972925cf9b208[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 20:54:14 2021 +0100
+
+    Set z-index higher so the banner overlaps
+
+[33mcommit 537e16732e2f51f51fec5e3e2d2ff447e16ae563[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Jan 28 16:15:43 2021 +0100
+
+    Row update
+
+[33mcommit a5d7aecb49b3e7726cf2f26364f1db5fc0d875f1[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 15:29:34 2021 +0100
+
+    Change height banner
+
+[33mcommit 4a6d3adb34668212831a699de427cba890e1e9f0[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 15:28:17 2021 +0100
+
+    Uncomment the rows
+
+[33mcommit 211358da8d2cc095607def37933d6efa560bee97[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 15:26:43 2021 +0100
+
+    Remove react-youtube
+
+[33mcommit 1b1066d86e656eb149468d5508cfd9d727982bce[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Jan 28 14:44:15 2021 +0100
+
+    Update fullscreen with latest footer and navbar
+
+[33mcommit d16811ea14c933930cc454a050a9672b3bd045bf[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 13:40:26 2021 +0100
+
+    Add test component for YouTube trailer
+
+[33mcommit e740e6e38709f083d80d193eab104090842c77ad[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 13:39:50 2021 +0100
+
+    Import react player, add custom functions and YouTube player options
+
+[33mcommit 9ef706426309967c601cf862d92e35415c853b8f[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 13:37:10 2021 +0100
+
+    Add styling to Banner
+
+[33mcommit 1cc13ed41d886eb30dac44d1eb28e37f38ce68f9[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 13:35:45 2021 +0100
+
+    Add z-index and change height to 10vh
+
+[33mcommit da6a4a342d2ae7accd317ec53d3d7eb260d77119[m
+Merge: 47b719b 1b55a67
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Thu Jan 28 13:32:58 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit 47b719bd9711b39cfe661264c1e493552285199e[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Wed Jan 27 16:41:18 2021 +0100
+
+    Change to a different prop name to retrieve logo
+
+[33mcommit 1b55a671bb1c1930ba9b0b891ac8a8ebf85190b8[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 27 16:35:10 2021 +0100
+
+    fase1
+
+[33mcommit ed94416cded07ad64ff3ca5ea28c5782089567e3[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Mon Jan 25 13:16:02 2021 +0100
+
+    Paraphrase Banner
+
+[33mcommit a8a2e35123810c75cd4841cb1bb871a4da4f4ea3[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Mon Jan 25 11:23:57 2021 +0100
+
+    Add Trailer feature, replace movieTitle with movieLogo
+
+[33mcommit ece030c4fdf15f3fe08e0827c50656b4fe07c132[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Mon Jan 25 11:22:52 2021 +0100
+
+    Add Trailer feature, replace movieTitle with movieLogo
+
+[33mcommit 17e362b801f67e029dbe04251b47b6d2488cd095[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Jan 24 16:25:09 2021 +0100
+
+    Update .eslintcache
+
+[33mcommit d168736a781595b7d6219af01a4a683469f6b697[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Jan 24 16:24:42 2021 +0100
+
+    Add style .banner_movielogo
+
+[33mcommit d0371470f9009a3816632a6fda5edeef5a9ee2fc[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Jan 24 16:23:05 2021 +0100
+
+    Import backend client, fetch data from backend
+
+[33mcommit 99954fa1bbf80132e8b5417951472310b2bfb172[m
+Author: Abraham Engel <engelenburg1980@gmail.com>
+Date:   Sun Jan 24 16:22:18 2021 +0100
+
+    Add Backend client
+
+[33mcommit 9c577b673a3e28349bd0023f8dcd91ec119008f1[m
+Merge: 11b97ae 67fa92c
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Jan 21 16:43:22 2021 +0100
+
+    Merge pull request #6 from Daniel-hospitality/Nav-Daniel-net001
+    
+    small update padding
+
+[33mcommit 67fa92c0d379e51273c1957b4aa024564222b1cc[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Thu Jan 21 08:10:23 2021 +0100
+
+    small update padding
+
+[33mcommit 11b97ae3f53a77d0403ae447f99fce595e5112e5[m
+Merge: a4381ca b2f61a5
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:42:27 2021 +0100
+
+    Merge branch 'main' of https://github.com/Daniel-hospitality/Netflixclone2 into main
+
+[33mcommit a4381cad1b2f0b60fdbaebc9b1e0155116f9021c[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:42:21 2021 +0100
+
+    update
+
+[33mcommit b2f61a5418bc0a8d3963a08a2edc81e1441c2b31[m
+Merge: 4e0a183 33ae3c8
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Wed Jan 20 21:31:23 2021 +0100
+
+    Merge pull request #5 from Daniel-hospitality/Nav-Daniel
+    
+    Nav daniel
+
+[33mcommit 4e0a183950231b40ffb0443722c62ca45447e53a[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:31:01 2021 +0100
+
+    update
+
+[33mcommit 7ee7b892da83b369651cc1a85cfdadbfd4a1f3cf[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:29:51 2021 +0100
+
+    .eslintcache
+
+[33mcommit 33ae3c8091c8e80e643a079c75a9667478f5bbe2[m
+Merge: c00ced3 ff04a03
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 21:28:27 2021 +0100
+
+    Merge branch 'Nav-Daniel' of https://github.com/Daniel-hospitality/Netflixclone2 into Nav-Daniel
+
+[33mcommit 133b5dba4a8312494f9546cafbc7f3b273bb3183[m
+Merge: 24e1ffb ff04a03
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:27:28 2021 +0100
+
+    Merge branch 'main' of https://github.com/Daniel-hospitality/Netflixclone2 into main
+
+[33mcommit 24e1ffb7acda760d580be31f778db1611d0f8521[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:24:29 2021 +0100
+
+    Merge branch 'main' of https://github.com/Daniel-hospitality/Netflixclone2 into main
+
+[33mcommit c1875c4d220a115a6d738302573d7436472e21f7[m
+Merge: d7a574e 3cb25d7
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 21:23:25 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit ff04a034bfe25d00f8ee27eaf7db4c8d6720b836[m
+Merge: 3cb25d7 e130d31
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Wed Jan 20 20:46:19 2021 +0100
+
+    Merge pull request #4 from Daniel-hospitality/Daniel-Nav
+    
+    Daniel nav
+
+[33mcommit e130d319a6062a4eaab917f75290d0ca742efcba[m
+Merge: d7ca5ba 3cb25d7
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Wed Jan 20 20:43:47 2021 +0100
+
+    Merge branch 'main' into Daniel-Nav
+
+[33mcommit d7a574e4eec8eed295d1874b191f0ebbebc7e461[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 15:10:06 2021 +0100
+
+    update
+
+[33mcommit c00ced30ad752c21cd8d7c790376e6358f9939f6[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 11:45:08 2021 +0100
+
+    nav
+
+[33mcommit 3cb25d7b5696423c730ccf5094eaa07f2b48b7ae[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 11:20:58 2021 +0100
+
+    test
+
+[33mcommit b6397d2f380cae38cbee45377a954b0999333943[m
+Merge: 3c5a711 a8ea51e
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 11:20:44 2021 +0100
+
+    Merge branch 'main' of https://github.com/Daniel-hospitality/Netflixclone2
+
+[33mcommit 3c5a71135fa9b9a666af75c49fe1b0d0dc116c1f[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 11:18:07 2021 +0100
+
+    update
+
+[33mcommit d7ca5baf2ee9b2db71572483b35e5fa95d27602f[m
+Merge: c67b05d 972198b
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Wed Jan 20 11:06:38 2021 +0100
+
+    Merge pull request #3 from Daniel-hospitality/Nav-Daniel
+    
+    navupdate
+
+[33mcommit 972198bf2c1e3ecab5360e9a3f9832328e3ac435[m
+Merge: 5b52d7b c67b05d
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Wed Jan 20 11:06:11 2021 +0100
+
+    Merge branch 'Daniel-Nav' into Nav-Daniel
+
+[33mcommit 8f70fd2155aeccf7ba976ebacb3aee45bfb48654[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 10:52:54 2021 +0100
+
+    update
+
+[33mcommit c67b05d84ef0ce079ffe916ed240e11d864bab83[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 10:36:34 2021 +0100
+
+    nav
+
+[33mcommit a8ea51e334459d4e94c7cfbe41aa299e928d2df5[m
+Merge: ca8aff3 2f8e027
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 10:32:01 2021 +0100
+
+    fix merge conflicts
+
+[33mcommit 5b52d7b981b39cf599e49f6f8ea2c403453ce28e[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Wed Jan 20 10:27:37 2021 +0100
+
+    navupdate
+
+[33mcommit ca8aff3a5f58bf912fe121bc9d9ba6f73255f70f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 09:49:16 2021 +0100
+
+    update
+
+[33mcommit 59b2af4ee75cdc0fa34cfaf54ecb1ea8222d4241[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Wed Jan 20 09:28:08 2021 +0100
+
+    update
+
+[33mcommit 2f8e0278df76c9080820d83ba9572f77f053d9cc[m[33m ([m[1;31morigin/Riga[m[33m)[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Tue Jan 19 18:11:45 2021 +0100
+
+    chachefile
+
+[33mcommit 6e0fe73df6bb064e36a03cf62e92664cdfb21d5c[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Tue Jan 19 18:11:22 2021 +0100
+
+    Merge branch 'main' of https://github.com/Daniel-hospitality/Netflixclone2
+
+[33mcommit ffac8dcf8871b00df2cf8e664c6430dd4c4234ae[m
+Merge: 5a8647e c437301
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Tue Jan 19 16:50:36 2021 +0100
+
+    Merge pull request #2 from Daniel-hospitality/Daniel
+    
+    Daniel
+
+[33mcommit c4373016217c378df72cc1a9343c21366959a9b4[m
+Merge: bd273a3 5a8647e
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Tue Jan 19 16:50:03 2021 +0100
+
+    Merge branch 'main' into Daniel
+
+[33mcommit 0c1969ada63b1e534e5631e67705a2e0db2a2b1a[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 16:48:08 2021 +0100
+
+    update 19 januari 2021
+
+[33mcommit ad3a1f771563a85ffe5dc9415a9274795037421d[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 16:35:57 2021 +0100
+
+    Update 19 januari 2021
+
+[33mcommit bd273a30759d7474dd0e2d52d903140a3b4755da[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Tue Jan 19 16:20:02 2021 +0100
+
+    test
+
+[33mcommit 5a8647e320dee72caa112e4c35ccff5e8c309337[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 16:10:44 2021 +0100
+
+    update
+
+[33mcommit 5d577b74b224a5f61d02a3356c6fbebc4a352b5e[m
+Merge: 95defb7 8f5e1d8
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Tue Jan 19 15:38:13 2021 +0100
+
+    Merge branch 'main' into Daniel
+
+[33mcommit 8f5e1d85585dd8bc3aacebae7299b38c70147d83[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 15:20:14 2021 +0100
+
+    Removed
+
+[33mcommit a95cd244ae214c6b45af9c733a5d85498663c41f[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 15:18:32 2021 +0100
+
+    Update
+
+[33mcommit 95defb70b6103a22a1b07752ac70ebc9352bdcae[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Tue Jan 19 14:37:07 2021 +0100
+
+    nav Qeury
+
+[33mcommit 566f7da68b3e19cbd077798ab135545b44cdf052[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Tue Jan 19 14:27:45 2021 +0100
+
+    Navbar banner layout
+
+[33mcommit 7fc32edd44c46dc93a3bb3134066acb4b0c12ffe[m
+Author: Cin1983! <cinnymaria@gmail.com>
+Date:   Tue Jan 19 13:32:34 2021 +0100
+
+    Update 19 januari 2021
+
+[33mcommit 038c8c8f959dc609d7139e544d7d88c8c7e18ecf[m
+Merge: e74236b b967a2d
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Fri Jan 15 19:27:50 2021 +0100
+
+    Merge pull request #1 from Daniel-hospitality/Daniel
+    
+    net01
+
+[33mcommit b967a2d5d01a7681aeeef8daf8e238cff51955fe[m
+Author: Daniel <info@danielhospitality.nl>
+Date:   Fri Jan 15 19:26:02 2021 +0100
+
+    net01
+
+[33mcommit e74236bb909ea0a575637036686cbe252ae3a76d[m
+Author: Daniel <70103351+Daniel-hospitality@users.noreply.github.com>
+Date:   Thu Jan 14 16:16:55 2021 +0100
+
+    Initial commit
