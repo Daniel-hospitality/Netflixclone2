@@ -187,7 +187,7 @@
   flex-direction: row;
   align-content: space-around;
   height: 43vh;
-}  
+}
 
 /* .runTime_overview {
   width: 60%;
@@ -283,17 +283,17 @@
     font-size: 0.625rem;
     padding: 0.7rem;
   }
-  
+
   .playButtonDetailCard {
     padding: 0.3rem 1.3rem;
     font-size: 0.7rem;
   }
-  
+
   .icon-btn,
   .playButtonDetailCard {
     margin-right: 0.5rem;
   }
-  
+
   .mute-button {
     bottom: 0.5rem;
     font-size: 70%;
@@ -304,9 +304,9 @@
     font-size: 70%;
   }
 
-  .mute-button, 
+  .mute-button,
   .closeMovie {
-    right: 0.5rem
+    right: 0.5rem;
   }
 
   .logo-container {
@@ -319,7 +319,7 @@
 
   .top-frameborder,
   .bottom-frameborder {
-    display: none;  
+    display: none;
   }
 }
 
@@ -329,33 +329,31 @@
     margin-left: calc((100vw - 550px) / 2);
   }
   .container_movie_info {
-      height: 65vh;
+    height: 65vh;
   }
   .movieJarFile {
-      width: 38vw;
+    width: 38vw;
   }
   .movieOverview {
-      margin-left: 4%;
+    margin-left: 4%;
   }
   .plus-button {
-      width: 550px;
-      margin-left: 7%;
+    width: 550px;
+    margin-left: 7%;
   }
   .thumbsUp {
-      margin-left: -20%;
+    margin-left: -20%;
   }
   .thumbsDown {
-      margin-left: 58%;
+    margin-left: 58%;
   }
   .mute-button {
-      margin-left: 17rem;
+    margin-left: 17rem;
   }
   .closeMovie {
-      margin-left: 7rem;
+    margin-left: 7rem;
   }
 }
-
-     
 
 /* //////////////////////////////////////////////////////////// */
 @media only screen and (min-width: 767px) {
@@ -374,7 +372,7 @@
 
 @media screen and (min-width: 900px) {
   .movieJarFile {
-      width: 27vw;
+    width: 27vw;
   }
 }
 
@@ -384,18 +382,15 @@
     margin-left: calc((100vw - 850px) / 2);
   }
   .movieJarFile {
-      width: 70vw;
-      margin-left: 0;
-      right:0;
+    width: 70vw;
+    margin-left: 0;
+    right: 0;
   }
-   
-
 }
 
 @media only screen and (min-width: 1200px) {
   .movieJarFile {
     width: 65vw;
-    
   }
   .container_movie_info {
     height: 35vh;
@@ -403,50 +398,48 @@
 }
 @media screen and (min-width: 1300px) {
   .movieJarFile {
-      width: 60vw;
-      margin-left: 0;
-      right:0;
+    width: 60vw;
+    margin-left: 0;
+    right: 0;
   }
-}    
+}
 
 @media screen and (min-width: 1400px) {
   .movieJarFile {
-      width: 60vw;
-      margin-left: 0;
-      right:0;
+    width: 60vw;
+    margin-left: 0;
+    right: 0;
   }
 }
 
 @media screen and (min-width: 1500px) {
   .movieJarFile {
-      width: 55vw;
-      margin-left: 0;
-      right:0;
+    width: 55vw;
+    margin-left: 0;
+    right: 0;
   }
-
 }
 
 @media screen and (min-width: 1600px) {
   .movieJarFile {
-      width: 50vw;
-      margin-left: 0;
-      right:0;
+    width: 50vw;
+    margin-left: 0;
+    right: 0;
   }
 }
 
 @media screen and (min-width: 1700px) {
   .movieJarFile {
-      width: 48vw;
-      margin-left: 0;
-      right:0;
+    width: 48vw;
+    margin-left: 0;
+    right: 0;
   }
 }
 
 @media screen and (min-width: 1820px) {
   .movieJarFile {
-      width: 43vw;
-      margin-left: 0;
-      right:0;
+    width: 43vw;
+    margin-left: 0;
+    right: 0;
   }
-  
 }
