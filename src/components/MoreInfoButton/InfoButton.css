@@ -41,7 +41,7 @@
     margin-left: calc((100vw - 550px) / 2);
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   .moreInfo {
     width: 850px;
     margin-left: calc((100vw - 850px) / 2);
@@ -64,7 +64,7 @@
     margin-left: calc((100vw - 550px) / 2);
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 990px) {
   .moreInfo {
     width: 850px;
     margin-left: calc((100vw - 850px) / 2);
@@ -106,7 +106,7 @@
   font-size: 14px;
   line-height: 20px;
   margin: 1.3em;
-  margin-left: 18rem;
+  margin-left: 16.5rem;
 }
 
 @media only screen and (max-width: 575px) {
@@ -127,7 +127,7 @@
     width: 32vw;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 990px) {
   .movieJarFile {
     width: 53vw;
   }
@@ -136,7 +136,7 @@
   .movieJarFile {
     width: 50%;
     margin-left: 0;
-    right:0;
+    right: 0;
   }
 }
 .movieOverview {
@@ -248,7 +248,7 @@
     margin-left: 25%;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 990px) {
   .icons-container {
     margin-left: 8.5rem;
   }
