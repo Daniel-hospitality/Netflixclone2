@@ -7,8 +7,15 @@
   background: none;
   outline: none;
   border: none;
-  color: #fff;
+  color: grey;
   font-size: 150%;
+  z-index: 10;
+}
+
+#player-fs-exit-btn:hover,
+#player-fs-mute-btn:hover,
+#player-fs-play-btn:hover {
+  color: ghostwhite;
 }
 
 #player-fs-exit-btn ,
@@ -31,10 +38,29 @@
   left: 45%;
 }
 
-.hidden {
+.hidden,
+.hide-border {
   display: none;
 }
 
-.show {
+.show,
+.show-border{
   display: block;
+}
+
+#top-frameborder {
+  top: 0;
+}
+
+#bottom-frameborder {
+  bottom: 0;
+}
+
+#top-frameborder,
+#bottom-frameborder {
+  position: absolute;
+  height: 10.6vh;
+  width: 100%;
+  z-index: 5;
+  background: black;
 }
