@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
-import LineIcon from 'react-lineicons';
+// import LineIcon from "react-lineicons";
 
 function RowMoreInfo(props) {
   const [showMovie, setshowMovie] = useState(false);
@@ -15,10 +15,11 @@ function RowMoreInfo(props) {
   };
 
   return (
-  <div className="smallMovieContainer">
-    <div className={` ${showMovie ? "smallDetailCard" : "hidden" }'}>
+    <div className="smallMovieContainer">
+      {/* <button onClick={toggleMovie}  */}
+      {/* // className={` ${showMovie ? "smallDetailCard" : "hidden" }'} */}
+  
 
-    <div>
       <ReactPlayer
         url={`https://youtu.be/${props.movie?.youtubeKey}`}
         playing={play}
@@ -28,24 +29,8 @@ function RowMoreInfo(props) {
         width="100%"
         height="100%"
       />
-    
-    {/* <div>
-              <div className="plusIcon">
-                <i className="lni lni-plus"></i>
-              </div>
-              <div className="thumbsUp">
-                <i className="lni lni-thumbs-up"></i>
-              </div>
-              <div className="thumbsDown">
-                <i className="lni lni-thumbs-down"></i>
-    </div> */}
-    {/* <div className="mute-button" onClick={onMute}>
-              <i className={muted ? "fas fa-volume-mute" : "fas fa-volume-up"}
-                
-              /> */}
     </div>
-    
-  )
-};
+  );
+}
 
 export default RowMoreInfo;
