@@ -74,7 +74,7 @@ function Banner() {
         /> 
         <p className="banner_description">{movie?.overview}</p>
         <div className="banner_buttons">
-          <button className="banner_button" onClick={handleClickFullscreen}>
+          <button className="banner_button banner_button_play" onClick={handleClickFullscreen}>
           <i className="fas fa-caret-right" />
              &nbsp;&nbsp; Play
           </button>
