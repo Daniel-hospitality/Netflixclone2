@@ -8,17 +8,30 @@ function RowMoreInfo(props) {
   const [muted, setMuted] = useState(true);
 
   const toggleMovie = () => {
-    setshowMovie(true)
-  }
+    setshowMovie(true);
+  };
   const onMute = () => {
-    muted ? setMuted(false) : setMuted(true)
-  }
+    muted ? setMuted(false) : setMuted(true);
+  };
 
   return (
     <div className="smallMovieContainer">
       <button onClick={toggleMovie} />
-      <div className= {`${showMovie ? "smallDetailCard" : "hidden" }`} >
-
+      <div className={`${showMovie ? "smallDetailCard" : "hidden"}`}>
+        <div className="icons-container">
+          <div className="plusIcon" id="icon-plus">
+            <i className="lni lni-plus"></i>
+          </div>
+          <div className="thumbsUp">
+            <i className="lni lni-thumbs-up"></i>
+          </div>
+          <div className="thumbsDown">
+            <i className="lni lni-thumbs-down"></i>
+          </div>
+          <div className="checkMark">
+          <i class="lni lni-checkmark"></i>
+          </div>
+        </div>
         <ReactPlayer
           url={`https://youtu.be/${props.movie?.youtubeKey}`}
           playing={play}
@@ -28,9 +41,9 @@ function RowMoreInfo(props) {
           width="100%"
           height="100%"
         />
+      </div>
     </div>
-    </div>
-     )
+  );
 }
 
 export default RowMoreInfo;
