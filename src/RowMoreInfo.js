@@ -6,18 +6,22 @@ function RowMoreInfo(props) {
   const [showMovie, setshowMovie] = useState(false);
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
+  
 
   const toggleMovie = () => {
     setshowMovie(true);
   };
   const onMute = () => {
     muted ? setMuted(false) : setMuted(true);
-  };
+  }
+  
 
   return (
+   
+      
     <div className="smallMovieContainer">
       <button onClick={toggleMovie} />
-      <div className={`${showMovie ? "smallDetailCard" : "hidden"}`}>
+      <div className={`${showMovie ? "smallDetailcard" : "hidden"}`}>
         <div className="icons-container">
           <div className="plusIcon" id="icon-plus">
             <i className="lni lni-plus"></i>
@@ -39,10 +43,11 @@ function RowMoreInfo(props) {
           controls={false}
           loop={true}
           width="100%"
-          height="100%"
+          height="7.3rem"
         />
       </div>
     </div>
+    
   );
 }
 
