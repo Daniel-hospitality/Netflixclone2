@@ -121,19 +121,21 @@ function MoreInfoCard(props) {
           </div>
             <div className="container_movie_info">
               <div className="runTime_overview">
-                <div className="movieJarFile">
-                  <div className="genresMovies">
-                    Genres: &nbsp; <h5>{genres}</h5>
-                  </div>
-                  <div className="movieDirector">
-                    <p>
-                      Director:&nbsp; <h5>{props.movie?.director}</h5>
-                    </p>
-                  </div>
-                  <div className="playTime">
-                    <p>
-                      Runtime: &nbsp; <h5>{props.movie?.runtime}</h5> min{" "}
-                    </p>{" "}
+                <div classname="jarBox">
+                  <div className="movieJarFile">
+                   <div className="genresMovies">
+                     Genres: &nbsp; <h5>{genres}</h5>
+                   </div>
+                   <div className="movieDirector">
+                     <p>
+                       Director:&nbsp; <h5>{props.movie?.director}</h5>
+                     </p>
+                   </div>
+                   <div className="playTime">
+                     <p>
+                       Runtime: &nbsp; <h5>{props.movie?.runtime} Min</h5> {" "}
+                     </p>{" "}
+                   </div>
                   </div>
                 </div>
                 <div className="movieOverview">

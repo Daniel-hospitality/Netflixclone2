@@ -1,5 +1,5 @@
 .dropdown-menu {
-  background: rgba(22, 21, 21, 0.123);
+  background: rgba(22, 21, 21, 0.808);
   width: 200px;
   position: absolute;
   top: 80px;
@@ -27,7 +27,7 @@
   width: 100%;
   text-decoration: none;
   color: #fff;
-  padding: 16px;
+  padding: 10px;
 }
 
 /* @media screen and (max-width: 576px) {

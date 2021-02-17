@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-around;
   list-style: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .nav_font1 {
   color: white;
@@ -95,7 +95,7 @@
  
 @media screen and (max-width: 992px) {
     .nav_menu {
-      width: 65%;
+      width: 61%;
       font-size: 1rem;
       margin-left: 6rem;
     }
@@ -103,7 +103,7 @@
     .nav_font {
       position: fixed;
       right: 4rem;
-      width: 6.5rem;
+      width: 8.5rem;
       top: 1.625rem;
       display: flex;
       justify-content: space-around;

@@ -66,7 +66,7 @@ function Navbar() {
         </Link>
 
         <Link className="nav_font1" to="/">
-          <li className="nav">Kids</li>
+          <li className="nav">Kinderen</li>
         </Link>
 
         <Link className="nav_font1" to="/">
