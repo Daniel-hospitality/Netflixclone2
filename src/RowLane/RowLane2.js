@@ -6,30 +6,28 @@ import "./RowLane.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function RowLane({ title, fetchUrl, isLargeRow }) {
+
+function RowLane2({ title, fetchUrl, isLargeRow }) {
   const [thriller, setThriller] = useState([]);
+  const [trailerUrl, setTrailerUrl] = useState("");
 
   useEffect(() => {
     async function fetchData() {
-      const response = await Backend.fetchGenres("thriller");
+      const response = await Backend.fetchGenres(fetchUrl);
       setThriller(response.data);
-    //   console.log(response.data);
+      console.log(response.data);
     }
     fetchData();
-  }, []);
+  }, [fetchUrl]);
 
-//   const handleClick = (thriller) => {
-//     if (trailerUrl) {
-//       setTrailerUrl("");
-//     } else {
-//       thrillerTrailer(thriller?.name || "")
-//         .then((url) => {
-//           const urlParams = new URLSearchParams(new URL(url).search);
-//           setTrailerUrl(urlParams.get("v"));
-//         })
-//         .catch((error) => console.log(error));
-//     }
-//   };
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await Backend.get(fetchUrl);
+  //     setThriller(response.data);
+  //     console.log(response.data);
+  //   }
+  //   fetchData();
+  // }, [fetchUrl]);
 
   return (
     <div className="rowlane">
@@ -40,15 +38,13 @@ function RowLane({ title, fetchUrl, isLargeRow }) {
           return (
             <img
               key={thriller.id}
-            //   onClick={() => handleClick(thriller)}
+              //   onClick={() => handleClick(thriller)}
               className={`row_poster ${isLargeRow && "row_posterLarge"}`}
               src={`${base_url}${
                 isLargeRow ? thriller.posterPath : thriller.backdropPath
               }`}
               alt={thriller.logoUrl}
-              
             />
-            
           );
         })}
       </div>
@@ -58,4 +54,4 @@ function RowLane({ title, fetchUrl, isLargeRow }) {
   );
 }
 
-export default RowLane;
+export default RowLane2;

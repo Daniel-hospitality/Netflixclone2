@@ -1,24 +1,29 @@
-import React, {useState, useEffect}from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Row from "./Row";
-import requests from "./requests";
+// import Row from "./Row";
+// import requests from "./requests";
 import Backend from "./Backend";
 import Series from "./pages/Series";
 import Films from "./pages/Films";
 import Nieuw from "./pages/Nieuw";
 import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
-import Banner from "./components/Banner"
+import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
+import RowLane from "./RowLane/RowLane";
+import RowLane2 from "./RowLane/RowLane2";
+
+
+
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-    
+
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/Series" component={Series} />
@@ -35,19 +40,20 @@ function App() {
 }
 
 function Home() {
-  const [movie, setMovie] = useState();
-  useEffect(() => {
-    async function fetchData() {
-      const response = await Backend.fetchMovies(335984);
-      setMovie(response.data);
-    }
-    fetchData();
-  }, []);
+  const [movie] = useState();
+
   return (
     <div className="app">
-      <Banner movie={movie}/>
+      <Banner movie={movie} />
       <div className="row-container">
-        <Row
+
+
+        <RowLane title="Thriller Backend"  />
+
+        <RowLane2 title="Thriller Backend" fetchUrl={Backend.fetchGenresThriller} isLargeRow />
+        
+
+        {/* <Row
           title="NETFLIX ORIGINALS"
           fetchUrl={requests.fetchNetflixOriginals}
         />
@@ -65,7 +71,7 @@ function Home() {
           isLargeRow
         />
         <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-        <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+        <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} /> */}
       </div>
     </div>
   );

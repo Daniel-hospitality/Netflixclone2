@@ -19,6 +19,7 @@ function Banner() {
     async function fetchData() {
       const response = await Backend.fetchMovies(335984);
       setMovie(response.data);
+      // console.log(response.data);
     }
     fetchData();
   }, []);

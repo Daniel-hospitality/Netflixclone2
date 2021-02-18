@@ -2,6 +2,11 @@
     margin-left: 20px;
 }
 
+.rowlane_movielogo {
+  width: 20rem;
+
+}
+
 .row_posters {
   display: flex;
   overflow-y: scroll;

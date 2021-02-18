@@ -262,9 +262,9 @@
 }
 
 @media screen and (max-width: 576px) {
-  .banner {
-    /* margin-top: -2vh; */
-  }
+  /* .banner {
+    margin-top: -2vh;
+  } */
   .banner_movielogo {
     width: 15rem;
   }
