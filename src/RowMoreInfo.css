@@ -1,0 +1,31 @@
+.hidden{
+    display:none;
+}
+
+.smallMovieContainer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 25px;
+    z-index: 10;
+    background-color: #19181a;
+    width: 90vw;
+    margin-left: 5vw;
+    position: fixed;
+    top: 35px;
+    left: 0;
+    
+    flex-direction: row;
+    align-content: space-around;
+    height: 43vh;
+
+}
+
+
+
+
+.icons-container{
+    width:50%;
+    height:50%;
+}
+
