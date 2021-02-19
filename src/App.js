@@ -12,6 +12,7 @@ import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner"
 import { FooterContainer } from "./footer/container/footer";
+import RowMoreInfo from "./RowMoreInfo"
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function Home() {
           fetchUrl={requests.fetchTrending}
           isLargeRow
         />
+        
         <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
         <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
         <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />

@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player/youtube";
 // import LineIcon from "react-lineicons";
 
-function RowMoreInfo(props) {
-  const [showMovie, setshowMovie] = useState(false);
+function RowMoreInfo({ showMovie, movie }) {
   const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
+ ;
  
 
-  
-  
+  // const moreInfo = ()=> {
+  //   setsmallMovieContainer (true);
+  // }
+ 
 
-  const toggleMovie = () => {
-    setshowMovie(true);
-  };
+ 
   const onMute = () => {
     muted ? setMuted(false) : setMuted(true);
   }
@@ -22,8 +22,8 @@ function RowMoreInfo(props) {
   return (
    
     <div className="smallMovieContainer">
-         <div className={`${showMovie ? "smallDetailcard" : "hidden"}`}>
-      <button onClick={toggleMovie} />
+         <div className={`${showMovie ? "smallMovieContainer" : "hidden"}`}>
+      {/* <button onClick={toggleMovie} /> */}
         <div className="icons-container">
           <div className="plusIcon" id="icon-plus">
             <i className="lni lni-plus"></i>
@@ -39,7 +39,7 @@ function RowMoreInfo(props) {
           </div>
         </div>
         <ReactPlayer
-          url={`https://youtu.be/${props.movie?.youtubeKey}`}
+          url={`https://youtu.be/${movie?.youtubeKey}`}
           playing={play}
           muted={muted}
           controls={false}

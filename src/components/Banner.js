@@ -9,15 +9,22 @@ function Banner() {
   const player = useRef(null);
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
+  const [horror, setHorror] = useState(null);
   
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchMovies(155);
+      const horror = await Backend.fetchGenres("horror");
       setMovie(response.data);
+      setHorror(horror.data);
     }
     fetchData();
   }, []);
-   
+  
+  console.log(horror);
+
+
+
   const handleClickFullscreen = () => {
     player.current.enableFullscreen();
   };
