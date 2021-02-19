@@ -47,6 +47,6 @@
 
 }
 .movies_posterLarge:hover {
-    transform: scale(10.09);
+    transform: scale(1.09);
     opacity: 1;
 }

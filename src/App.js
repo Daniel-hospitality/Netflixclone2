@@ -48,13 +48,12 @@ function Home() {
 
 
         <MoviesLanes title="Thriller" genre="thriller"  />
-        <MoviesLanes title="Family" genre="family"  />
-        <MoviesLanes title="Comedy" genre="comedy"  />
-        <MoviesLanes title="Adventure" genre="adventure"  />
-        <MoviesLanes title="Crime" genre="crime"  />
-        <MoviesLanes title="Action" genre="action"  />
-        <MoviesLanes title="Fantasy" genre="fantasy"  />
-        <MoviesLanes title="Tom Cruise" casts="tomcruise"  />
+        <MoviesLanes title="Family" genre="family" isLargeRow />
+        {/* <MoviesLanes title="Comedy" genre="comedy"  /> */}
+        {/* <MoviesLanes title="Adventure" genre="adventure"  /> */}
+        {/* <MoviesLanes title="Crime" genre="crime"  /> */}
+        {/* <MoviesLanes title="Action" genre="action"  /> */}
+        {/* <MoviesLanes title="Fantasy" genre="fantasy"  /> */}
 
         
       </div>
