@@ -12,7 +12,6 @@ import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
-// import RowLane from "./RowLane/RowLane";
 import MoviesLanes from "./RowLane/MoviesLanes";
 
 
@@ -57,28 +56,7 @@ function Home() {
         <MoviesLanes title="Fantasy" genre="fantasy"  />
         <MoviesLanes title="Tom Cruise" casts="tomcruise"  />
 
-        {/* <RowLane2 title="Thriller Backend" fetchUrl={Backend.fetchGenresThriller} isLargeRow /> */}
         
-
-        {/* <Row
-          title="NETFLIX ORIGINALS"
-          fetchUrl={requests.fetchNetflixOriginals}
-        />
-        <Row
-          title="Trending Now"
-          fetchUrl={requests.fetchTrending}
-          isLargeRow
-        />
-        <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-        <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-        <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-        <Row
-          title="Horror Movies"
-          fetchUrl={requests.fetchHorrorMovies}
-          isLargeRow
-        />
-        <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-        <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} /> */}
       </div>
     </div>
   );
