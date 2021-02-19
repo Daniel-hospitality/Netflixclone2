@@ -4,28 +4,27 @@
 
 .smallMovieContainer{
     display: flex;
+    position:absolute;
+    top:67rem;
     flex-direction: column;
     height: auto;
-    border-radius: 25px;
-    z-index: 10;
-    background-color: #7604e7;
-    width: 90vw;
-    margin-left: 5vw;
-    position: fixed;
-    top: 35px;
+    border-radius:5px;
+    z-index: 15;
+    background-color:#111;
+    width: 11vw;
+    margin-left: 11vw;
     left: 0;
-    
-    flex-direction: row;
-    align-content: space-around;
-    height: 43vh;
 
 }
 
-
-
-
-.icons-container{
-    width:50%;
+.icons-container {
+    display: flex;
+    
+    width:15%;
     height:50%;
+    color:red;
+font-size:30px;
+
+   ;
 }
 

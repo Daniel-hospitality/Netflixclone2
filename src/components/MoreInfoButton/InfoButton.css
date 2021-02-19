@@ -33,7 +33,7 @@
   position: fixed;
   top: 35px;
   left: 0;
-}
+} 
 
 @media screen and (min-width: 576px) {
   .moreInfo {
@@ -107,7 +107,7 @@
   line-height: 20px;
   margin: 1.3em;
   margin-left: 18rem;
-}
+} 
 
 @media only screen and (max-width: 575px) {
   .movieJarFile {
