@@ -12,8 +12,8 @@ import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
-import RowLane from "./RowLane/RowLane";
-import RowLane2 from "./RowLane/RowLane2";
+// import RowLane from "./RowLane/RowLane";
+import MoviesLanes from "./RowLane/MoviesLanes";
 
 
 
@@ -48,9 +48,16 @@ function Home() {
       <div className="row-container">
 
 
-        <RowLane title="Thriller Backend"  />
+        <MoviesLanes title="Thriller" genre="thriller"  />
+        <MoviesLanes title="Family" genre="family"  />
+        <MoviesLanes title="Comedy" genre="comedy"  />
+        <MoviesLanes title="Adventure" genre="adventure"  />
+        <MoviesLanes title="Crime" genre="crime"  />
+        <MoviesLanes title="Action" genre="action"  />
+        <MoviesLanes title="Fantasy" genre="fantasy"  />
+        <MoviesLanes title="Tom Cruise" casts="tomcruise"  />
 
-        <RowLane2 title="Thriller Backend" fetchUrl={Backend.fetchGenresThriller} isLargeRow />
+        {/* <RowLane2 title="Thriller Backend" fetchUrl={Backend.fetchGenresThriller} isLargeRow /> */}
         
 
         {/* <Row

@@ -8,7 +8,8 @@ const client = axios.create({
 const requests = {
   fetchMovies: (movieId) => client.get(`/movies/${movieId}`),
   fetchGenres: (genres) => client.get(`/movies/genres?with_genres=${genres}`),
-  fetchGenresThriller: "/movies/genres?with_genres=thriller",
+  fetchCast: (cast) => client.get(`/movies/genres?with_cast=${cast}`),
+
 };
 
 export default requests;
