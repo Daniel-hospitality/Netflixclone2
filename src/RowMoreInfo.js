@@ -23,11 +23,13 @@ function RowMoreInfo({ showMovie, movie }) {
         {/* <button onClick={toggleMovie} /> */}
         <div className="icons-container-small">
           <i class="lni lni-play"></i>
-          <i className="lni lni-plus"></i>
-          <i className="lni lni-thumbs-up"></i>
-          <i className="lni lni-thumbs-down"></i>
-          <i class="lni lni-checkmark"></i>
-        </div>
+          
+            <i className="lni lni-plus" id="plus-icon"></i>
+            <i className="lni lni-thumbs-up" id="thumbs-up"></i>
+            <i className="lni lni-thumbs-down" id="thumbs-down"></i>
+            <i class="lni lni-checkmark" id="checkmark-icon"></i>
+          </div>
+        
         {/* <div className="checkMark">
           <InfoButton onClick={handleCheckMark} />
           <i class="lni lni-checkmark"></i>

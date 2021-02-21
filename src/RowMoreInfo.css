@@ -20,11 +20,16 @@
   position: absolute;
   justify-content: space-evenly;
   top:9rem;
-  /* left: 2rem; */
   display: inline-flex;
   width:100%;
   color: whitesmoke;
   font-size: 21px;
+}
+#plus-icon{
+    border:1px solid white;
+    border-radius:50%;
+   
+   
 }
 
 .player-wrapper {
