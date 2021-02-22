@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import FilePlayer from "react-player/file";
 import ReactPlayer from "react-player/youtube";
+import Player from "./components/Player"
 // import InfoButton from "./components/MoreInfoButton/InfoButton";
 import "../src/RowMoreInfo.css";
 // import LineIcon from "react-lineicons";
@@ -19,7 +21,7 @@ function RowMoreInfo({ showMovie, movie }) {
   // }
   return (
     <div className="smallMovieContainer">
-      <div className={`${showMovie ? "smallMovieContainer" : ""}`}>
+      <div className={`${showMovie ? "smallMovieContainer" :"hidden"}`}>
         {/* <button onClick={toggleMovie} /> */}
         <div className="icons-container-small">
           <i class="lni lni-play" id="play"></i>
@@ -35,15 +37,7 @@ function RowMoreInfo({ showMovie, movie }) {
           </div> */}
       </div>
       <div className="movieWrapper">
-        <ReactPlayer
-          url=""
-          playing={play}
-          muted={muted}
-          controls={false}
-          loop={true}
-          width="100%"
-          height="7.3rem"
-        />
+        <Player />
       </div>
     </div>
   );
