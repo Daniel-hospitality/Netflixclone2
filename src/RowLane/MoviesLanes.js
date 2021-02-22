@@ -6,20 +6,19 @@ import movieTrailer from "movie-trailer";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function MoviesLanes({ title, genre, casts, isLargeRow }) {
+function MoviesLanes({ title, genre, isLargeRow }) {
   const [movies, setMovies] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState("");
 
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchGenres(genre);
-      //   const response = await Backend.fetchCast(casts);
 
       setMovies(response.data);
     }
     fetchData();
   }, []);
-
+  console.log(movies);
   const opts = {
     height: "390",
     width: "100%",
@@ -62,8 +61,35 @@ function MoviesLanes({ title, genre, casts, isLargeRow }) {
           );
         })}
       </div>
+      <div className="movieslane_info">
+        {movies?.map((info) => {
+          return (
+            <div>
+              <div className="movies_title">
+                <h1>{info.title}</h1>
+              </div>
+              <div className="movies_overview">
+                <p>{info.overview}</p>
+              </div>
+              <div className="movies_runtime">
+                <p>Runtime: {info.runtime}</p>
+              </div>{" "}
+              <div className="movies_director">
+                <p>Director: {info.director}</p>
+              </div>{" "}
+              <div className="movies_genres">
+                <p>
+                  {info.genres.map((id) => (
+                    <li>{id.name}</li>
+                  ))}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      {/* {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />} */}
     </div>
   );
 }

@@ -1,0 +1,29 @@
+.movieslane_info {
+  margin-left: 20px;
+  max-width: 100%;
+  /* padding: 60px 80px 60px 20px; */
+
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  
+}
+
+.rowlane_movielogo {
+  width: 20rem;
+}
+
+.movieslane_infocard {
+  display: flex;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  padding: 2px;
+}
+.movieslane_infocard::-webkit-scrollbar {
+  display: none;
+}
+
+h1{
+ color:rgb(187, 63, 25);
+ 
+
+}

@@ -4,7 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import Row from "./Row";
 // import requests from "./requests";
-import Backend from "./Backend";
+// import Backend from "./Backend";
 import Series from "./pages/Series";
 import Films from "./pages/Films";
 import Nieuw from "./pages/Nieuw";
@@ -13,6 +13,7 @@ import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
 import MoviesLanes from "./RowLane/MoviesLanes";
+import MM from "./RowLane/MM";
 
 
 
@@ -46,9 +47,13 @@ function Home() {
       <Banner movie={movie} />
       <div className="row-container">
 
+          
 
-        <MoviesLanes title="Thriller" genre="thriller"  />
-        <MoviesLanes title="Family" genre="family" isLargeRow />
+
+        <MoviesLanes title="Thriller" genre="thriller"/>
+        <MM genre="thriller"/>
+
+        {/* <MoviesLanes title="Family" genre="family" isLargeRow /> */}
         {/* <MoviesLanes title="Comedy" genre="comedy"  /> */}
         {/* <MoviesLanes title="Adventure" genre="adventure"  /> */}
         {/* <MoviesLanes title="Crime" genre="crime"  /> */}

@@ -26,3 +26,5 @@ yarn-error.log*
 src/footer/container/footer test.js
 
 src/footer/container/footerTest.css
+package-lock.json
+package-lock.json

@@ -17,6 +17,8 @@
   display: none;
 }
 
+
+
 .movies_poster {
   object-fit: contain;
   width: 100%;
@@ -27,14 +29,10 @@
 
 }
 .movies_poster:hover {
-  padding: 20px;
-  top: 60px;
-  transition: transform .54s cubic-bezier(.5,0,.1,1) 0s,-webkit-transform .54s cubic-bezier(.5,0,.1,1) 0s,-moz-transform .54s cubic-bezier(.5,0,.1,1) 0s,-o-transform .54s cubic-bezier(.5,0,.1,1) 0s;
-  transition-property: transform, -webkit-transform, -moz-transform, -o-transform;
-  transition-duration: 0.54s, 0.54s, 0.54s, 0.54s;
-  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1), cubic-bezier(0.5, 0, 0.1, 1), cubic-bezier(0.5, 0, 0.1, 1), cubic-bezier(0.5, 0, 0.1, 1);
-  transition-delay: 0s, 0s, 0s, 0s;
-  /* transform: scale(3.08); */
+  padding: 2px;
+  top: 6px;
+  
+  transform: scale(1.08);
 
 
 
