@@ -3,12 +3,15 @@ import Backend from "../Backend";
 import "./MoviesLanes.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
+import MovieLaneItem from "./MovieLaneItem";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function MoviesLanes({ title, genre, isLargeRow }) {
   const [movies, setMovies] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [render, setRender] = useState(false);
+  const [infoo, setInfoo] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -18,7 +21,7 @@ function MoviesLanes({ title, genre, isLargeRow }) {
     }
     fetchData();
   }, []);
-  console.log(movies);
+  // console.log(movies);
   const opts = {
     height: "390",
     width: "100%",
@@ -28,19 +31,18 @@ function MoviesLanes({ title, genre, isLargeRow }) {
     },
   };
 
-  const handleClick = (movie) => {
-    if (trailerUrl) {
-      setTrailerUrl("");
-    } else {
-      movieTrailer(movie?.name || "")
-        .then((url) => {
-          const urlParams = new URLSearchParams(new URL(url).search);
-          setTrailerUrl(urlParams.get("v"));
-        })
-        .catch((error) => console.log(error));
-    }
+  const onRender = () => {
+    setRender(true);
+  };
+  const offRender = () => {
+    setRender(false);
   };
 
+  function setInformation(itemProp) {
+    setInfoo(itemProp);
+  }
+
+  //  console.log(infoo);
   return (
     <div className="movieslane">
       <h2>{title}</h2>
@@ -48,20 +50,24 @@ function MoviesLanes({ title, genre, isLargeRow }) {
         {movies?.map((movie) => {
           return (
             <img
-              key={movie.id}
-              onClick={() => handleClick(movie)}
-              className={`movies_poster ${isLargeRow && "movies_posterLarge"}`}
-              src={
-                isLargeRow
-                  ? `${base_url}${movie.posterPath}`
-                  : movie.movieThumbUrl
-              }
-              alt={movie.title}
+            key={movie.id}
+            onMouseEnter={onRender}
+            onMouseLeave={offRender}
+            className={`movies_poster ${isLargeRow && "movies_posterLarge"}`}
+            src={
+              isLargeRow
+              ? `${base_url}${movie.posterPath}`
+              : movie.movieThumbUrl
+            }
+            alt={movie.title}
             />
-          );
-        })}
+            );
+          })}
       </div>
-      <div className="movieslane_info">
+          {render ? <MovieLaneItem info={infoo} /> : ""}
+      {console.log(infoo)}
+
+      {/* <div className="movieslane_info">
         {movies?.map((info) => {
           return (
             <div>
@@ -87,9 +93,8 @@ function MoviesLanes({ title, genre, isLargeRow }) {
             </div>
           );
         })}
-      </div>
+      </div> */}
 
-      {/* {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />} */}
     </div>
   );
 }

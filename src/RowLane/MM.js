@@ -14,7 +14,7 @@ function MM({genre}) {
     }
     fetchData();
   }, []);
-  console.log(movies);
+  // console.log(movies);
 
   return (
     <div className="movieslane_info">
