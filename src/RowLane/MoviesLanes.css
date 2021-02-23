@@ -1,18 +1,17 @@
 .movieslane {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .movie_lane_itemc {
- height: 400px;
- width: 200px;
- background-color: blueviolet;
- color: cornsilk;
+  height: 400px;
+  width: 200px;
+  background-color: blueviolet;
+  color: cornsilk;
 }
 
-.rowlane_movielogo {
+/* .rowlane_movielogo {
   width: 20rem;
-
-}
+} */
 
 .movies_posters {
   display: flex;
@@ -24,34 +23,107 @@
   display: none;
 }
 
-
-
 .movies_poster {
   object-fit: contain;
   width: 100%;
   max-height: 100px;
-  /* height: 100%; */
+  height: 100%;
   margin-right: 10px;
   transition: transform 450ms;
-
 }
 .movies_poster:hover {
   padding: 2px;
   top: 6px;
-  
   transform: scale(1.08);
-
-
-
-
-
 }
 
 .movies_posterLarge {
-    max-height: 250px;
-
+  max-height: 250px;
 }
 .movies_posterLarge:hover {
-    transform: scale(1.09);
-    opacity: 1;
+  transform: scale(1.09);
+  opacity: 1;
+}
+
+.iconsSm-container {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap-reverse;
+  width: 90%;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  position: static;
+  margin: 4px;
+}
+
+.playSmallButton {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 70px;
+  height: 70px;
+  margin-top: 100px;
+  /* margin-right: 90%; */
+}
+
+.playSmallButton:hover {
+  transition: all 1s ease-in-out;
+  color: #000;
+  background-color: #fff;
+}
+
+/* .iconsSm-container,
+.mute-button {
+  z-index: 10;
+} */
+
+.icon-btnSm,
+.playSmallButton {
+  margin-right: 0.6rem;
+}
+
+.icon-btnSm {
+  pointer-events: all;
+  color: rgba(255, 255, 255, 0.541);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  border-radius: 50%;
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 0px;
+  height: 0px;
+  margin-top: 200px;
+}
+.icon-btnSm:hover {
+  color: white;
+  border: 2px solid #fff;
+}
+.icon-plusSm {
+  color: red;
+  width: 100px;
+  height: 40px;
+}
+
+.movie_title {
+  display: row;
+}
+h1 {
+  color: rgb(216, 50, 0);
+}
+p {
+  list-style-type: none;
 }
