@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, {} from "react";
 import "./MovieLaneItem.css";
-import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from "react-player/youtube";
 
 function MovieLaneItem({movies}) {
   return (

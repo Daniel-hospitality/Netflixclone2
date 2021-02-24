@@ -1,15 +1,15 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Backend from "../Backend";
 import "./MoviesLanes.css";
-import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
+// import YouTube from "react-youtube";
+// import movieTrailer from "movie-trailer";
 import MovieLaneItem from "./MovieLaneItem";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function MoviesLanes({ title, genre, isLargeRow }) {
   const [movies, setMovies] = useState(null);
-  const [trailerUrl, setTrailerUrl] = useState("");
+  // const [trailerUrl, setTrailerUrl] = useState("");
   const [render, setRender] = useState(false);
   // const [infoo, setInfoo] = useState(null);
 
@@ -22,14 +22,14 @@ function MoviesLanes({ title, genre, isLargeRow }) {
     fetchData();
   }, [genre]);
   // console.log(movies);
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      //https://developers.google.com/youtube/player_parameters#?v=46646454546
-      autoplay: 0,
-    },
-  };
+  // const opts = {
+  //   height: "390",
+  //   width: "100%",
+  //   playerVars: {
+  //     //https://developers.google.com/youtube/player_parameters#?v=46646454546
+  //     autoplay: 0,
+  //   },
+  // };
 
   const onRender = () => {
     setRender(true);
@@ -40,9 +40,11 @@ function MoviesLanes({ title, genre, isLargeRow }) {
     setRender(false);
   };
 
-  function setInformation(movie) {
-    setMovies(movie);
-  }
+  // function setInformation(movie) {
+  //   setMovies(movie);
+  // }
+
+
   return (
     <div className="movieslane">
       <h2>{title}</h2>

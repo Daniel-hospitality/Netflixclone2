@@ -13,7 +13,7 @@ import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
 import MoviesLanes from "./RowLane/MoviesLanes";
-import MM from "./RowLane/MM";
+// import MM from "./RowLane/MM";
 
 
 
