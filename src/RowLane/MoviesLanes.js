@@ -11,7 +11,7 @@ function MoviesLanes({ title, genre, isLargeRow }) {
   const [movies, setMovies] = useState(null);
   const [trailerUrl, setTrailerUrl] = useState("");
   const [render, setRender] = useState(false);
-  const [infoo, setInfoo] = useState(null);
+  // const [infoo, setInfoo] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +20,7 @@ function MoviesLanes({ title, genre, isLargeRow }) {
       setMovies(response.data);
     }
     fetchData();
-  }, []);
+  }, [genre]);
   // console.log(movies);
   const opts = {
     height: "390",
@@ -33,24 +33,25 @@ function MoviesLanes({ title, genre, isLargeRow }) {
 
   const onRender = () => {
     setRender(true);
+    setMovies(movies);
+  
   };
   const offRender = () => {
     setRender(false);
   };
 
-  function setInformation(itemProp) {
-    setInfoo(itemProp);
+  function setInformation(movie) {
+    setMovies(movie);
   }
-
   return (
     <div className="movieslane">
       <h2>{title}</h2>
       <div className="movies_posters">
-        {movies?.map((movie) => {
+        {movies?.map((movie, index) => {
           return (
-            <>
-              <div className="topMovies_container">
+            <> 
                 <img
+                  id={index}
                   key={movie.id}
                   onMouseEnter={onRender}
                   onMouseLeave={offRender}
@@ -59,45 +60,20 @@ function MoviesLanes({ title, genre, isLargeRow }) {
                   }`}
                   src={
                     isLargeRow
-                      ? `${base_url}${movie.posterPath}`
-                      : movie.movieThumbUrl
+                    ? `${base_url}${movie.posterPath}`
+                    : movie.movieThumbUrl
                   }
                   alt={movie.title}
-                />
-                <div className="iconsSm-container">
-                  <button className="playSmallButton">
-                    <i className="fas fa-caret-right" /> &nbsp; Play
-                  </button>
-                  <div className="icon-btnSm" id="icon-plusSm">
-                    <i className="lni lni-plus"></i>
-                  </div>
-                  <div className="icon-btnSm">
-                    <i className="lni lni-thumbs-up"></i>
-                  </div>
-                  <div className="icon-btnSm">
-                    <i className="lni lni-thumbs-down"></i>
-                  </div>
-
-                  {/* <div className="movies_title">
-                  <h1>{movie.title}</h1>
-                </div> */}
-                  <div className="movies_genres">
-                    <p>
-                      {movie.genres.map((id) => (
-                        <li>{id.name}</li>
-                      ))}
-                    </p>
-                  </div>
-                </div>
-              </div>
+                  />
+                  {/* {console.log("movie = " + movie.id)} */}
+               
             </>
           );
         })}
       </div>
-      {render ? <MovieLaneItem info={infoo} /> : ""}
-      {console.log(infoo)}
+        {render ? <MovieLaneItem id={"index"} movies={movies} /> : ""}
     </div>
-  );
+  ); 
 }
 
 export default MoviesLanes;

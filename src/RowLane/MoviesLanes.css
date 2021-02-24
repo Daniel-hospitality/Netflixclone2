@@ -2,12 +2,7 @@
   margin-left: 20px;
 }
 
-.movie_lane_itemc {
-  height: 400px;
-  width: 200px;
-  background-color: blueviolet;
-  color: cornsilk;
-}
+
 
 /* .rowlane_movielogo {
   width: 20rem;
@@ -120,6 +115,7 @@
 
 .movie_title {
   display: row;
+  
 }
 h1 {
   color: rgb(216, 50, 0);
