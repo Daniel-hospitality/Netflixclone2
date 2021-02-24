@@ -15,7 +15,7 @@ function MovieLaneItem({movies}) {
               <h1 id={movie.id}>{movie.title}</h1>
             </div>
             <div className="movies_genres">
-              <p>
+              <p>test
                 {movie.genres.map((id) => (
                   <li>{id.name}</li>
                   ))}
