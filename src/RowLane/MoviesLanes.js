@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import Backend from "../Backend";
 import "./MoviesLanes.css";
 // import YouTube from "react-youtube";
-// import movieTrailer from "movie-trailer";
 import MovieLaneItem from "./MovieLaneItem";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 function MoviesLanes({ title, genre, isLargeRow }) {
   const [movies, setMovies] = useState(null);
-  // const [trailerUrl, setTrailerUrl] = useState("");
+  const [movie, setMovie] = useState(null);
+  const [index, setIndex] = useState(null);
   const [render, setRender] = useState(false);
-  // const [infoo, setInfoo] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -21,19 +20,13 @@ function MoviesLanes({ title, genre, isLargeRow }) {
     }
     fetchData();
   }, [genre]);
-  // console.log(movies);
-  // const opts = {
-  //   height: "390",
-  //   width: "100%",
-  //   playerVars: {
-  //     //https://developers.google.com/youtube/player_parameters#?v=46646454546
-  //     autoplay: 0,
-  //   },
-  // };
 
-  const onRender = () => {
+
+  const onMouseEnter = (e) => {
     setRender(true);
-    setMovies(movies);
+    setIndex(e.target.id);
+    setMovie(movies[index]);
+    console.log(movie);
   
   };
   const offRender = () => {
@@ -55,7 +48,7 @@ function MoviesLanes({ title, genre, isLargeRow }) {
                 <img
                   id={index}
                   key={movie.id}
-                  onMouseEnter={onRender}
+                  onMouseEnter={onMouseEnter}
                   onMouseLeave={offRender}
                   className={`movies_poster ${
                     isLargeRow && "movies_posterLarge"
@@ -73,7 +66,8 @@ function MoviesLanes({ title, genre, isLargeRow }) {
           );
         })}
       </div>
-        {render ? <MovieLaneItem id={"index"} movies={movies} /> : ""}
+        {render ? <MovieLaneItem movie={movie} /> : ""}
+
     </div>
   ); 
 }
