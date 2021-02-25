@@ -18,8 +18,11 @@ function Banner() {
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchMovies(335984);
+      
       setMovie(response.data);
-      // console.log(response.data);
+
+      // random films maken
+      // [math.floor(math.random() * response.data.results.lenght -1)]
     }
     fetchData();
   }, []);

@@ -51,6 +51,7 @@ function Home() {
 
 
         <MoviesLanes title="Thriller" genre="thriller"/>
+        <MoviesLanes title="Action" genre="action"/>
         {/* <MM genre="thriller"/> */}
 
         {/* <MoviesLanes title="Family" genre="family" isLargeRow /> */}
