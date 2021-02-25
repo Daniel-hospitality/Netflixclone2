@@ -13,8 +13,8 @@ function MovieLaneItem(props) {
           muted={true}
           controls={false}
           loop={true}
-          width="100%"
-          height="100%"
+          width="50%"
+          height="50%"
         />
       </div>
       <div className="movies_genres">
