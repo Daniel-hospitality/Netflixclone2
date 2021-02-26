@@ -12,11 +12,7 @@ import Lijst from "./pages/Lijst";
 import Kijk from "./pages/Kijk";
 import Banner from "./components/Banner";
 import { FooterContainer } from "./footer/container/footer";
-import MoviesLanes from "./RowLane/MoviesLanes";
-import MM from "./RowLane/MM";
-
-
-
+import MovieLane from "./RowLane/MovieLane";
 
 function App() {
   return (
@@ -45,23 +41,15 @@ function Home() {
   return (
     <div className="app">
       <Banner movie={movie} />
-      <div className="row-container">
 
-          
-
-
-        <MoviesLanes title="Thriller" genre="thriller"/>
-        {/* <MM genre="thriller"/> */}
-
-        {/* <MoviesLanes title="Family" genre="family" isLargeRow /> */}
-        {/* <MoviesLanes title="Comedy" genre="comedy"  /> */}
-        {/* <MoviesLanes title="Adventure" genre="adventure"  /> */}
-        {/* <MoviesLanes title="Crime" genre="crime"  /> */}
-        {/* <MoviesLanes title="Action" genre="action"  /> */}
-        {/* <MoviesLanes title="Fantasy" genre="fantasy"  /> */}
-
+      <MovieLane title="Comedy" genre="THRILLER"/>
+      <MovieLane title="Family" genre="FAMILY" />
+      <MovieLane title="Comedy" genre="COMEDY"  />
+      <MovieLane title="Adventure" genre="ADVENTURE"  />
+      <MovieLane title="Crime" genre="CRIME"  />
+      <MovieLane title="Action" genre="ACTION"  />
+      <MovieLane title="Fantasy" genre="FANTASY"  />
         
-      </div>
     </div>
   );
 }
