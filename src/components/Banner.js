@@ -19,7 +19,6 @@ function Banner() {
     async function fetchData() {
       const response = await Backend.fetchMovies(335984);
       setMovie(response.data);
-      // console.log(response.data);
     }
     fetchData();
   }, []);
@@ -76,10 +75,9 @@ function Banner() {
         <p className="banner_description">{movie?.overview}</p>
         <div className="banner_buttons">
           <button className="banner_button" onClick={handleClickFullscreen}>
-          <i className="fas fa-caret-right" />
-             &nbsp;&nbsp; Play
+            <i className="fas fa-caret-right" />
+              &nbsp;&nbsp; Play
           </button>
-
           <button className="banner_button" onClick={handleRender}>
             <i className="fas fa-info-circle"></i> &nbsp;&nbsp; Meer informatie
           </button>
