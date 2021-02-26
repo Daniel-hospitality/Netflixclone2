@@ -58,9 +58,9 @@
 .movies_posterLarge {
     max-height: 250px;
 }
-.movies_posterLarge:hover {
-    transform: scale(1.09);
-    opacity: 1;
+.icon-btnSm:hover {
+  color: white;
+  border: 2px solid #fff;
 }
 
 .hide {
