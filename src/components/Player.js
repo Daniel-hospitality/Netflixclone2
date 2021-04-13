@@ -1,5 +1,5 @@
 import React, {
-  forwardRef,
+  
   useEffect,
   useImperativeHandle,
   useRef,
@@ -103,6 +103,6 @@ function Player(props, ref) {
   );
 }
 
-Player = forwardRef(Player);
+
 
 export default Player;
