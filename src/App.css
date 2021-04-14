@@ -4,7 +4,9 @@
 }
 
 .app {
-  background-color: #111;
+  /* background-color: #111; */
+  background-color:  rgba(14, 13, 13, 0.746);
+  ;
 }
 
 .row-container {

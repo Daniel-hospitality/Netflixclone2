@@ -11,22 +11,24 @@
   font-size: 150%;
 }
 
-#player-fs-exit-btn,
+#player-fs-exit-btn ,
 #player-fs-mute-btn {
-  right: 1rem;
+  left: 1rem;
 }
 
 #player-fs-exit-btn {
-  top: 1rem;
+  bottom: 1rem;
+  left: 55%;
 }
 
 #player-fs-mute-btn {
   bottom: 1rem;
+  left: 50%;
 }
 
 #player-fs-play-btn {
   bottom: 1rem;
-  left: 1rem;
+  left: 45%;
 }
 
 .hidden {

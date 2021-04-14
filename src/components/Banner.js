@@ -9,15 +9,22 @@ function Banner() {
   const player = useRef(null);
   const [movie, setMovie] = useState();
   const [muted, setMuted] = useState(true);
+  const [horror, setHorror] = useState(null);
   
   useEffect(() => {
     async function fetchData() {
       const response = await Backend.fetchMovies(155);
+      const horror = await Backend.fetchGenres("horror");
       setMovie(response.data);
+      setHorror(horror.data);
     }
     fetchData();
   }, []);
-   
+  
+  console.log(horror);
+
+
+
   const handleClickFullscreen = () => {
     player.current.enableFullscreen();
   };
@@ -33,13 +40,14 @@ function Banner() {
       <div className="player-wrapper">
         <Player ref={player} movie={movie}/>
       </div>
+      <div className="banner_fadeBottom1" /> 
       <div className="banner_contents">
         <img
           className="banner_movielogo"
           src={movie?.logoUrl}
           alt={movie?.title + "logo"}
         /> 
-        <h1 className="banner_description">{movie?.overview}</h1>
+        <p className="banner_description">{movie?.overview}</p>
         <div className="banner_buttons">
           <button className="banner_button" onClick={handleClickFullscreen}>
           <i className="fas fa-caret-right" />
@@ -49,9 +57,12 @@ function Banner() {
           <InfoButton className="banner_button" movie={movie} />
           <button className="banner_button_mute" onClick={handleClickMute}>
             <LineIcon name={muted ? "volume-mute" : "volume"}/>
-          </button>
 
+          </button>
+          
         </div>
+        {/* <div className="banner_fadeBottom" /> */}
+
       </div>
       <div className="banner_fadeBottom" />
     </header>
