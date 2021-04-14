@@ -7,7 +7,7 @@ function InfoButton(props) {
   const playerWrapper = useRef(null);
   const [showMovie, setshowMovie] = useState(false);
   const [genres, setGenres] = useState(null);
-  const [play, setPlay] = useState(true);
+  // const [play, setPlay] = useState(true);
   const [muted, setMuted] = useState(true);
   const toggleMovie = () => {
     setshowMovie(true);
@@ -23,11 +23,11 @@ function InfoButton(props) {
   const handleOnBlur = () => {
     setshowMovie(false);
   };
-  const handlePlayPause = () => {
-    if (play === true) {
-      setPlay(false);
-    }
-  };
+  // const handlePlayPause = () => {
+  //   if (play === true) {
+  //     setPlay(false);
+  //   }
+  // };
   const handleToggleMuted = () => {
     muted ? setMuted(false) : setMuted(true);
   }
@@ -66,7 +66,7 @@ function InfoButton(props) {
             <div className="playerWrapper" ref={playerWrapper}>
               <ReactPlayer
                 url={`https://youtu.be/${props.movie?.youtubeKey}`}
-                playing={play}
+                // playing={play}
                 muted={muted}
                 controls={false}
                 loop={true}
