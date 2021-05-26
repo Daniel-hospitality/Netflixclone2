@@ -88,7 +88,7 @@ function Player(props, ref) {
           id="banner_player"
           className="banner-player"
           url={`https://youtu.be/${props.movie?.youtubeKey}`}
-          frameborder="0"
+          frameBorder="0"
           width="100%"
           height="100%"
           ref={player}

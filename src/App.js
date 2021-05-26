@@ -44,12 +44,12 @@ function Home() {
 
       <MovieLane title="Comedy" genre="THRILLER"/>
       <MovieLane title="Family" genre="FAMILY" />
-      <MovieLane title="Comedy" genre="COMEDY"  />
+      {/* <MovieLane title="Comedy" genre="COMEDY"  />
       <MovieLane title="Adventure" genre="ADVENTURE"  />
       <MovieLane title="Crime" genre="CRIME"  />
       <MovieLane title="Action" genre="ACTION"  />
       <MovieLane title="Fantasy" genre="FANTASY"  />
-        
+         */}
     </div>
   );
 }

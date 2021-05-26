@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Backend from "../Backend";
-import "./MoviesLanes.css";
+import "./MoviesLane.css";
 import MovieLaneItem from "./MovieLaneItem";
-import Player from "../components/Player";
+// import Player from "../components/Player";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -20,18 +20,18 @@ function MovieLane({ title, genre, isLargeRow }) {
       setMovies(response.data);
     }
     fetchData();
-  }, []);
+  }, [genre]);
   
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 0,
-    },
-  };
+  // const opts = {
+  //   height: "600",
+  //   width: "100%",
+  //   playerVars: {
+  //     autoplay: 0,
+  //   },
+  // };
   
   const setPositionXY = (top, left) => {
-    setPosTop(`${top-5}px`);
+    setPosTop(`${top-100}px`);
     setPosLeft(`${left}px`);
   }
 
@@ -40,15 +40,15 @@ function MovieLane({ title, genre, isLargeRow }) {
     setMovie(movies[id]);
   }
   
-  const onMouseEnter = (e) => {
-    let offsetTop = e.target.offsetTop;
-    let offsetLeft = e.target.offsetLeft;
+  // const onMouseEnter = (e) => {
+  //   let offsetTop = e.target.offsetTop;
+  //   let offsetLeft = e.target.offsetLeft;
 
-    setLaneItemIndex(e.target.id)
-    setPositionXY(offsetTop, offsetLeft);
-    setRender(true);
-    e.target.style.setProperty("width", "500px");
-  };
+  //   setLaneItemIndex(e.target.id)
+  //   setPositionXY(offsetTop, offsetLeft);
+  //   setRender(true);
+  //   e.target.style.setProperty("width", "500px");
+  // };
 
   const onMouseOver = (e) => {
     let offsetTop = e.target.offsetTop;
@@ -88,6 +88,8 @@ function MovieLane({ title, genre, isLargeRow }) {
           })}
       </div>
       {render ? <MovieLaneItem onMouseOver={onMouseOver} movie={movie} posLeft={posLeft} posTop={posTop}/>: ""}
+      {/* {render ? <MovieLaneItem onMouseEnter={onMouseEnter} movie={movie} posLeft={posLeft} posTop={posTop}/>: ""} */}
+
     </div>
   );
 }
